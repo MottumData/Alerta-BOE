@@ -4,60 +4,6 @@ from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import PromptTemplate
 
 
-# loader = PyPDFLoader(document_path)
-
-# documents = loader.load()
-# num_pages = len(documents)
-
-# print(f"Number of pages: {num_pages}")
-
-# num_documents = len(documents)
-
-# if num_documents > 6:
-#     raise ValueError("Número de documentos excede el límite permitido.")
-# else:
-#     PROMPT_TEMPLATE = """
-#         Haz un resumen del documento.
-#         El resumen debe incluir los puntos más importantes y relevantes del documento.
-#         El resumen debe ser breve y conciso, pero lo suficientemente informativo como para que el
-#         lector entienda el contenido del documento.
-
-#         La respuesta debe ser en Castellano con la siguiente estructura:
-#         1. Título del documento.
-#         2. Resumen muy breve pero contenido con los enunciados de los cambios más relevantes.
-
-#         Documento:
-#         {document}
-#     """
-
-#     prompt = PromptTemplate(
-#         input_variables=["document"],
-#         template=PROMPT_TEMPLATE
-#     )
-#     # 4. Inicializa tu LLM de Ollama
-#     llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct:latest",
-#                     base_url="http://192.168.1.134:11434",
-#                     temperature=0.2)
-
-#     print("llm inicializado")
-
-#     # 5. Monta un LLMChain que use el prompt anterior
-#     chain = prompt | llm
-
-#     print("iniciando Invocación ...")
-#     # 6. Ejecuta el chain pasándole todo el texto
-#     result = chain.invoke({"document": documents})
-#     print(result)
-
-# 1. Recibo una lista con URL
-# 2. Para cada URL cargo el documento
-# 2.1 Consulto el numero de paginas
-# 2.2 Si el número de páginas es mayor a 6, crear un mensaje
-# 2.3 Si el número de páginas es menor a 6, hacer el resumen con los cambios más relevantes
-# 3. Guardar el resultado en un diccionario con el nombre del BOE y el resumen
-# 3.1 Retornar el diccionario con los resúmenes
-
-
 def load_documents_from_urls(urls):
     """
     Carga documentos desde una lista de URLs y devuelve un diccionario con los resúmenes.
