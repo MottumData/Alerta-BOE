@@ -39,4 +39,16 @@ if __name__ == "__main__":
 
     # emissions = tracker.stop()
     # print(f"Emissions: {emissions} kg CO₂eq")
-    
+# TODO:
+# Preparar directorio con 10 BOES (5 biodiversidad y 5 no biodiversidad) pdf y xml
+# Prepara prueba para ejecutar los del directorio y los de URL por fecha.
+# Documentar el código
+# Logs
+# Limpieza de codigo innecesario
+# requirements.txt
+# dockerfile
+# Ejecucion Codecarbon
+# README
+# .env
+# Contemplar casos de errores. (No hay BOE ese dia, no hay tematica ese dia, se publican mas tarde,...)
+# prompting para enfocar mejor la notificacion.
