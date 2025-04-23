@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fecha_actualizacion="20250217095601">
+  <metadatos>
+    <identificador>BOE-A-2025-2869</identificador>
+    <origen_legislativo codigo="1">Estatal</origen_legislativo>
+    <departamento codigo="5140">Ministerio de Hacienda</departamento>
+    <rango codigo="1370">Resolución</rango>
+    <fecha_disposicion>20250214</fecha_disposicion>
+    <numero_oficial/>
+    <titulo>Resolución de 14 de febrero de 2025, de la Presidencia del Comisionado para el Mercado de Tabacos, por la que se publican los precios de venta al público de determinadas labores de tabaco en Expendedurías de Tabaco y Timbre del área del Monopolio.</titulo>
+    <diario codigo="BOE">Boletín Oficial del Estado</diario>
+    <fecha_publicacion>20250215</fecha_publicacion>
+    <diario_numero>40</diario_numero>
+    <seccion>1</seccion>
+    <subseccion/>
+    <pagina_inicial>20668</pagina_inicial>
+    <pagina_final>20673</pagina_final>
+    <suplemento_pagina_inicial/>
+    <suplemento_pagina_final/>
+    <url_pdf>/boe/dias/2025/02/15/pdfs/BOE-A-2025-2869.pdf</url_pdf>
+    <url_epub>/diario_boe/epub.php?id=BOE-A-2025-2869</url_epub>
+    <url_pdf_catalan/>
+    <url_pdf_euskera/>
+    <url_pdf_gallego/>
+    <url_pdf_valenciano/>
+    <estatus_legislativo>L</estatus_legislativo>
+    <fecha_vigencia>20250215</fecha_vigencia>
+    <estatus_derogacion>N</estatus_derogacion>
+    <fecha_derogacion/>
+    <judicialmente_anulada>N</judicialmente_anulada>
+    <fecha_anulacion/>
+    <vigencia_agotada>N</vigencia_agotada>
+    <estado_consolidacion codigo="0"/>
+    <letra_imagen>A</letra_imagen>
+    <suplemento_letra_imagen/>
+    <url_eli>https://www.boe.es/eli/es/res/2025/02/14/(1)</url_eli>
+  </metadatos>
+  <metadata-eli>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:eli="http://data.europa.eu/eli/ontology#">
+      <eli:LegalResource rdf:about="https://www.boe.es/eli/es/res/2025/02/14/(1)">
+        <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+        <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/res"/>
+        <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2025-2869</eli:id_local>
+        <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-14</eli:date_document>
+        <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(1)</eli:number>
+        <eli:has_member>
+          <eli:LegalResource rdf:about="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof">
+            <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+            <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/res"/>
+            <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2025-2869</eli:id_local>
+            <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-14</eli:date_document>
+            <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(1)</eli:number>
+            <eli:version rdf:resource="http://www.elidata.es/mdr/authority/version/dof"/>
+            <eli:is_member_of rdf:resource="https://www.boe.es/eli/es/res/2025/02/14/(1)"/>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof/spa">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/spa"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resolución de 14 de febrero de 2025, de la Presidencia del Comisionado para el Mercado de Tabacos, por la que se publican los precios de venta al público de determinadas labores de tabaco en Expendedurías de Tabaco y Timbre del área del Monopolio.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-15</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof/spa/epub">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/epub+zip"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof/spa/html">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof/spa/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof/spa/xml">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/xml"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/res/2025/02/14/(1)/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+          </eli:LegalResource>
+        </eli:has_member>
+      </eli:LegalResource>
+    </rdf:RDF>
+  </metadata-eli>
+  <analisis>
+    <materias>
+      <materia codigo="3511" orden="1">Expendedurías de Tabaco y Efectos Timbrados</materia>
+      <materia codigo="5665" orden="1">Precios</materia>
+      <materia codigo="6819" orden="1">Tabaco</materia>
+    </materias>
+    <notas/>
+    <referencias>
+      <anteriores>
+        <anterior referencia="BOE-A-1998-10407" orden="3060">
+          <palabra codigo="440">DE CONFORMIDAD con</palabra>
+          <texto>el art. 4 de la Ley 13/1998, de 4 de mayo</texto>
+        </anterior>
+      </anteriores>
+      <posteriores/>
+    </referencias>
+    <alertas/>
+  </analisis>
+  <texto>
+    <p class="parrafo">En virtud de lo establecido en el artículo 4 de la Ley 13/1998, de 4 de mayo, de Ordenación del Mercado de Tabacos y Normativa Tributaria, se publican los precios de venta al público (PVP) de determinadas labores de tabaco en Expendedurías de Tabaco y Timbre del área del Monopolio, que han sido propuestos por los correspondientes fabricantes e importadores.</p>
+    <p class="articulo">Primero.</p>
+    <p class="parrafo">Los precios de venta al público (PVP) de las labores de tabaco que se indican a continuación, incluidos los diferentes tributos, en Expendedurías de Tabaco y timbre de la Península e Illes Balears, serán los siguientes:</p>
+    <table class="tabla">
+      <caption>
+        <p class="centro_redonda">A) CIGARROS Y CIGARRITOS</p>
+      </caption>
+      <colgroup>
+        <col width="60%"/>
+        <col width="16%"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="cabeza_tabla"> </th>
+          <th class="cabeza_tabla">
+            <p class="cabeza_tabla">PVP</p>
+            <p class="cabeza_tabla">–</p>
+            <p class="cabeza_tabla">Euros/unidad</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>AL CAPONE</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Al Capone Duo Filter (4).</td>
+          <td class="cuerpo_tabla_coma">0,25</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>ALEC BRADLEY</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Alec Bradley Texas Lancero (10).</td>
+          <td class="cuerpo_tabla_coma">11,20</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>ALEJANDRO ALFAMBRA</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Gran Toro (25).</td>
+          <td class="cuerpo_tabla_coma">5,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Half Corona (25).</td>
+          <td class="cuerpo_tabla_coma">4,35</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Magníficos (25).</td>
+          <td class="cuerpo_tabla_coma">5,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Petit Toro (25).</td>
+          <td class="cuerpo_tabla_coma">4,55</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Robusto (25).</td>
+          <td class="cuerpo_tabla_coma">4,80</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>DREW ESTATE</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Drew Estate Undercrown Coronets 4 × 32 C (10).</td>
+          <td class="cuerpo_tabla_coma">2,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>FLOR DE SELVA</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Flor de Selva Villa Zamorano Reserva El Gordo C (25).</td>
+          <td class="cuerpo_tabla_coma">7,30</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Flor de Selva Villa Zamorano Reserva Expreso C (25).</td>
+          <td class="cuerpo_tabla_coma">4,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Flor de Selva Villa Zamorano Reserva Intenso C (25).</td>
+          <td class="cuerpo_tabla_coma">5,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>JOSÉ GENER</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Fantásticos (24).</td>
+          <td class="cuerpo_tabla_coma">18,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Maravillas (24).</td>
+          <td class="cuerpo_tabla_coma">24,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Pirámide (24).</td>
+          <td class="cuerpo_tabla_coma">17,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Robusto (24).</td>
+          <td class="cuerpo_tabla_coma">15,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Toro (24).</td>
+          <td class="cuerpo_tabla_coma">16,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>LA AURORA</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">107 Nicaragua Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">6,70</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">107 Nicaragua Toro (20).</td>
+          <td class="cuerpo_tabla_coma">7,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">115 Aniversario Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">12,80</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">115 Aniversario Toro (20).</td>
+          <td class="cuerpo_tabla_coma">13,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">1495 15 Minutes Break Display (5).</td>
+          <td class="cuerpo_tabla_coma">4,10</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">1495 Sumo Short Robusto (25).</td>
+          <td class="cuerpo_tabla_coma">6,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">1985 Maduro Gran Toro (20).</td>
+          <td class="cuerpo_tabla_coma">6,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">1985 Maduro Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">5,85</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">ADN Dominicano Gran Toro (20).</td>
+          <td class="cuerpo_tabla_coma">9,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">ADN Dominicano Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">7,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Cameroon 1903 Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">5,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Cameroon 1903 Sublimes Tubos (20).</td>
+          <td class="cuerpo_tabla_coma">5,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Cameroon Sumo Short Robusto Original (20).</td>
+          <td class="cuerpo_tabla_coma">5,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Connecticut 1987 Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">5,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Corojo 1962 Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">5,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Ecuador Belicoso (20).</td>
+          <td class="cuerpo_tabla_coma">7,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Ecuador Gran Toro (20).</td>
+          <td class="cuerpo_tabla_coma">7,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Ecuador Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">6,30</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Ecuador Sumo Short Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">5,65</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Ecuador Toro (20).</td>
+          <td class="cuerpo_tabla_coma">7,20</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Ecuador Zeppelin (20).</td>
+          <td class="cuerpo_tabla_coma">6,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Nicaragua Belicoso (20).</td>
+          <td class="cuerpo_tabla_coma">7,80</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Nicaragua Sumo Short Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">6,10</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Nicaragua Zeppelin (20).</td>
+          <td class="cuerpo_tabla_coma">6,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 USA Maduro Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">6,30</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 120 Aniversario Churchill (20).</td>
+          <td class="cuerpo_tabla_coma">10,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 120 Aniversario Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">9,20</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 120 Aniversario Toro (20).</td>
+          <td class="cuerpo_tabla_coma">9,70</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 1495 Robusto GB (20).</td>
+          <td class="cuerpo_tabla_coma">7,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 1495 Sumo Toro GB (20).</td>
+          <td class="cuerpo_tabla_coma">8,20</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora Escogidos Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">7,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora Escogidos Short Robusto (20).</td>
+          <td class="cuerpo_tabla_coma">7,20</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora Escogidos Toro (20).</td>
+          <td class="cuerpo_tabla_coma">7,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>LA AURORA 1903 EDITION</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Doble Figurado Emerald (8).</td>
+          <td class="cuerpo_tabla_coma">20,40</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Doble Figurado Gold (8).</td>
+          <td class="cuerpo_tabla_coma">20,40</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Doble Figurado Platinum (8).</td>
+          <td class="cuerpo_tabla_coma">20,40</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Doble Figurado Ruby (8).</td>
+          <td class="cuerpo_tabla_coma">20,40</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Doble Figurado Shapphire (8).</td>
+          <td class="cuerpo_tabla_coma">20,40</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>LEÓN JIMENES</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">León Jimenes Connecticut N.º 5 (25).</td>
+          <td class="cuerpo_tabla_coma">4,40</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">León Jimenes Connecticut Robusto (25).</td>
+          <td class="cuerpo_tabla_coma">5,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">León Jimenes Prestige Robusto Tubos (10).</td>
+          <td class="cuerpo_tabla_coma">7,10</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>PRÍNCIPES</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Chicos Blond 6 × 5 (30).</td>
+          <td class="cuerpo_tabla_coma">0,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Chicos Brown 6 × 5 (30).</td>
+          <td class="cuerpo_tabla_coma">0,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Chicos Original 6 × 5 (30).</td>
+          <td class="cuerpo_tabla_coma">0,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Coronas Original (25).</td>
+          <td class="cuerpo_tabla_coma">0,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Coronas Original (5).</td>
+          <td class="cuerpo_tabla_coma">0,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Coronas Original (55).</td>
+          <td class="cuerpo_tabla_coma">0,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Long Filler Claro Robusto (12).</td>
+          <td class="cuerpo_tabla_coma">2,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Long Filler Claro Robusto (25).</td>
+          <td class="cuerpo_tabla_coma">2,75</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Long Filler Claro Sumo Short Robusto (12).</td>
+          <td class="cuerpo_tabla_coma">2,40</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Long Filler Claro Sumo Short Robusto (25).</td>
+          <td class="cuerpo_tabla_coma">2,40</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Long Filler Claro Toro (12).</td>
+          <td class="cuerpo_tabla_coma">2,80</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Long Filler Claro Toro (25).</td>
+          <td class="cuerpo_tabla_coma">2,80</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="tabla">
+      <caption>
+        <p class="centro_redonda">B) CIGARROS Y CIGARRITOS</p>
+      </caption>
+      <colgroup>
+        <col width="60%"/>
+        <col width="16%"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="cabeza_tabla"> </th>
+          <th class="cabeza_tabla">
+            <p class="cabeza_tabla">PVP</p>
+            <p class="cabeza_tabla">–</p>
+            <p class="cabeza_tabla">Euros/envase</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>AL CAPONE</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Al Capone Duo Filter (el envase de 10).</td>
+          <td class="cuerpo_tabla_coma">2,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>LA AURORA</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">115 ED Humidor Toro (el envase de 30).</td>
+          <td class="cuerpo_tabla_coma">405,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">La Aurora 107 Nicaragua Training Kit (el envase de 5).</td>
+          <td class="cuerpo_tabla_coma">42,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Lo Mejor de La Aurora (el envase de 5).</td>
+          <td class="cuerpo_tabla_coma">53,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_centro" colspan="2">
+            <em>LA AURORA 1903</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Edition Doble Figurado Treasure Box (el envase de 6).</td>
+          <td class="cuerpo_tabla_coma">122,10</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="tabla">
+      <caption>
+        <p class="centro_redonda">C) PICADURAS DE LIAR</p>
+      </caption>
+      <colgroup>
+        <col width="60%"/>
+        <col width="16%"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="cabeza_tabla"> </th>
+          <th class="cabeza_tabla">
+            <p class="cabeza_tabla">PVP</p>
+            <p class="cabeza_tabla">–</p>
+            <p class="cabeza_tabla">Euros/unidad</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cuerpo_tabla_izq">Fleur de Lys Blonde (40 g).</td>
+          <td class="cuerpo_tabla_coma">7,90</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="tabla">
+      <caption>
+        <p class="centro_redonda">D) OTRAS LABORES</p>
+      </caption>
+      <colgroup>
+        <col width="60%"/>
+        <col width="16%"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="cabeza_tabla"> </th>
+          <th class="cabeza_tabla">
+            <p class="cabeza_tabla">PVP</p>
+            <p class="cabeza_tabla">–</p>
+            <p class="cabeza_tabla">Euros/unidad</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cuerpo_tabla_izq">Terea Classic Gold (20).</td>
+          <td class="cuerpo_tabla_coma">4,80</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Terea Classic Red (20).</td>
+          <td class="cuerpo_tabla_coma">4,80</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="tabla">
+      <caption>
+        <p class="centro_redonda">E) PICADURAS DE PIPA</p>
+      </caption>
+      <colgroup>
+        <col width="60%"/>
+        <col width="16%"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="cabeza_tabla"> </th>
+          <th class="cabeza_tabla">
+            <p class="cabeza_tabla">PVP</p>
+            <p class="cabeza_tabla">–</p>
+            <p class="cabeza_tabla">Euros/unidad</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cuerpo_tabla_izq">Black Jack Original Blend (20 g).</td>
+          <td class="cuerpo_tabla_centro">1,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Frérot (120 g).</td>
+          <td class="cuerpo_tabla_centro">10,05</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Frérot (30 g).</td>
+          <td class="cuerpo_tabla_centro">2,65</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Frérot (500 g).</td>
+          <td class="cuerpo_tabla_centro">39,99</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Blody Punch (200 g).</td>
+          <td class="cuerpo_tabla_centro">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Blue Punch (200 g).</td>
+          <td class="cuerpo_tabla_centro">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Bono (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster GP 2.0 Classic (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster IZ Bomb (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Iz Finger (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster IZ Kactuz (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Iz Kaktuz (995 g).</td>
+          <td class="cuerpo_tabla_coma">86,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Lee Punch (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Miss Joosy (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Miss Joosy (995 g).</td>
+          <td class="cuerpo_tabla_coma">86,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster MR John (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Mr. C (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Noir Charly Punch (200 g).</td>
+          <td class="cuerpo_tabla_coma">20,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Noir Charly Punch (50 g).</td>
+          <td class="cuerpo_tabla_coma">5,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Noir Iz Kaktuz (200 g).</td>
+          <td class="cuerpo_tabla_coma">20,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Noir Iz Kaktuz (50 g).</td>
+          <td class="cuerpo_tabla_coma">5,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Noir Miss Joosy (200 g).</td>
+          <td class="cuerpo_tabla_coma">20,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Noir Miss Joosy (50 g).</td>
+          <td class="cuerpo_tabla_coma">5,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Peery Munch (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Peery Punch (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster P-Rex (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Qumi Punch (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Qumi Punch (995 g).</td>
+          <td class="cuerpo_tabla_coma">86,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Smurf Daddy (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Unicorn (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Verdacho (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Wild Punch (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Willy Punch (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Winter Edition (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Holster Yellow Punch (200 g).</td>
+          <td class="cuerpo_tabla_coma">17,95</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Hookain Kaffa Yayo (950 g).</td>
+          <td class="cuerpo_tabla_coma">75,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Hookain Lemenciaga (950 g).</td>
+          <td class="cuerpo_tabla_coma">75,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Kendal Gold By Gawith, Hoggarth &amp; Co (50 g).</td>
+          <td class="cuerpo_tabla_coma">17,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Kendal Mixed By Gawith, Hoggarth &amp; Co (50 g).</td>
+          <td class="cuerpo_tabla_coma">17,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Noth Star By Gawith, Hoggarth &amp; Co (50 g).</td>
+          <td class="cuerpo_tabla_coma">17,30</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Rodeo By Gawith, Hoggarth &amp; Co (50 g).</td>
+          <td class="cuerpo_tabla_coma">17,30</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith 1792 Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Balkan Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Best Brown Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Bob’s CH Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">22,90</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Bothy Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Cabbie’s Roll Cut (50 g).</td>
+          <td class="cuerpo_tabla_coma">32,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Celtic Talisman (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Commonwealth (50 g).</td>
+          <td class="cuerpo_tabla_coma">25,20</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Full Virginia Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Golden Glow (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Hoggarth Balkan Mixture (50 g).</td>
+          <td class="cuerpo_tabla_coma">23,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith James Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith K C Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Navy Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Perfection Mixture (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Sam’s Flake (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Samuel Gawith Squadron Leader (50 g).</td>
+          <td class="cuerpo_tabla_coma">24,60</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Tipsy Aqua de Luna (200 g).</td>
+          <td class="cuerpo_tabla_coma">16,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Tipsy Berserk Red (200 g).</td>
+          <td class="cuerpo_tabla_coma">16,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Tipsy Summer Love (200 g).</td>
+          <td class="cuerpo_tabla_coma">16,50</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Tipsy Viva la Fiesta (200 g).</td>
+          <td class="cuerpo_tabla_coma">16,50</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="articulo">Segundo.</p>
+    <p class="parrafo">Los precios de venta al público (PVP) de las labores de tabaco que se indican a continuación, incluidos los diferentes tributos, en Expendedurías de Tabaco y Timbre de Ceuta y Melilla serán los siguientes:</p>
+    <table class="tabla">
+      <caption>
+        <p class="centro_redonda">A) PICADURAS DE PIPA</p>
+      </caption>
+      <colgroup>
+        <col width="60%"/>
+        <col width="16%"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="cabeza_tabla"> </th>
+          <th class="cabeza_tabla">
+            <p class="cabeza_tabla">PVP</p>
+            <p class="cabeza_tabla">–</p>
+            <p class="cabeza_tabla">Euros/unidad</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cuerpo_tabla_izq">Adalya Berlin Nights (990 g).</td>
+          <td class="cuerpo_tabla_coma">33,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Adalya Blue I’ss (990 g).</td>
+          <td class="cuerpo_tabla_coma">33,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Adalya Hawaii (990 g).</td>
+          <td class="cuerpo_tabla_coma">33,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Adalya I’ss Lie On The Rocks (990 g).</td>
+          <td class="cuerpo_tabla_coma">33,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Adalya Kizz 2.0 (990 g).</td>
+          <td class="cuerpo_tabla_coma">33,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Adalya L. Kill 2.0 (990 g).</td>
+          <td class="cuerpo_tabla_coma">33,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Adalya Love66 (990 g).</td>
+          <td class="cuerpo_tabla_coma">33,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Adalya Manko Tanko I’ss (990 g).</td>
+          <td class="cuerpo_tabla_coma">33,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Adalya Sweess Boom (990 g).</td>
+          <td class="cuerpo_tabla_coma">33,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Hookain Kaffa Yayo (950 g).</td>
+          <td class="cuerpo_tabla_coma">52,00</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">Hookain Lemenciaga (950 g).</td>
+          <td class="cuerpo_tabla_coma">52,00</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="articulo">Tercero.</p>
+    <p class="parrafo">La presente resolución entrará en vigor el mismo día de su publicación en el «Boletín Oficial del Estado».</p>
+    <p class="parrafo_2">Madrid, 14 de febrero de 2025.–El Presidente del Comisionado para el Mercado de Tabacos, Luis Gavira Caballero.</p>
+  </texto>
+</documento>

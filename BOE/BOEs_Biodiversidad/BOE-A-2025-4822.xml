@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fecha_actualizacion="20250321125601">
+  <metadatos>
+    <identificador>BOE-A-2025-4822</identificador>
+    <origen_legislativo codigo="1">Estatal</origen_legislativo>
+    <departamento codigo="9575">Ministerio para la Transición Ecológica y el Reto Demográfico</departamento>
+    <rango codigo="1340">Real Decreto</rango>
+    <fecha_disposicion>20250218</fecha_disposicion>
+    <numero_oficial>105/2025</numero_oficial>
+    <titulo>Real Decreto 105/2025, de 18 de febrero, por el que se modifica el Real Decreto 1424/2008, de 14 de agosto, y el Real Decreto 948/2009, de 5 de junio, para reforzar la gobernanza de la lucha contra la desertificación en España.</titulo>
+    <diario codigo="BOE">Boletín Oficial del Estado</diario>
+    <fecha_publicacion>20250312</fecha_publicacion>
+    <diario_numero>61</diario_numero>
+    <seccion>1</seccion>
+    <subseccion/>
+    <pagina_inicial>32968</pagina_inicial>
+    <pagina_final>32971</pagina_final>
+    <suplemento_pagina_inicial/>
+    <suplemento_pagina_final/>
+    <url_pdf>/boe/dias/2025/03/12/pdfs/BOE-A-2025-4822.pdf</url_pdf>
+    <url_epub>/diario_boe/epub.php?id=BOE-A-2025-4822</url_epub>
+    <url_pdf_catalan>/boe_catalan/dias/2025/03/12/pdfs/BOE-A-2025-4822-C.pdf</url_pdf_catalan>
+    <url_pdf_euskera/>
+    <url_pdf_gallego/>
+    <url_pdf_valenciano/>
+    <estatus_legislativo>L</estatus_legislativo>
+    <fecha_vigencia>20250313</fecha_vigencia>
+    <estatus_derogacion>N</estatus_derogacion>
+    <fecha_derogacion/>
+    <judicialmente_anulada>N</judicialmente_anulada>
+    <fecha_anulacion/>
+    <vigencia_agotada>N</vigencia_agotada>
+    <estado_consolidacion codigo="0"/>
+    <letra_imagen>A</letra_imagen>
+    <suplemento_letra_imagen/>
+    <url_eli>https://www.boe.es/eli/es/rd/2025/02/18/105</url_eli>
+  </metadatos>
+  <metadata-eli>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:eli="http://data.europa.eu/eli/ontology#">
+      <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rd/2025/02/18/105">
+        <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+        <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rd"/>
+        <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2025-4822</eli:id_local>
+        <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-18</eli:date_document>
+        <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">105</eli:number>
+        <eli:has_member>
+          <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rd/2025/02/18/105/dof">
+            <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+            <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rd"/>
+            <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2025-4822</eli:id_local>
+            <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-18</eli:date_document>
+            <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">105</eli:number>
+            <eli:version rdf:resource="http://www.elidata.es/mdr/authority/version/dof"/>
+            <eli:is_member_of rdf:resource="https://www.boe.es/eli/es/rd/2025/02/18/105"/>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/spa">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/spa"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Real Decreto 105/2025, de 18 de febrero, por el que se modifica el Real Decreto 1424/2008, de 14 de agosto, y el Real Decreto 948/2009, de 5 de junio, para reforzar la gobernanza de la lucha contra la desertificación en España.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-12</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rd/2025/02/18/105/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/spa/epub">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/epub+zip"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/spa/html">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/spa/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/spa/xml">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/xml"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/cat">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/cat"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reial decret 105/2025, de 18 de febrer, pel qual es modifiquen el Reial decret 1424/2008, de 14 d'agost, i el Reial decret 948/2009, de 5 de juny, per reforçar la governança de la lluita contra la desertificació a Espanya.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-12</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rd/2025/02/18/105/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/cat/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/18/105/dof/cat"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+          </eli:LegalResource>
+        </eli:has_member>
+      </eli:LegalResource>
+    </rdf:RDF>
+  </metadata-eli>
+  <analisis>
+    <materias>
+      <materia codigo="1262" orden="1">Comités consultivos</materia>
+      <materia codigo="9633" orden="1">Ministerio para la Transición Ecológica y el Reto Demográfico</materia>
+      <materia codigo="5278" orden="1">Organización de la Administración del Estado</materia>
+      <materia codigo="5651" orden="1">Políticas de medio ambiente</materia>
+    </materias>
+    <notas/>
+    <referencias>
+      <anteriores>
+        <anterior referencia="BOE-A-2009-10221" orden="2015">
+          <palabra codigo="270">MODIFICA</palabra>
+          <texto>los arts. 2.1 y 3 del Real Decreto 948/2009, de 5 de junio</texto>
+        </anterior>
+        <anterior referencia="BOE-A-2008-14855" orden="2015">
+          <palabra codigo="270">MODIFICA</palabra>
+          <texto>el art. 5 del Real Decreto 1424/2008, de 14 de agosto</texto>
+        </anterior>
+      </anteriores>
+      <posteriores/>
+    </referencias>
+    <alertas>
+      <alerta codigo="121" orden="1">Organización de la Administración</alerta>
+    </alertas>
+  </analisis>
+  <texto>
+    <p class="parrafo">La Estrategia Nacional de Lucha contra la Desertificación, presentada en el Consejo de Ministros el 21 de junio de 2022, establece un nuevo marco para las políticas e iniciativas relacionadas con la desertificación en España, y refleja el compromiso de España con la Convención de las Naciones Unidas de Lucha contra la Desertificación en los países afectados por sequía grave o desertificación, en particular en África, hecha en París el 17 de junio de 1994.</p>
+    <p class="parrafo">Para ello, la estrategia determina objetivos y principios, analiza las políticas de mayor impacto sobre la desertificación, elabora un diagnóstico de la situación, propone medidas y acciones para mejorar la gobernanza en la lucha contra la desertificación y fomenta una gestión de las tierras que evite su degradación.</p>
+    <p class="parrafo">En el contexto de mejora de la gobernanza y del reforzamiento institucional, la estrategia señala la necesidad de crear un órgano consultivo y de cooperación adscrito a la Comisión Estatal para el Patrimonio Natural y la Biodiversidad que cuente con la participación de las comunidades autónomas y de los departamentos de la Administración General del Estado (en adelante, AGE) implicados en la lucha contra la desertificación.</p>
+    <p class="parrafo">Además, la estrategia señala la creación de un órgano consultivo y de apoyo a la AGE, así como de coordinación con la comunidad científica y la sociedad civil en materia de lucha contra la desertificación. Prevé asimismo que este órgano cuente con representantes de las unidades competentes en la AGE, de la comunidad científica y de las principales organizaciones de la sociedad civil que lleven a cabo su trabajo en el ámbito de la desertificación.</p>
+    <p class="parrafo">A la vista de los mencionados objetivos, se hace necesario modificar dos reales decretos dictados en desarrollo de los artículos 7 y 8 de la Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y la Biodiversidad, con la finalidad de adaptar la composición y las funciones de sendos órganos colegiados a este marco de actuaciones, contribuyendo al cumplimiento del hito número L12 «Adopción de la Estrategia Nacional de Lucha contra la Desertificación y del programa de acción asociado (2022-2026) y creación de organismos colegiados» asociado al componente 4 (Conservación y restauración de ecosistemas y su biodiversidad) del Plan de Recuperación Transformación y Resiliencia, como parte de la reforma 4 (C4.R4) «Lucha contra la desertificación». Pues en efecto, mediante el presente real decreto se contribuye al desarrollo de capacidades y gobernanza en esta materia, a la implementación de acciones dirigidas a mejorar la transparencia y la participación civil, al fomento de la coordinación y la cooperación entre los agentes pertinentes que se ocupan de las cuestiones relacionadas con la desertificación, así como a la necesidad de crear varios órganos colegiados, tal y como exigen la medida C4.R4 y el hito número L12 asociados al componente 4 del Plan de Recuperación Transformación y Resiliencia.</p>
+    <p class="parrafo">De acuerdo con lo anterior, el presente real decreto modifica, en primer término, el Real Decreto 1424/2008, de 14 de agosto, por el que se determinan la composición y las funciones de la Comisión Estatal para el Patrimonio Natural y la Biodiversidad, y se dictan las normas que regulan su funcionamiento y se establecen los comités especializados adscritos a la misma. La finalidad de esta modificación es, por un lado, adscribir a la Comisión Estatal un Comité especializado de lucha contra la desertificación y, por otro, dotar a este Comité de una estructura organizativa específica.</p>
+    <p class="parrafo">En segundo lugar, esta norma también modifica el Real Decreto 948/2009, de 5 de junio, por el que se determinan la composición, las funciones y las normas de funcionamiento del Consejo Estatal para el Patrimonio Natural y la Biodiversidad, órgano de participación pública en el ámbito de la conservación y el uso sostenible del patrimonio natural y la biodiversidad que incluye a las organizaciones profesionales, científicas, empresariales, sindicales y ecologistas más representativas, así como a las administraciones públicas. Las modificaciones de esta norma tienen por objetivo atribuir al Consejo Estatal funciones relacionadas con la lucha contra la desertificación y la degradación de las tierras, reforzando así su estructura organizativa. De este modo se está dando cumplimiento de una manera óptima a las necesidades identificadas en la Estrategia, al propiciar la coordinación y coherencia en el desarrollo de políticas sobre el patrimonio natural, la biodiversidad y la lucha contra la desertificación.</p>
+    <p class="parrafo">El presente real decreto es conforme con los principios de necesidad, eficacia, proporcionalidad, seguridad jurídica, transparencia y eficiencia, previstos en el artículo 129 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas.</p>
+    <p class="parrafo">En este sentido, esta norma es necesaria y eficaz, en tanto en cuanto sirve para adecuar el régimen jurídico de los reales decretos a la Estrategia Nacional de Lucha contra la Desertificación y al Plan de Recuperación, Transformación y Resiliencia. La norma, además, resulta proporcional porque es el instrumento adecuado para la ejecución de la acción a la que se refiere, modificando la regulación imprescindible para atender a su finalidad. Esta norma, además, garantiza el principio de seguridad jurídica pues se integra de manera coherente con el marco normativo de aplicación, ofreciendo así un escenario regulatorio claro y predecible.</p>
+    <p class="parrafo">En cuanto al principio de transparencia, se ha posibilitado la participación activa de los potenciales destinatarios durante su tramitación mediante la realización del trámite de audiencia e información pública, previsto en el artículo 26.6 de la Ley 50/1997, de 27 de noviembre, del Gobierno, si bien, tal principio se refuerza a través de la exposición clara y accesible de los motivos y de los objetivos de la norma, que se recogen en esta parte expositiva y en la preceptiva memoria de análisis de impacto normativo que lo acompaña, accesible a través del Portal de la Transparencia. Por otro lado, este real decreto también atiende al principio de eficiencia, pues no incorpora más cargas administrativas.</p>
+    <p class="parrafo">En la tramitación de este real decreto se ha solicitado informe a los departamentos ministeriales afectados. Además, ha sido informado por el Consejo Estatal del Patrimonio Natural y la Biodiversidad y por la Comisión Estatal del Patrimonio Natural y la Biodiversidad.</p>
+    <p class="parrafo">En su virtud, a propuesta de la Ministra para la Transición Ecológica y el Reto Demográfico, con la aprobación previa del Ministro para la Transformación Digital y de la Función Pública, de acuerdo con el Consejo de Estado, y previa deliberación del Consejo de Ministros en su reunión del día 18 de febrero de 2025,</p>
+    <p class="centro_redonda">DISPONGO:</p>
+    <p class="articulo"><strong>Artículo primero.</strong> Modificación del Real Decreto 1424/2008, de 14 de agosto, por el que se determinan la composición y las funciones de la Comisión Estatal para el Patrimonio Natural y la Biodiversidad, se dictan las normas que regulan su funcionamiento y se establecen los comités especializados adscritos a la misma.</p>
+    <p class="parrafo">El Real Decreto 1424/2008, de 14 de agosto, por el que se determinan la composición y las funciones de la Comisión Estatal para el Patrimonio Natural y la Biodiversidad, se dictan las normas que regulan su funcionamiento y se establecen los comités especializados adscritos a la misma, queda modificado en los siguientes términos:</p>
+    <p class="parrafo_2">Uno. Se añade un párrafo i) al artículo 5.1, con la siguiente redacción:</p>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«i) Comité de Lucha contra la Desertificación, que se encargará de la cooperación, la consulta y la colaboración entre las administraciones públicas para la aplicación coherente en el territorio nacional de las políticas de lucha contra la desertificación y la degradación de las tierras, así como del intercambio de buenas prácticas en la implementación de políticas y acciones sobre estas materias.»</p>
+    </blockquote>
+    <p class="parrafo_2">Dos. Se añade un párrafo e) al artículo 5.3, con la siguiente redacción:</p>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«e) Del Comité de Lucha contra la Desertificación formarán parte, además de los representantes a los que se hace referencia en el primer párrafo de este apartado, tres representantes adicionales del Ministerio para la Transición Ecológica y el Reto Demográfico, procedentes de la Dirección General del Agua, la Dirección General de Políticas contra la Despoblación y la Oficina Española de Cambio Climático; tres representantes del Ministerio de Agricultura, Pesca y Alimentación, procedentes de la Dirección General de Desarrollo Rural, Innovación y Formación Agroalimentaria la Dirección General de Producciones y Mercados Agrarios y la Subdirección General de Planificación de Políticas Agrarias; y un representante del Ministerio de Vivienda y Agenda Urbana.»</p>
+    </blockquote>
+    <p class="articulo"><strong>Artículo segundo.</strong> Modificación del Real Decreto 948/2009, de 5 de junio, por el que se determinan la composición, las funciones y las normas de funcionamiento del Consejo Estatal para el Patrimonio Natural y la Biodiversidad.</p>
+    <p class="parrafo">El Real Decreto 948/2009, de 5 de junio, por el que se determinan la composición, las funciones y las normas de funcionamiento del Consejo Estatal para el Patrimonio Natural y la Biodiversidad, queda modificado en los siguientes términos:</p>
+    <p class="parrafo_2">Uno. Se modifican las letras a) y m) del artículo 2.1, y se añaden las letras n) y ñ) a ese mismo apartado, de acuerdo con la siguiente redacción:</p>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«a) Informar las normas y planes de ámbito estatal, relativos al patrimonio natural, la desertificación y la biodiversidad, haciendo un seguimiento de los mismos y valorando la incidencia social, económica y ambiental de las políticas públicas.»</p>
+      <p class="parrafo">«m) Asesorar técnica y científicamente a las delegaciones españolas, cuando sea requerido para ello a través de su Presidente, por quien ostente la presidencia o jefatura de la delegación española, en organismos, conferencias y reuniones internacionales relacionados con la conservación del patrimonio natural, la desertificación y la biodiversidad y contribuir al cumplimiento de las obligaciones derivadas de los mismos.</p>
+      <p class="parrafo">n) Impulsar la elaboración de informes periódicos de evaluación de los efectos de la aplicación de las diversas políticas y acciones con incidencia en la lucha contra la desertificación y la degradación de las tierras en España y proponer recomendaciones para mejorar su efectividad. Esta evaluación incluirá el análisis de las sinergias y contrapartidas entre los objetivos de dichas políticas y acciones.</p>
+      <p class="parrafo">ñ) Promover las directrices y recomendaciones realizadas por organismos internacionales, en particular, por la Convención de las Naciones Unidas de Lucha contra la Desertificación en los países afectados por sequía grave o desertificación, en particular en África, hecha en París el 17 de junio de 1994, en materia de lucha contra la desertificación y degradación de las tierras.»</p>
+    </blockquote>
+    <p class="parrafo_2">Dos. Se modifica el párrafo final del artículo 3, que pasa a tener la siguiente redacción:</p>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«Se integrarán en el Consejo, con voz pero sin voto, un representante de cada comunidad autónoma, de las Ciudades de Ceuta y Melilla y un representante de la administración local. Además, se integrará en el Consejo, con voz pero sin voto, a la persona designada por España como corresponsal de ciencia y tecnología ante la Convención de las Naciones Unidas de Lucha contra la Desertificación.»</p>
+    </blockquote>
+    <p class="articulo"><strong>Disposición final única.</strong> Entrada en vigor.</p>
+    <p class="parrafo">El presente real decreto entrará en vigor el día siguiente al de su publicación en el «Boletín Oficial del Estado».</p>
+    <p class="parrafo_2">Dado en Madrid, el 18 de febrero de 2025.</p>
+    <p class="firma_rey">FELIPE R.</p>
+    <p class="firma_ministro">La Vicepresidenta Tercera del Gobierno<br/>
+y Ministra para la Transición Ecológica y el Reto Demográfico,</p>
+    <p class="firma_ministro">SARA AAGESEN MUÑOZ</p>
+  </texto>
+</documento>

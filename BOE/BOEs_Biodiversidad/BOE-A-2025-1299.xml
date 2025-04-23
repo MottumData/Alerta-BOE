@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fecha_actualizacion="20250130085601">
+  <metadatos>
+    <identificador>BOE-A-2025-1299</identificador>
+    <origen_legislativo codigo="1">Estatal</origen_legislativo>
+    <departamento codigo="9575">Ministerio para la Transición Ecológica y el Reto Demográfico</departamento>
+    <rango codigo="1370">Resolución</rango>
+    <fecha_disposicion>20250113</fecha_disposicion>
+    <numero_oficial/>
+    <titulo>Resolución de 13 de enero de 2025, de la Dirección General de Biodiversidad, Bosques y Desertificación, de modificación de las zonas de especial protección para las aves marinas de la Red Natura 2000 incluidas en la Red de Áreas Marinas Protegidas de España.</titulo>
+    <diario codigo="BOE">Boletín Oficial del Estado</diario>
+    <fecha_publicacion>20250124</fecha_publicacion>
+    <diario_numero>21</diario_numero>
+    <seccion>3</seccion>
+    <subseccion/>
+    <pagina_inicial>10606</pagina_inicial>
+    <pagina_final>10608</pagina_final>
+    <suplemento_pagina_inicial/>
+    <suplemento_pagina_final/>
+    <url_pdf>/boe/dias/2025/01/24/pdfs/BOE-A-2025-1299.pdf</url_pdf>
+    <url_epub/>
+    <url_pdf_catalan/>
+    <url_pdf_euskera/>
+    <url_pdf_gallego/>
+    <url_pdf_valenciano/>
+    <estatus_legislativo>L</estatus_legislativo>
+    <fecha_vigencia/>
+    <estatus_derogacion>N</estatus_derogacion>
+    <fecha_derogacion/>
+    <judicialmente_anulada>N</judicialmente_anulada>
+    <fecha_anulacion/>
+    <vigencia_agotada>N</vigencia_agotada>
+    <estado_consolidacion codigo="0"/>
+    <letra_imagen>A</letra_imagen>
+    <suplemento_letra_imagen/>
+    <url_eli>https://www.boe.es/eli/es/res/2025/01/13/(1)</url_eli>
+  </metadatos>
+  <metadata-eli>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:eli="http://data.europa.eu/eli/ontology#">
+      <eli:LegalResource rdf:about="https://www.boe.es/eli/es/res/2025/01/13/(1)">
+        <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+        <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/res"/>
+        <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2025-1299</eli:id_local>
+        <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-01-13</eli:date_document>
+        <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(1)</eli:number>
+        <eli:has_member>
+          <eli:LegalResource rdf:about="https://www.boe.es/eli/es/res/2025/01/13/(1)/dof">
+            <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+            <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/res"/>
+            <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2025-1299</eli:id_local>
+            <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-01-13</eli:date_document>
+            <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(1)</eli:number>
+            <eli:version rdf:resource="http://www.elidata.es/mdr/authority/version/dof"/>
+            <eli:is_member_of rdf:resource="https://www.boe.es/eli/es/res/2025/01/13/(1)"/>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/res/2025/01/13/(1)/dof/spa">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/spa"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resolución de 13 de enero de 2025, de la Dirección General de Biodiversidad, Bosques y Desertificación, de modificación de las zonas de especial protección para las aves marinas de la Red Natura 2000 incluidas en la Red de Áreas Marinas Protegidas de España.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-01-24</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/res/2025/01/13/(1)/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/res/2025/01/13/(1)/dof/spa/html">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/res/2025/01/13/(1)/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/res/2025/01/13/(1)/dof/spa/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/res/2025/01/13/(1)/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/res/2025/01/13/(1)/dof/spa/xml">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/xml"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/res/2025/01/13/(1)/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+          </eli:LegalResource>
+        </eli:has_member>
+      </eli:LegalResource>
+    </rdf:RDF>
+  </metadata-eli>
+  <analisis>
+    <materias>
+      <materia codigo="407" orden="1">Aves</materia>
+      <materia codigo="1751" orden="1">Costas marítimas</materia>
+      <materia codigo="3109" orden="1">Ecosistemas</materia>
+      <materia codigo="3430" orden="1">Espacios naturales protegidos</materia>
+      <materia codigo="3438" orden="1">Especies protegidas</materia>
+      <materia codigo="3608" orden="1">Fauna</materia>
+    </materias>
+    <notas/>
+    <referencias>
+      <anteriores>
+        <anterior referencia="BOE-A-2023-26741" orden="3060">
+          <palabra codigo="440">DE CONFORMIDAD con</palabra>
+          <texto>la Orden TED/1416/2023, de 26 de diciembre</texto>
+        </anterior>
+        <anterior referencia="BOE-A-2011-19209" orden="3060">
+          <palabra codigo="440">DE CONFORMIDAD con</palabra>
+          <texto>el art. 6 del Real Decreto 1599/2011, de 4 de noviembre</texto>
+        </anterior>
+        <anterior referencia="BOE-A-2016-559" orden="3070">
+          <palabra codigo="331">EN RELACIÓN con</palabra>
+          <texto>Resolución de 20 de noviembre de 2015</texto>
+        </anterior>
+        <anterior referencia="DOUE-L-2010-80052" orden="5020">
+          <palabra codigo="330">CITA</palabra>
+          <texto>Directiva 2009/147/CE, de 30 de noviembre</texto>
+        </anterior>
+        <anterior referencia="DOUE-L-1992-81200" orden="5020">
+          <palabra codigo="330">CITA</palabra>
+          <texto>Directiva 92/43/CEE, de 21 de mayo</texto>
+        </anterior>
+      </anteriores>
+      <posteriores/>
+    </referencias>
+    <alertas>
+      <alerta codigo="119" orden="1">Medio ambiente</alerta>
+    </alertas>
+  </analisis>
+  <texto>
+    <p class="parrafo">La Ley 41/2010, de 29 de diciembre, de protección del medio marino crea formalmente, a través de su artículo 24, la Red de Áreas Marinas Protegidas de España (en adelante, RAMPE), constituida por espacios protegidos en el medio marino español, representativos del patrimonio natural marino, con independencia de que su declaración y gestión estén reguladas por normas internacionales, comunitarias o estatales, el carácter de su marco normativo y del sistema de relaciones necesario para su funcionamiento.</p>
+    <p class="parrafo">Esta norma enumera, en su artículo 26.1, los espacios protegidos que podrán formar parte de la RAMPE, entre los que figuran las Zonas de Especial Protección para las Aves de la Red Natura 2000 (en adelante ZEPA). Este mismo artículo, en su apartado segundo, señala que el Ministerio para la Transición Ecológica y el Reto Demográfico establecerá los criterios de integración en la RAMPE conforme a los cuales se incluirán aquellos espacios de competencia estatal. El Real Decreto 1599/2011, de 4 de noviembre, por el que se establecen los criterios de integración de los espacios marinos protegidos en la RAMPE, dispone, en su artículo 5, dichos criterios.</p>
+    <p class="parrafo">A su vez, el Real Decreto 1056/2022 de 27 de diciembre, por el que se aprueba el Plan Director de la Red de Áreas Marinas Protegidas de España y los criterios mínimos comunes de gestión coordinada y coherente de la Red modifica el citado Real Decreto 1599/2011, de 4 de noviembre, añadiendo un nuevo artículo 6 referido al procedimiento para la incorporación de los espacios marinos protegidos a la RAMPE.</p>
+    <p class="parrafo">Con fecha 20 de noviembre de 2015, se emitió la resolución, de la Dirección General de Sostenibilidad de la Costa y del Mar, por la que se integran en la Red de Áreas Marinas Protegidas de España las zonas de especial protección para las aves marinas de la Red Natura 2000, entre las que se incluyeron las siguientes: «ES0000494 Espacio marino de Cabo Peñas», «ES0000495 Espacio marino de Punta de Candelaria-Ría de Ortigueira-Estaca de Bares», «ES0000496 Espacio marino de la Costa de Ferrolterra-Valdoviño», «ES0000497 Espacio marino de la Costa da Morte», «ES0000499 Espacio marino de las Rías Baixas de Galicia» y «ES0000502 Espacio marino de la Bahía de Cádiz».</p>
+    <p class="parrafo">Mediante Orden TED/1416/2023, de 26 de diciembre, por la que se aprueba la propuesta para la inclusión de seis espacios marinos protegidos en la lista de lugares de importancia comunitaria de la Red Natura 2000 y se declaran dos zonas de especial protección para las aves en aguas marinas españolas, el Ministerio para la Transición Ecológica y el Reto Demográfico ha declarado 2 nuevos espacios ZEPA. Esta declaración supone la modificación de las delimitaciones de las 6 ZEPA marinas referidas en el párrafo anterior cuyo ámbito territorial ha quedado integrado por completo en los nuevos espacios declarados ZEPA.</p>
+    <p class="parrafo">Con base en lo dispuesto en el artículo 6 del Real Decreto 1599/2011, de 4 de noviembre, resulta necesario proceder a la actualización y adaptación en la RAMPE de los espacios marinos declarados por la Orden TED/1416/2023, de 26 de diciembre, procediendo, por un lado, a la integración en la RAMPE de las ZEPA de nueva creación y, por otro, a la supresión de la RAMPE de aquellas ZEPA que han quedado incluidas en las anteriores, y todo ello atendiendo a los requisitos establecidos en el artículo 6.3.a) del Real Decreto 1599/2011, de 4 de noviembre.</p>
+    <p class="parrafo">Así, en primer lugar, en cuanto a los criterios de integración establecidos en el artículo 5 del Real Decreto 1599/2011, de 4 de noviembre, todos los espacios marinos protegidos, que mediante la presente resolución se integran en la RAMPE, forman parte de la Red Natura 2000. Dado que la Red Natura 2000 constituye un instrumento fundamental de la política de la UE en materia de conservación de la naturaleza, resultado de la aplicación de la Directiva 92/43/CEE del Consejo, de 21 de mayo de 1992, y de la Directiva 2009/147/CE del Parlamento Europeo y del Consejo, de 30 de noviembre de 2009, con finalidad de garantizar el estado de conservación favorable de determinadas especies y tipos de hábitats naturales, los espacios marinos protegidos recogidos en la presente resolución, por sus características intrínsecas, cumplen los criterios definidos en el artículo 5 del Real Decreto 1599/2011, de 4 de noviembre, para poder ser integrados en la RAMPE.</p>
+    <p class="parrafo">Por otra parte, en segundo lugar, en cuanto a la necesidad trasladada en el artículo 6.3.a) del Real Decreto 1599/2011, de 4 de noviembre, de indicar la categoría, o categorías, de gestión UICN a la que pueden asimilarse los espacios marinos protegidos a incluirse en la RAMPE, todos ellos podrían asimilarse a la categoría IV de gestión UICN, al considerarse áreas de gestión de hábitats y especies cuyo objetivo es la protección de hábitats o especies concretas y su gestión refleja dicha prioridad.</p>
+    <p class="parrafo">De acuerdo con todo lo anterior, esta Dirección General, en aplicación de lo establecido en el artículo 6 del Real Decreto 1599/2011, de 4 de noviembre, habiendo realizado la consulta pertinente al Consejo Estatal para el Patrimonio Natural y la Biodiversidad por procedimiento escrito desde el 29 de noviembre al 20 de diciembre de 2024, resuelve:</p>
+    <p class="articulo">Primero.</p>
+    <p class="parrafo">La integración de las siguientes ZEPA marinas de la Red Natura 2000 en la Red de Áreas Marinas Protegidas de España:</p>
+    <table class="tabla">
+      <colgroup>
+        <col width="100%"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="cabeza_tabla">Nombre y código ZEPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cuerpo_tabla_izq">ES0000554 Corredor migratorio galaico-cantábrico occidental.</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">ESZZ12004 Estrecho Occidental.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="articulo">Segundo.</p>
+    <p class="parrafo">La supresión de las siguientes ZEPA marinas de la RAMPE:</p>
+    <p class="parrafo_2">a) Por inclusión en la ZEPA ES0000554 Corredor migratorio galaico-cantábrico occidental:</p>
+    <table class="tabla">
+      <colgroup>
+        <col width="100%"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="cabeza_tabla">Nombre y código ZEPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cuerpo_tabla_izq">ES0000494 Espacio marino de Cabo Peñas.</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">ES0000495 Espacio marino de Punta de Candelaria-Ría de Ortigueira-Estaca de Bares.</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">ES0000496 Espacio marino de la Costa de Ferrolterra-Valdoviño.</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">ES0000497 Espacio marino de la Costa da Morte.</td>
+        </tr>
+        <tr>
+          <td class="cuerpo_tabla_izq">ES0000499 Espacio marino de las Rías Baixas de Galicia.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="parrafo_2">b) Por inclusión en el nuevo espacio propuesto como LIC y declarado como ZEPA ESZZ12004 Estrecho occidental:</p>
+    <table class="tabla">
+      <colgroup>
+        <col width="100%"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="cabeza_tabla">Nombre y código ZEPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cuerpo_tabla_izq">ES0000502 Espacio marino de la Bahía de Cádiz.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="parrafo_2">Contra la presente resolución podrá interponerse recurso de alzada ante el Secretario de Estado de Medio Ambiente en el plazo de un mes, de acuerdo con lo previsto en los artículos 121 y 122 de la Ley 39/2015, de 1 de octubre.</p>
+    <p class="parrafo_2">Madrid, 13 de enero de 2025.–La Directora General de Biodiversidad, Bosques y Desertificación, María Jesús Rodríguez de Sancho.</p>
+  </texto>
+</documento>

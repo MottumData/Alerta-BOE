@@ -2,12 +2,25 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import PromptTemplate
+from langchain.schema import Document
+from typing import List, Dict
 
 
-def load_documents_from_urls(urls):
+def load_documents_from_urls(
+    urls: List[str]
+) -> Dict[str, str]:
+    
     """
     Carga documentos desde una lista de URLs y devuelve un diccionario con los resúmenes.
+
+    Args:
+        urls (List[str]): Lista de URLs de los documentos a cargar.
+
+    Returns:
+        Dict[str, str]: Diccionario donde la clave es la URL y el valor es el resumen
+                        generado o un mensaje de error si la carga o el resumen fallan.
     """
+
     summaries = {}
     for url in urls:
         try:
@@ -30,9 +43,17 @@ def load_documents_from_urls(urls):
     return summaries
 
 
-def make_summary(document):
+def make_summary(document: Document)-> str:
     """
-    Genera un resumen para un documento dado.
+    Genera un resumen para un único documento Langchain.
+
+    Args:
+        document (Document): Objeto Document de Langchain que contiene 
+                             todo el texto del BOE en su atributo `page_content`.
+
+    Returns:
+        str: Resumen generado según la plantilla definida, o un mensaje de error 
+             si ocurre una excepción durante la generación.
     """
     try:
         # PROMPT_TEMPLATE = """

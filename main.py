@@ -21,14 +21,16 @@ tracker = OfflineEmissionsTracker(
 )
 
 if __name__ == "__main__":
-    # tracker.start()
+    
+    tracker.start()
+
     sumario = get_boe_sumario()
     items_filtrados = filtrar_items(sumario)
     # print("Items filtrados:")
-    # print(items_filtrados)
+    print(items_filtrados)
     list_urls = []
     for name_boe, value in items_filtrados.items():
-        list_urls.append(value['url_pdf']['texto'])
+        list_urls.append(value['url_pdf'])
     
     summaries = load_documents_from_urls(list_urls)
     print("-" * 80)
@@ -37,8 +39,9 @@ if __name__ == "__main__":
             print(summary)
             print("-" * 80)
 
-    # emissions = tracker.stop()
-    # print(f"Emissions: {emissions} kg CO₂eq")
+    emissions = tracker.stop()
+    print(f"Emissions: {emissions} kg CO₂eq")
+
 # TODO:
 # Preparar directorio con 10 BOES (5 biodiversidad y 5 no biodiversidad) pdf y xml (B)
 # Prepara prueba para ejecutar los del directorio y los de URL por fecha.

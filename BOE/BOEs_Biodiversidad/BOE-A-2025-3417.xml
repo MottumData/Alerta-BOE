@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fecha_actualizacion="20250227135601">
+  <metadatos>
+    <identificador>BOE-A-2025-3417</identificador>
+    <origen_legislativo codigo="1">Estatal</origen_legislativo>
+    <departamento codigo="3120">Ministerio de Agricultura, Pesca y Alimentación</departamento>
+    <rango codigo="1340">Real Decreto</rango>
+    <fecha_disposicion>20250211</fecha_disposicion>
+    <numero_oficial>88/2025</numero_oficial>
+    <titulo>Real Decreto 88/2025, de 11 de febrero, por el que se modifican el Real Decreto 814/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de porcino, y el Real Decreto 815/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de vacuno y ovino y al registro y comunicación de los precios de mercado de determinadas categorías de canales y animales vivos.</titulo>
+    <diario codigo="BOE">Boletín Oficial del Estado</diario>
+    <fecha_publicacion>20250221</fecha_publicacion>
+    <diario_numero>45</diario_numero>
+    <seccion>1</seccion>
+    <subseccion/>
+    <pagina_inicial>24034</pagina_inicial>
+    <pagina_final>24041</pagina_final>
+    <suplemento_pagina_inicial/>
+    <suplemento_pagina_final/>
+    <url_pdf>/boe/dias/2025/02/21/pdfs/BOE-A-2025-3417.pdf</url_pdf>
+    <url_epub>/diario_boe/epub.php?id=BOE-A-2025-3417</url_epub>
+    <url_pdf_catalan>/boe_catalan/dias/2025/02/21/pdfs/BOE-A-2025-3417-C.pdf</url_pdf_catalan>
+    <url_pdf_euskera/>
+    <url_pdf_gallego/>
+    <url_pdf_valenciano/>
+    <estatus_legislativo>L</estatus_legislativo>
+    <fecha_vigencia>20250222</fecha_vigencia>
+    <estatus_derogacion>N</estatus_derogacion>
+    <fecha_derogacion/>
+    <judicialmente_anulada>N</judicialmente_anulada>
+    <fecha_anulacion/>
+    <vigencia_agotada>N</vigencia_agotada>
+    <estado_consolidacion codigo="0"/>
+    <letra_imagen>A</letra_imagen>
+    <suplemento_letra_imagen/>
+    <url_eli>https://www.boe.es/eli/es/rd/2025/02/11/88</url_eli>
+  </metadatos>
+  <metadata-eli>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:eli="http://data.europa.eu/eli/ontology#">
+      <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rd/2025/02/11/88">
+        <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+        <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rd"/>
+        <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2025-3417</eli:id_local>
+        <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-11</eli:date_document>
+        <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">88</eli:number>
+        <eli:has_member>
+          <eli:LegalResource rdf:about="https://www.boe.es/eli/es/rd/2025/02/11/88/dof">
+            <eli:jurisdiction rdf:resource="http://www.elidata.es/mdr/authority/jurisdiction/1/es"/>
+            <eli:type_document rdf:resource="http://www.elidata.es/mdr/authority/resource-type/1/rd"/>
+            <eli:id_local rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOE-A-2025-3417</eli:id_local>
+            <eli:date_document rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-11</eli:date_document>
+            <eli:number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">88</eli:number>
+            <eli:version rdf:resource="http://www.elidata.es/mdr/authority/version/dof"/>
+            <eli:is_member_of rdf:resource="https://www.boe.es/eli/es/rd/2025/02/11/88"/>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/spa">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/spa"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Real Decreto 88/2025, de 11 de febrero, por el que se modifican el Real Decreto 814/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de porcino, y el Real Decreto 815/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de vacuno y ovino y al registro y comunicación de los precios de mercado de determinadas categorías de canales y animales vivos.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-21</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rd/2025/02/11/88/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/spa/epub">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/epub+zip"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/spa/html">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/spa/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/spa/xml">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/xml"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/spa"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+            <eli:is_realized_by>
+              <eli:LegalExpression rdf:about="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/cat">
+                <eli:language rdf:resource="http://www.elidata.es/mdr/authority/language/cat"/>
+                <eli:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reial decret 88/2025, d'11 de febrer, pel qual es modifiquen el Reial decret 814/2018, de 6 de juliol, pel qual s'estableixen disposicions d'aplicació relatives a la classificació de les canals de porcí, i el Reial decret 815/2018, de 6 de juliol, pel qual s'estableixen disposicions d'aplicació relatives a la classificació de les canals de boví i oví i al registre i la comunicació dels preus de mercat de determinades categories de canals i animals vius.</eli:title>
+                <eli:publisher_agent rdf:resource="https://www.boe.es"/>
+                <eli:date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-21</eli:date_publication>
+                <eli:realizes rdf:resource="https://www.boe.es/eli/es/rd/2025/02/11/88/dof"/>
+                <eli:is_embodied_by>
+                  <eli:Format rdf:about="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/cat/pdf">
+                    <eli:format rdf:resource="http://www.iana.org/assignments/media-types/application/pdf"/>
+                    <eli:embodies rdf:resource="https://www.boe.es/eli/es/rd/2025/02/11/88/dof/cat"/>
+                  </eli:Format>
+                </eli:is_embodied_by>
+              </eli:LegalExpression>
+            </eli:is_realized_by>
+          </eli:LegalResource>
+        </eli:has_member>
+      </eli:LegalResource>
+    </rdf:RDF>
+  </metadata-eli>
+  <analisis>
+    <materias>
+      <materia codigo="250" orden="1">Aparatos de medida</materia>
+      <materia codigo="621" orden="1">Carnes</materia>
+      <materia codigo="1624" orden="1">Consumidores y usuarios</materia>
+      <materia codigo="3493" orden="1">Etiquetas</materia>
+      <materia codigo="3883" orden="1">Ganado ovino</materia>
+      <materia codigo="3884" orden="1">Ganado porcino</materia>
+      <materia codigo="3885" orden="1">Ganado vacuno</materia>
+      <materia codigo="4290" orden="1">Inspección veterinaria</materia>
+      <materia codigo="4887" orden="1">Mataderos</materia>
+      <materia codigo="5163" orden="1">Normas de calidad</materia>
+      <materia codigo="5709" orden="1">Procedimiento sancionador</materia>
+    </materias>
+    <notas/>
+    <referencias>
+      <anteriores>
+        <anterior referencia="BOE-A-2018-9463" orden="2015">
+          <palabra codigo="270">MODIFICA</palabra>
+          <texto>los arts. 2.d), 4.3, 7, 8.7, 19, 21 y anexos I y VII del Real Decreto 815/2018, de 6 de julio</texto>
+        </anterior>
+        <anterior referencia="BOE-A-2018-9462" orden="2015">
+          <palabra codigo="270">MODIFICA</palabra>
+          <texto>el art. 12 del Real Decreto 814/2018, de 6 de julio</texto>
+        </anterior>
+        <anterior referencia="DOUE-L-2017-81318" orden="3060">
+          <palabra codigo="440">DE CONFORMIDAD con</palabra>
+          <texto>el Reglamento (UE) 2017/1184, de 20 de abril de 2017</texto>
+        </anterior>
+        <anterior referencia="DOUE-L-2017-81316" orden="3060">
+          <palabra codigo="440">DE CONFORMIDAD con</palabra>
+          <texto>el Reglamento (UE) 2017/1182, de 20 de abril de 2017</texto>
+        </anterior>
+        <anterior referencia="DOUE-L-2013-82903" orden="3060">
+          <palabra codigo="440">DE CONFORMIDAD con</palabra>
+          <texto>el Reglamento (UE) 1308/2013, de 17 de diciembre</texto>
+        </anterior>
+      </anteriores>
+      <posteriores/>
+    </referencias>
+    <alertas>
+      <alerta codigo="102" orden="1">Alimentación</alerta>
+      <alerta codigo="105" orden="1">Comercio</alerta>
+      <alerta codigo="106" orden="1">Consumidores y usuarios</alerta>
+      <alerta codigo="109" orden="1">Derecho Administrativo</alerta>
+      <alerta codigo="117" orden="1">Ganadería y animales</alerta>
+    </alertas>
+  </analisis>
+  <texto>
+    <p class="parrafo">El Real Decreto 814/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de porcino, introduce las condiciones específicas en materia de clasificación de canales de porcino en el territorio nacional, además de constituir la Mesa de Coordinación de Clasificación de Canales y Precios, como órgano de asesoramiento y coordinación en materia de clasificación de canales de porcino, vacuno y ovino.</p>
+    <p class="parrafo">Por su parte, el Real Decreto 815/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de vacuno y ovino y al registro y comunicación de los precios de mercado de determinadas categorías de canales y animales vivos, establece las condiciones y disposiciones específicas en materia de clasificación de canales de vacuno y ovino para su aplicación en el Reino de España.</p>
+    <p class="parrafo">Dichos reales decretos ya vieron incorporadas ciertas modificaciones concretas en su contenido a través del Real Decreto 145/2021, de 9 de marzo, por el que se modifican el Real Decreto 814/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de porcino, y el Real Decreto 815/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de vacuno y ovino y al registro y comunicación de los precios de mercado de determinadas categorías de canales y animales vivos.</p>
+    <p class="parrafo">Sin embargo, en el transcurso de la aplicación práctica de esta primera modificación, así como del texto inicial, se han detectado errores menores y ambigüedades puntuales sobre las que resulta necesario realizar las oportunas correcciones o precisiones adicionales, de modo que se permita una mejor comprensión de esta normativa, así como fomentar una interpretación y aplicación homogéneas en todo el territorio nacional, acorde a lo dictado por las pautas comunitarias en lo que respecta a la utilización del modelo de clasificación de canales de la Unión y el registro y comunicación de precios de mercado comparables.</p>
+    <p class="parrafo">El presente real decreto tiene como objetivo aportar mayor claridad y, en consecuencia, seguridad jurídica, en lo que respecta a aspectos técnicos en el Real Decreto 815/2018, de 6 de julio, relacionados con las condiciones en las que se permite retirar grasa externa superficial en las canales de bovino antes de su pesaje, clasificación y marcado, así como con la autorización de los métodos de clasificación automatizada, con la utilización de los medios de identificación, con aspectos relacionados con la actividad inspectora y en materia de presentación en canales bovinas. Además, se han detectado errores en lo que respecta a la información a recoger en las comunicaciones sobre controles de clasificación, por lo que se procede a efectuar las oportunas rectificaciones.</p>
+    <p class="parrafo">Finalmente, tanto en el Real Decreto 815/2018, de 6 de julio, como en el Real Decreto 814/2018, de 6 de julio, procede actualizar las referencias relacionadas con el régimen sancionador aplicable en materia de clasificación, pesaje y marcado de canales, con el fin de evitar cualquier duda al respecto, y dado el carácter restrictivo de la aplicación de la normativa sancionadora.</p>
+    <p class="parrafo">Nótese, a este respecto, la relevancia y prolijidad de la normativa europea en esta materia, que incide directamente en nuestro ordenamiento nacional y en particular en materia de canales, como ocurre con el Reglamento (UE) n.° 1308/2013 del Parlamento Europeo y del Consejo, de 17 de diciembre de 2013, por el que se crea la organización común de mercados de los productos agrarios y por el que se derogan los Reglamentos (CEE) n.° 922/72, (CEE) n.° 234/79, (CE) n.° 1037/2001 y (CE) n.° 1234/2007, a su vez desarrollado en la materia específica que nos ocupa, por el Reglamento Delegado (UE) n.º 2017/1182 de la Comisión, de 20 de abril de 2017, por el que se completa el Reglamento (UE) n.º 1308/2013 del Parlamento Europeo y del Consejo en lo que atañe a los modelos de la Unión de clasificación de las canales de vacuno, porcino y ovino y a la comunicación de los precios de mercado de determinadas categorías de canales y animales vivos, y el Reglamento de Ejecución (UE) n.º 2017/1184 de la Comisión, de 20 de abril de 2017, por el que se establecen disposiciones de aplicación del Reglamento (UE) n.º 1308/2013 del Parlamento Europeo y del Consejo en lo que atañe a los modelos de la Unión de clasificación de canales de vacuno, porcino y ovino y a la comunicación de los precios de mercado de determinadas categorías de canales y animales vivos.</p>
+    <p class="parrafo">Dado el marcado carácter técnico de esta norma, de acuerdo con la doctrina del Tribunal Constitucional sobre la legislación básica, se considera apropiada su adopción mediante real decreto, que se dicta, como los dos que ahora se modifican, al amparo de lo dispuesto en el artículo 149.1.13.ª de la Constitución, que atribuye al Estado la competencia exclusiva en materia de bases y coordinación de la planificación general de la actividad económica.</p>
+    <p class="parrafo">En la tramitación de este real decreto se ha consultado a las comunidades autónomas y entidades representativas de los sectores afectados y se han recabado los informes correspondientes.</p>
+    <p class="parrafo">Asimismo, en cumplimiento de lo previsto en la Ley 50/1997, de 27 de noviembre, del Gobierno, el proyecto de real decreto ha sido sometido al procedimiento de audiencia e información pública y se adecua a los principios de buena regulación a que se refiere el artículo 129 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. En concreto, cumple con los principios de necesidad y eficacia, pues se trata del instrumento más adecuado para garantizar que la normativa europea se aplica de un modo homogéneo en todo el territorio nacional, lo que garantiza el interés general. También se adecua al principio de proporcionalidad, pues no existe otra alternativa menos restrictiva de derechos o que imponga menos obligaciones a los destinatarios. En cuanto a los principios de seguridad jurídica, transparencia y eficiencia, dicha norma se adecua a los mismos pues es coherente con el resto del ordenamiento jurídico, y se ha procurado la participación de las partes interesadas, evitando cargas administrativas innecesarias o accesorias.</p>
+    <p class="parrafo">En su virtud, a propuesta del Ministro de Agricultura, Pesca y Alimentación, con la aprobación previa del Ministro para la Transformación Digital y de la Función Pública, de acuerdo con el Consejo de Estado, y previa deliberación del Consejo de Ministros en su reunión del día 11 de febrero de 2025,</p>
+    <p class="centro_redonda">DISPONGO:</p>
+    <p class="articulo"><strong>Artículo primero.</strong> Modificación del Real Decreto 814/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de porcino.</p>
+    <p class="parrafo">El artículo 12 del Real Decreto 814/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de porcino, queda redactado como sigue:</p>
+    <blockquote class="sangrado">
+      <p class="articulo">«Artículo 12. Régimen sancionador en materia de clasificación, pesaje y marcado de canales.</p>
+      <p class="parrafo">El régimen de infracciones y sanciones será el establecido en el Real Decreto 1945/1983, de 22 de junio, por el que se regulan las infracciones y sanciones en materia de defensa del consumidor y de la producción agroalimentaria, en el artículo 47.g) del texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios y otras leyes complementarias, aprobado por Real Decreto Legislativo 1/2007, de 16 de noviembre, así como en la disposición adicional primera de la Ley 28/2015, de 30 de julio, para la defensa de la calidad alimentaria, en cuanto a la cuantía de las sanciones y las sanciones accesorias, salvo en las comunidades autónomas que dispongan de régimen sancionador específico, en las que se aplicará dicho régimen.»</p>
+    </blockquote>
+    <p class="articulo"><strong>Artículo segundo.</strong> Modificación del Real Decreto 815/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de vacuno y ovino y al registro y comunicación de los precios de mercado de determinadas categorías de canales y animales vivos.</p>
+    <p class="parrafo">El Real Decreto 815/2018, de 6 de julio, por el que se establecen disposiciones de aplicación relativas a la clasificación de las canales de vacuno y ovino y al registro y comunicación de los precios de mercado de determinadas categorías de canales y animales vivos, se modifica como sigue:</p>
+    <p class="parrafo_2">Uno. El apartado d) del artículo 2, queda redactado como sigue:</p>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«d) Pulido: recorte parcial de grasa externa superficial antes de las operaciones de pesaje, clasificación y marcado en determinadas canales que reúnen características específicas detalladas en este real decreto, a fin de facilitar un juicio más objetivo de su conformación y sin influir en su grado de engrasamiento. Este recorte deberá efectuarse de acuerdo a lo establecido en el artículo 6.4 del Reglamento Delegado (UE) 2017/1182 de la Comisión, de 20 de abril de 2017 por el que se completa el Reglamento (UE) n.º 1308/2013 del Parlamento Europeo y del Consejo en lo que atañe a los modelos de la Unión de clasificación de las canales de vacuno, porcino y ovino y a la comunicación de los precios de mercado de determinadas categorías de canales y animales vivos, en adelante Reglamento Delegado, el cual ciñe este recorte parcial exclusivamente a estos puntos:</p>
+      <p class="parrafo_2">i) a la altura del anca, del lomo, y de la parte media del costillar;</p>
+      <p class="parrafo">ii) a la altura de la parte anterior del pecho y en los alrededores de la región ano-genital;</p>
+      <p class="parrafo">iii) a la altura de la cara interna de la pierna.»</p>
+    </blockquote>
+    <p class="parrafo_2">Dos. El apartado 3 del artículo 4, queda redactado como sigue:</p>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«3. El pulido solo se realizará en los casos en que las canales reúnan el conjunto de características de faenado de una presentación tipo II cuyo grado de engrasamiento sea 3 o superior, exclusivamente en los puntos de localización definidos en el Reglamento Delegado.»</p>
+    </blockquote>
+    <p class="parrafo_2">Tres. Los apartados 2 y 7 del artículo 7 quedan redactados como sigue:</p>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«2. El marcado de las menciones obligatorias derivadas de la aplicación del modelo de la Unión de clasificación de canales estará situado como mínimo en cada cuarto de las canales de vacuno y en cada canal o media canal de ovino.»</p>
+    </blockquote>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«7. El marcado de las canales no será de aplicación en los casos en que todas las canales se troceen, como una operación continua, en una sala de despiece adjunta al matadero y autorizada de conformidad con el Reglamento (CE) n.º 853/2004 del Parlamento Europeo y del Consejo, de 29 de abril de 2004, por el que se establecen normas específicas de higiene de los alimentos de origen animal.»</p>
+    </blockquote>
+    <p class="parrafo_2">Cuatro. El apartado 7 del artículo 8, queda redactado como sigue:</p>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«7. Los establecimientos que empleen dispositivos de clasificación automatizada deberán realizar informes de control diarios sobre el funcionamiento de las técnicas de clasificación automatizada, registrando, en particular, las deficiencias observadas y las medidas que, en caso necesario, se hayan adoptado.</p>
+      <p class="parrafo">El Ministerio de Agricultura, Pesca y Alimentación podrá declarar caducada la autorización a la que se refiere al apartado 3 si de los informes de control del matadero o de autoridades competentes de las comunidades autónomas se desprende un desuso prolongado en el tiempo, de modo que no pueda continuar empleándose, previo informe de la Mesa de Coordinación de Clasificación de Canales y Precios.</p>
+      <p class="parrafo">El Ministerio de Agricultura, Pesca y Alimentación podrá revocar la autorización a la que se refiere al apartado 3 si de los informes de control del matadero o de autoridades competentes de las comunidades autónomas se desprende un uso incoherente con las condiciones bajo las que fue concedida la autorización, de modo que no pueda continuar empleándose, previo informe de la Mesa de Coordinación de Clasificación de Canales y Precios y previa audiencia del titular.»</p>
+    </blockquote>
+    <p class="parrafo_2">Cinco. Los apartados 5, 8 y 11 del artículo 19, quedan redactados como sigue:</p>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«5. Sin perjuicio de las competencias que tengan reservadas los organismos oficiales encargados del control metrológico en aplicación del Real Decreto 244/2016, de 3 de junio, por el que se desarrolla la Ley 32/2014, de 22 de diciembre, de Metrología, los encargados del control de clasificación de canales realizarán los siguientes controles:</p>
+      <p class="parrafo_2">a) Verificación de la pesada realizada en el establecimiento en comparación con los datos recogidos en el registro informático, la etiqueta de la canal y la comunicación al proveedor de los animales o a la persona que ordenó su sacrificio.</p>
+      <p class="parrafo">b) Comprobación de la vigencia de la verificación periódica o después de la reparación de las básculas.»</p>
+    </blockquote>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«8. Los controles tendrán una frecuencia de al menos dos veces por trimestre en los establecimientos que sacrifiquen y clasifiquen 150 animales o más de la especie bovina de ocho meses o más semanalmente como media anual. Cada control se efectuará sobre un mínimo de 40 canales escogidas al azar, o sobre todas las canales si el número disponible en ese momento es inferior a 40.»</p>
+    </blockquote>
+    <blockquote class="sangrado">
+      <p class="parrafo_2">«11. Los informes de control deberán firmarse el día en que se extiendan por el funcionario actuante y por una persona del matadero encargada de la función de control, debiendo conservarse durante al menos tres años desde el día de su firma, preferiblemente digitalizados y en un archivo electrónico.»</p>
+    </blockquote>
+    <p class="parrafo_2">Seis. El artículo 21, queda redactado como sigue:</p>
+    <blockquote class="sangrado">
+      <p class="articulo">«Artículo 21. Régimen sancionador en materia de clasificación, pesaje y marcado de canales.</p>
+      <p class="parrafo">El régimen de infracciones y sanciones será el establecido en el Real Decreto 1945/1983, de 22 de junio, por el que se regulan las infracciones y sanciones en materia de defensa del consumidor y de la producción agroalimentaria, y en el artículo 47.g) del texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios, aprobado por Real Decreto Legislativo 1/2007, de 16 de noviembre, así como en la disposición adicional primera de la Ley 28/2015, de 30 de julio, para la defensa de la calidad alimentaria, en cuanto a la cuantía de las sanciones y las sanciones accesorias, salvo en las comunidades autónomas que dispongan de régimen sancionador específico, en las que se aplicará dicho régimen.»</p>
+    </blockquote>
+    <p class="parrafo_2">Siete. El anexo I, queda redactado como sigue:</p>
+    <blockquote class="sangrado">
+      <p class="anexo_num">«ANEXO I</p>
+      <p class="anexo_tit">Presentaciones autorizadas en canales de bovinos</p>
+      <p class="centro_cursiva">Canales de bovinos de ocho meses o más</p>
+      <p class="centro_redonda">1. Canal de referencia o tipo I</p>
+      <p class="parrafo_2">Aquella que cumpla con los requisitos recogidos en el anexo IV, parte A.IV, del Reglamento (UE) n.º 1308/2013, de 17 de diciembre de 2013, y en el artículo 6 del Reglamento Delegado.</p>
+      <p class="centro_redonda">2. Canal tipo II</p>
+      <p class="parrafo_2">a) Subtipo II A:</p>
+      <p class="parrafo_2">Tomando como base la canal tipo I, este subtipo incluye el rabo, entraña fina y entraña gruesa, y se realiza el pulido en canales con un grado de engrasamiento de 3 o superior, conforme al artículo 6.4 del Reglamento Delegado y a lo definido en los artículos 2 y 4 del presente real decreto.</p>
+      <p class="parrafo">Se incluyen los coeficientes de corrección, como porcentaje del peso de la canal que debe añadirse o restarse, con arreglo al anexo del Reglamento de Ejecución (UE) n.º 2017/1184 de la Comisión, de 20 de abril de 2017.</p>
+      <table class="tabla" data-omitir-repetir-tfoot="true">
+        <colgroup>
+          <col width="48%"/>
+          <col width="13%"/>
+          <col width="13%"/>
+          <col width="13%"/>
+          <col width="13%"/>
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="cabeza_tabla" rowspan="2">Categorías Z, A, B, C, D y E</th>
+            <th class="cabeza_tabla" colspan="4">Grado de engrasamiento</th>
+          </tr>
+          <tr>
+            <th class="cabeza_tabla">Grado 2</th>
+            <th class="cabeza_tabla">Grado 3</th>
+            <th class="cabeza_tabla">Grado 4</th>
+            <th class="cabeza_tabla">Grado 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuerpo_tabla_izq">Rabo.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Entraña fina.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Entraña gruesa.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Pulido (Recorte parcial grasa superficial).</td>
+            <td class="cuerpo_tabla_coma">0</td>
+            <td class="cuerpo_tabla_coma">+2</td>
+            <td class="cuerpo_tabla_coma">+3</td>
+            <td class="cuerpo_tabla_coma">+4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Coeficiente de corrección aplicable.</td>
+            <td class="cuerpo_tabla_coma">–1.2</td>
+            <td class="cuerpo_tabla_coma">+0.8</td>
+            <td class="cuerpo_tabla_coma">+1.8</td>
+            <td class="cuerpo_tabla_coma">+2.8</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="parrafo_2">b) Subtipo II B:</p>
+      <p class="parrafo_2">Tomando como base la canal tipo I, este subtipo incluye el rabo y entraña fina, y se realiza el pulido en canales con un grado de engrasamiento de 3 o superior, conforme al artículo 6.4 del Reglamento Delegado y a lo definido en los artículos 2 y 4 del presente real decreto.</p>
+      <p class="parrafo">Se incluyen los coeficientes de corrección, como porcentaje del peso de la canal que debe añadirse o restarse, con arreglo al anexo del Reglamento de Ejecución (UE) n.º 2017/1184 de la Comisión, de 20 de abril de 2017.</p>
+      <table class="tabla" data-omitir-repetir-tfoot="true">
+        <colgroup>
+          <col width="48%"/>
+          <col width="13%"/>
+          <col width="13%"/>
+          <col width="13%"/>
+          <col width="13%"/>
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="cabeza_tabla" rowspan="2">Categorías Z, A, B, C, D y E</th>
+            <th class="cabeza_tabla" colspan="4">Grado de engrasamiento</th>
+          </tr>
+          <tr>
+            <th class="cabeza_tabla">Grado 2</th>
+            <th class="cabeza_tabla">Grado 3</th>
+            <th class="cabeza_tabla">Grado 4</th>
+            <th class="cabeza_tabla">Grado 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuerpo_tabla_izq">Rabo.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Entraña fina.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Pulido (Recorte parcial grasa superficial).</td>
+            <td class="cuerpo_tabla_coma">0</td>
+            <td class="cuerpo_tabla_coma">+2</td>
+            <td class="cuerpo_tabla_coma">+3</td>
+            <td class="cuerpo_tabla_coma">+4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Coeficiente de corrección aplicable.</td>
+            <td class="cuerpo_tabla_coma">–0.8</td>
+            <td class="cuerpo_tabla_coma">+1.2</td>
+            <td class="cuerpo_tabla_coma">+2.2</td>
+            <td class="cuerpo_tabla_coma">+3.2</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="parrafo_2">3. Canal tipo III.</p>
+      <p class="parrafo_2">Este tipo comprende las canales en las que no se efectúa el pulido y que, además, con respecto a la canal tipo I, incluyen el rabo, riñón, grasa de riñonada, entraña fina, entraña gruesa y los testículos en machos de categorías Z, A y B.</p>
+      <p class="parrafo">Se dividen en dos subtipos, de una parte las canales procedentes de machos de categorías Z, A y B (incluyen testículos) y de otra parte las procedentes de hembras de categorías Z, D y E y machos categoría C.</p>
+      <p class="parrafo">Se incluyen los coeficientes de corrección para cada subtipo, como porcentaje del peso de la canal que debe añadirse o restarse, con arreglo al anexo del Reglamento de Ejecución (UE) n.º 2017/1184 de la Comisión, de 20 de abril de 2017.</p>
+      <p class="parrafo_2">a) Subtipo III A: machos categorías Z, A y B.</p>
+      <table class="tabla">
+        <colgroup>
+          <col/>
+          <col width="15%"/>
+          <col width="15%"/>
+          <col width="15%"/>
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="cabeza_tabla" rowspan="2">Categorías Z, A, B</th>
+            <th class="cabeza_tabla" colspan="3">Grado de engrasamiento</th>
+          </tr>
+          <tr>
+            <th class="cabeza_tabla">Grado 2.º</th>
+            <th class="cabeza_tabla">Grado 3</th>
+            <th class="cabeza_tabla">Grado 4 y 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuerpo_tabla_izq">Rabo.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Riñón.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Grasa de riñonada.</td>
+            <td class="cuerpo_tabla_coma">–1.75</td>
+            <td class="cuerpo_tabla_coma">–2.5</td>
+            <td class="cuerpo_tabla_coma">–3.5</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Entraña fina.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Entraña gruesa.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Testículos.</td>
+            <td class="cuerpo_tabla_coma">–0.3</td>
+            <td class="cuerpo_tabla_coma">–0.3</td>
+            <td class="cuerpo_tabla_coma">–0.3</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Coeficiente de corrección aplicable.</td>
+            <td class="cuerpo_tabla_coma">–3.65</td>
+            <td class="cuerpo_tabla_coma">–4.40</td>
+            <td class="cuerpo_tabla_coma">–5.40</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="parrafo_2">b) Subtipo III B: hembras categorías Z, D, E y machos categoría C.</p>
+      <table class="tabla">
+        <colgroup>
+          <col/>
+          <col width="15%"/>
+          <col width="15%"/>
+          <col width="15%"/>
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="cabeza_tabla">Categorías:</th>
+            <th class="cabeza_tabla" colspan="3">Grado de engrasamiento</th>
+          </tr>
+          <tr>
+            <th class="cabeza_tabla">Z, D, E y C</th>
+            <th class="cabeza_tabla">Grado 2</th>
+            <th class="cabeza_tabla">Grado 3</th>
+            <th class="cabeza_tabla">Grados 4 y 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuerpo_tabla_izq">Rabo.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Riñón.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Grasa de riñonada.</td>
+            <td class="cuerpo_tabla_coma">–1.75</td>
+            <td class="cuerpo_tabla_coma">–2.5</td>
+            <td class="cuerpo_tabla_coma">–3.5</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Entraña fina.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Entraña gruesa.</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+            <td class="cuerpo_tabla_coma">–0.4</td>
+          </tr>
+          <tr>
+            <td class="cuerpo_tabla_izq">Coeficiente de corrección aplicable.</td>
+            <td class="cuerpo_tabla_coma">–3.35</td>
+            <td class="cuerpo_tabla_coma">–4.10</td>
+            <td class="cuerpo_tabla_coma">–5.10</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="centro_cursiva">Canales de bovinos de menos de ocho meses</p>
+      <p class="centro_redonda">1. Canal tipo I</p>
+      <p class="parrafo_2">Aquella presentada de conformidad con lo dispuesto en el anexo IV, parte A.IV, del Reglamento (UE) n.º 1308/2013, de 17 de diciembre de 2013, y en el artículo 6 del Reglamento Delegado, presentándose sin riñones, grasa de riñonada, grasa pélvica, entraña fina, entraña gruesa, rabo, médula espinal, grasa de los testículos, grasa de la cara interna de la pierna, vena yugular y grasa adyacente.</p>
+      <p class="centro_redonda">2. Canal tipo II</p>
+      <p class="parrafo_2">a) Subtipo II A:</p>
+      <p class="parrafo_2">Tomando como base la canal tipo I, este subtipo incluye el rabo, entraña fina y entraña gruesa, y se realiza el pulido en canales con un grado de engrasamiento de 3 o superior, conforme al artículo 6.4 del Reglamento Delegado y a lo definido en los artículos 2 y 4 del presente real decreto.</p>
+      <p class="parrafo_2">b) Subtipo II B:</p>
+      <p class="parrafo_2">Tomando como base la canal tipo I, este subtipo incluye el rabo y la entraña fina, y se realiza el pulido en canales con un grado de engrasamiento de 3 o superior, conforme al artículo 6.4 del Reglamento Delegado y a lo definido en los artículos 2 y 4 del presente real decreto.</p>
+      <p class="centro_redonda">3. Canal tipo III</p>
+      <p class="parrafo_2">Este tipo comprende las canales en las que no se efectúa el pulido y que, además, con respecto a la canal tipo I, incluyen el rabo, el riñón, la grasa de riñonada, entraña fina, entraña gruesa, y los testículos en el caso de los machos.»</p>
+    </blockquote>
+    <p class="parrafo_2">Ocho. El anexo VII, queda redactado como sigue:</p>
+    <blockquote class="sangrado">
+      <p class="anexo_num">«ANEXO VII</p>
+      <p class="anexo_tit">Informe sobre los controles en clasificación a efectos de cumplir con las obligaciones de comunicación a la Comisión Europea</p>
+      <p class="parrafo_2">1. El número total de mataderos autorizados, indicando si realizan clasificación de acuerdo al modelo de la Unión de manera obligatoria o de manera voluntaria. En el caso del bovino, para aquellos mataderos que realizan clasificación obligatoria indicar el número de aquellos que sacrifiquen 150 animales o más de la especie bovina de ocho meses o más semanalmente como media anual y el número de los que sacrifiquen menos de 150 bovinos de ocho meses o más a la semana como media anual. Además habrá que especificar si en los mataderos la clasificación se realiza con clasificador o es mediante clasificación automática, y si para la ponderación del estado de engrasamiento emplean clases o subclases.</p>
+      <p class="parrafo">2. El número total de cabezas de vacuno de ocho meses o más clasificadas.</p>
+      <p class="parrafo">3. Número de inspectores que realicen controles en materia de clasificación de canales.</p>
+      <p class="parrafo">4. Número de visitas de control de clasificación realizadas a los mataderos. En el caso de mataderos de bovino que realizan clasificación obligatoria, indicar el número de las realizadas en mataderos que sacrifiquen 150 animales o más de la especie bovina de ocho meses o más a la semana como media anual y las realizadas a mataderos que sacrifiquen menos de 150 bovinos de ocho meses o más a la semana como media anual.</p>
+      <p class="parrafo">5. Listado de clasificadores autorizados desempeñando actividad en el ámbito territorial autonómico, indicando estado de situación, fecha de autorización y fecha de última renovación.</p>
+      <p class="parrafo">6. Número de máquinas de clasificación objeto de control, indicando su estado de funcionamiento desglosando entre activo o inactivo.</p>
+      <p class="parrafo">7. Número total de canales controladas en las visitas de control, especificando en el caso del bovino el número de canales que ha sido controlado en mataderos clasificadores que sacrifiquen 150 animales o más de la especie bovina de ocho meses o más a la semana como media anual. Para el total de canales controladas en las visitas de control se indicará:</p>
+      <p class="parrafo_2">a) El número de canales controladas en las que la categoría era incorrecta.</p>
+      <p class="parrafo">b) El número de canales controladas en las que la conformación era incorrecta.</p>
+      <p class="parrafo">c) El número de canales controladas en las que el engrasamiento era incorrecto.</p>
+      <p class="parrafo">d) El número de canales controladas incorrectamente identificadas/marcadas.</p>
+      <p class="parrafo">e) El número de canales controladas incorrectamente presentadas.</p>
+      <p class="parrafo_2">8. En caso de aplicar método de clasificación automática, precisión de la actividad de la máquina de clasificación en cuanto a conformación y estado de engrasamiento.</p>
+      <p class="parrafo">9. Total de producción anual en cabezas y en toneladas acumulado por los sujetos que participen en el registro y comunicación de precios de mercado en su ámbito territorial autonómico.</p>
+      <p class="parrafo">10. Cualquier otra información que se solicite por parte de la Comisión Europea o el Ministerio de Agricultura, Pesca y Alimentación referente a la clasificación de canales con el modelo de la Unión para vacuno y ovino.»</p>
+    </blockquote>
+    <p class="articulo"><strong>Disposición final única.</strong> Entrada en vigor.</p>
+    <p class="parrafo">El presente real decreto entrará en vigor el día siguiente al de su publicación en el «Boletín Oficial del Estado».</p>
+    <p class="parrafo_2">Dado en Madrid, el 11 de febrero de 2025.</p>
+    <p class="firma_rey">FELIPE R.</p>
+    <p class="firma_ministro">El Ministro de Agricultura, Pesca y Alimentación,</p>
+    <p class="firma_ministro">LUIS PLANAS PUCHADES</p>
+  </texto>
+</documento>

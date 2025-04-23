@@ -6,14 +6,15 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 from dotenv import load_dotenv
+import json
 
 def send_boe_notification_email(
     receivers: List[str],
     attachment_paths: List[str],
     sender_email: str,
     password: str,
+    body: str,
     subject: str = "Notificación diaria: BOEs de biodiversidad",
-    body: str = "Nuevo día, nuevo BOE biodiversidad en lo alto. Muchos dicen que la gente que consume el BOE diariamente incrementa sus posibilidades de convertirse en un gran político. El BOE te ayuda a tí y nos ayuda a todos =)",
     smtp_server: str = "smtp.gmail.com",
     smtp_port: int = 587
 ) -> None:
@@ -65,7 +66,13 @@ if __name__ == "__main__":
 
     load_dotenv()
 
-    mi_lista = ["belv221@gmail.com", "aoaeso2@gmail.com"]
+    json_path = os.path.join(os.path.dirname(__file__), "destinatarios.json")
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        receivers: List[str] = data.get("receivers", [])
+        if not receivers:
+            raise ValueError(f"No se encontraron destinatarios en {json_path}")
+        
     mis_adjuntos = [
         "./BOE/BOE-A-2025-1299.pdf",
         "./BOE/BOE-A-2025-4822.pdf"
@@ -74,8 +81,11 @@ if __name__ == "__main__":
     remitente = os.getenv("SMTP_USER")
     clave = os.getenv("SMTP_PASS")
 
+    body = "Un BOE diario al año nunca hace daño ;)"
+
     send_boe_notification_email(
-        receivers=mi_lista,
+        receivers=receivers,
+        body = body,
         attachment_paths=mis_adjuntos,
         sender_email=remitente,
         password=clave
