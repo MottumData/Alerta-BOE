@@ -4,11 +4,6 @@ from pathlib import Path
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_ollama.llms import OllamaLLM
-
-from internal.prompt_utils import load_single_pdf
-from internal.prompt_utils import load_prompt
-
-from langchain_core.output_parsers.pydantic import PydanticOutputParser
 from internal.boe_utils import get_boe_sumario, filtrar_items
 
 
