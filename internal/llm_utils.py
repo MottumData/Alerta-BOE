@@ -1,11 +1,16 @@
+import os
 import logging
+from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from tqdm import tqdm
 
+load_dotenv()
+
 logger = logging.getLogger("mottum")
+
 
 def classify_boe(items):
 
@@ -57,7 +62,7 @@ def classify_boe(items):
     # 4. Inicializa tu LLM de Ollama
     llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct:latest",
                     temperature=0.0,
-                    base_url="http://192.168.1.134:11434")
+                    base_url=os.getenv("BASE_URL"))
 
     # 5. Monta un LLMChain que use el prompt anterior
     chain = prompt | llm | parser
@@ -65,6 +70,7 @@ def classify_boe(items):
     result = chain.invoke({"text": items})
 
     return result
+
 
 def generate_summaries_from_documents(pdf_sources):
     """
@@ -99,6 +105,7 @@ def generate_summaries_from_documents(pdf_sources):
 def make_summary(document):
     """
     Genera un resumen para un documento dado.
+    # TODO - Documentar
     """
     try:
         # PROMPT_TEMPLATE = """
@@ -141,7 +148,7 @@ def make_summary(document):
         - En dos o tres frases, describe la esencia de la disposición y su relevancia.
 
         Instrucciones del formato de salida:  
-        - Usa viñetas para cada punto.  
+        - Todo en un párrafo, sin saltos de línea.
         - Máximo 150 palabras totales.  
         - No añadas información que no esté en el texto proporcionado.
         ---  
