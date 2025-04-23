@@ -1,6 +1,18 @@
+import os
+import logging
 from codecarbon import OfflineEmissionsTracker
-from internal.rag_utils import *
+import time
+from internal.llm_utils import *
 from internal.boe_utils import *
+import json
+
+
+log_format = '[%(name)s %(levelname)s @ %(asctime)s]   %(message)s'
+date_format = '%H:%M:%S'
+logging.basicConfig(level=logging.INFO, format=log_format, datefmt=date_format)
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logger = logging.getLogger("mottum")
+
 # Configuracion CodeCarbon
 pue = 1.12
 country_iso_code = "ESP"
@@ -21,32 +33,41 @@ tracker = OfflineEmissionsTracker(
 )
 
 if __name__ == "__main__":
-    
     tracker.start()
+    logger.info("Iniciando el script...")
+    start_time = time.time()
 
-    sumario = get_boe_sumario()
-    items_filtrados = filtrar_items(sumario)
-    # print("Items filtrados:")
-    print(items_filtrados)
-    list_urls = []
-    for name_boe, value in items_filtrados.items():
-        list_urls.append(value['url_pdf'])
     
-    summaries = load_documents_from_urls(list_urls)
-    print("-" * 80)
-    for url, summary in summaries.items():
-            print(f"Resumen para {url}:")
-            print(summary)
-            print("-" * 80)
+    # Descomentar para ejecutar desde la API
+    sumario = get_boe_sumario(fecha="20250422")
+    # clasificacion = classify_boe(sumario)
+    # print(clasificacion)
+    boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
+
+    # Descomentar para ejecutar desde el directorio
+    # boe_files = os.listdir("BOE")
+    # boe_paths = [os.path.join("BOE", f) for f in boe_files]
+
+    summaries = generate_summaries_from_documents(boe_paths)
+
+    # Save summaries to a JSON file
+    output_json_file = "summaries.json"
+    try:
+        with open(output_json_file, 'w', encoding='utf-8') as f:
+            json.dump(summaries, f, ensure_ascii=False, indent=4)
+        logger.info(f"Summaries saved to {output_json_file}")
+    except Exception as e:
+        logger.error(f"Error saving summaries to JSON: {e}")
 
     emissions = tracker.stop()
-    print(f"Emissions: {emissions} kg CO₂eq")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
 
+    logger.info("Emissions: %s kg CO₂eq", emissions)
+    logger.info("Tiempo de ejecución: %.2f segundos", elapsed_time)
 # TODO:
 # Preparar directorio con 10 BOES (5 biodiversidad y 5 no biodiversidad) pdf y xml (B)
-# Prepara prueba para ejecutar los del directorio y los de URL por fecha.
 # Documentar el código (B)
-# Logs (A)
 # Limpieza de código innecesario (A, B)
 # requirements.txt (B)
 # dockerfile (A)
