@@ -1,6 +1,9 @@
 import requests
+from typing import Union, Dict, Any
 from datetime import date
-from typing import Union, Dict, Any, List
+from langchain_core.output_parsers import JsonOutputParser
+from langchain_ollama.llms import OllamaLLM
+from langchain_core.prompts import PromptTemplate
 
 BASE_URL = "https://www.boe.es/datosabiertos/api"
 
@@ -29,6 +32,7 @@ def ensure_list(x: Any) -> List[Any]:
     if isinstance(x, list):
         return x
     return [x]
+
 
 def get_boe_sumario(fecha: Union[str, date] = None, formato: str = "json") -> Dict[str, Any]:
     """
@@ -119,11 +123,67 @@ def filtrar_items(sumario: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
                     for item in ensure_list(epig.get("item")):
                         _procesar_item(resultados, dept_name, epig_name, item)
 
-                # 2) Procesa los ítems que estén “a pie” del departamento
-                for item in ensure_list(dept.get("item")):
-                    _procesar_item(resultados, dept_name, None, item)
+def classify_items(items):
 
-    return resultados
+    template = """
+        Eres un clasificador automático de disposiciones del BOE.  
+        Recibirás un diccionario en JSON, donde cada clave es el identificador de un BOE y su valor es 
+        un objeto con metadatos, por ejemplo:
+
+        {{
+        "BOE-A-2025-8144": {{
+            "departamento": "...",
+            "epigrafe": "...",
+            "identificador": "BOE-A-2025-8144",
+            "titulo": "...",
+            "url_pdf": {{ ... }}
+        }},
+        // más entradas
+        }}
+
+        Tu tarea es, **solo** basándote en los campos `titulo` y `epigrafe`, decidir para cada BOE si 
+        está relacionado con biodiversidad (o temas muy afines: conservación, especies protegidas, 
+        espacios naturales, Red Natura 2000, ecosistema, fauna, flora, hábitat, conservación, especies 
+        protegidas, restauración ecológica, parques naturales, sostenibilidad ambiental, etc...).  
+        
+        - Si lo está, devuelve `true`. En caso de que tengas dudas, también devuelve `true`. 
+        - Si no, devuelve `false`.  
+
+        **Formato de salida**: únicamente una lista o array JSON de objetos, cada uno con la forma:
+        ```json
+        [
+        {{"BOE-A-2025-8144": true}},
+        {{"BOE-A-2025-8145": false}},
+        ...
+        ]
+        ```
+
+    Aquí tiene la entrada (json):
+
+    {text}
+    
+    """
+
+    # system_prompt = load_prompt(prompt_name="ricce_prompt_para_resumen_de_pdf")
+
+    prompt = PromptTemplate(
+        input_variables=["text"],
+        template=template
+    )
+
+    parser = JsonOutputParser()
+    # 4. Inicializa tu LLM de Ollama
+    llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct:latest",
+                    temperature=0.0, 
+                    base_url="http://192.168.1.134:11434")
+
+    # 5. Monta un LLMChain que use el prompt anterior
+    chain = prompt | llm | parser
+
+    result = chain.invoke({"text": items})
+
+    return result
+
 
 if __name__ == "__main__":
     # Obtengo el sumario del BOE de hoy

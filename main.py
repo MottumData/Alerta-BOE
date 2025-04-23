@@ -1,5 +1,6 @@
 from codecarbon import OfflineEmissionsTracker
-import time
+from internal.rag_utils import *
+from internal.boe_utils import *
 # Configuracion CodeCarbon
 pue = 1.12
 country_iso_code = "ESP"
@@ -16,12 +17,38 @@ tracker = OfflineEmissionsTracker(
     cloud_region=cloud_region,
     country_2letter_iso_code=country_2letter_iso_code,
     pue=pue,
-    output_file=emission_output_file,
-    default_cpu_power=35
+    output_file=emission_output_file
 )
 
 if __name__ == "__main__":
-    tracker.start()
-    time.sleep(5)
-    emissions = tracker.stop()
-    print(f"Emissions: {emissions} kg CO₂eq")
+    # tracker.start()
+    sumario = get_boe_sumario()
+    items_filtrados = filtrar_items(sumario)
+    # print("Items filtrados:")
+    # print(items_filtrados)
+    list_urls = []
+    for name_boe, value in items_filtrados.items():
+        list_urls.append(value['url_pdf']['texto'])
+    
+    summaries = load_documents_from_urls(list_urls)
+    print("-" * 80)
+    for url, summary in summaries.items():
+            print(f"Resumen para {url}:")
+            print(summary)
+            print("-" * 80)
+
+    # emissions = tracker.stop()
+    # print(f"Emissions: {emissions} kg CO₂eq")
+# TODO:
+# Preparar directorio con 10 BOES (5 biodiversidad y 5 no biodiversidad) pdf y xml (B)
+# Prepara prueba para ejecutar los del directorio y los de URL por fecha.
+# Documentar el código (B)
+# Logs (A)
+# Limpieza de código innecesario (A, B)
+# requirements.txt (B)
+# dockerfile (A)
+# Ejecucion Codecarbon  (B)
+# README (A)
+# .env (B)
+# Contemplar casos de errores. (No hay BOE ese dia, no hay temática ese dia, se publican mas tarde,...) (A,B)
+# prompting para enfocar mejor la notificación. (A)
