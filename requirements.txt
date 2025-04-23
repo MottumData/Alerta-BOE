@@ -1,0 +1,11 @@
+python-dotenv~=1.1.0
+ollama~=0.4.7
+requests~=2.32.3
+fastapi~=0.115.12
+orjson~=3.10.16
+langchain~=0.3.23
+langchain-community~=0.3.21
+langchain-core~=0.3.52
+langchain-ollama~=0.3.1
+langchain-text-splitters~=0.3.8
+langsmith~=0.3.31

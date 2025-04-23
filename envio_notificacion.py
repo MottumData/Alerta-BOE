@@ -5,6 +5,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
+from dotenv import load_dotenv
 
 def send_boe_notification_email(
     receivers: List[str],
@@ -61,14 +62,17 @@ def send_boe_notification_email(
         print(f"Correo enviado a: {', '.join(receivers)}")
 
 if __name__ == "__main__":
+
+    load_dotenv()
+
     mi_lista = ["belv221@gmail.com", "aoaeso2@gmail.com"]
     mis_adjuntos = [
         "./BOE/BOE-A-2025-1299.pdf",
         "./BOE/BOE-A-2025-4822.pdf"
     ]
 
-    remitente = "b.valle@mottum.io"
-    clave = "zqduwnuutzunqdmb"
+    remitente = os.getenv("SMTP_USER")
+    clave = os.getenv("SMTP_PASS")
 
     send_boe_notification_email(
         receivers=mi_lista,
