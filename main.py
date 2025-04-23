@@ -50,13 +50,13 @@ if __name__ == "__main__":
     summaries = generate_summaries_from_documents(boe_paths)
 
     # Save summaries to a JSON file
-    # output_json_file = "summaries.json"
-    # try:
-    #     with open(output_json_file, 'w', encoding='utf-8') as f:
-    #         json.dump(summaries, f, ensure_ascii=False, indent=4)
-    #     logger.info(f"Summaries saved to {output_json_file}")
-    # except Exception as e:
-    #     logger.error(f"Error saving summaries to JSON: {e}")
+    output_json_file = "summaries.json"
+    try:
+        with open(output_json_file, 'w', encoding='utf-8') as f:
+            json.dump(summaries, f, ensure_ascii=False, indent=4)
+        logger.info(f"Summaries saved to {output_json_file}")
+    except Exception as e:
+        logger.error(f"Error saving summaries to JSON: {e}")
 
     emissions = tracker.stop()
     end_time = time.time()
