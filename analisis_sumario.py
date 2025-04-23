@@ -8,7 +8,6 @@ from langchain_ollama.llms import OllamaLLM
 from internal.prompt_utils import load_single_pdf
 from internal.prompt_utils import load_prompt
 
-from schema.parser_models import BiodiversitySummaryParser, BOEClassificationResponse
 from langchain_core.output_parsers.pydantic import PydanticOutputParser
 from internal.boe_utils import get_boe_sumario, filtrar_items
 
