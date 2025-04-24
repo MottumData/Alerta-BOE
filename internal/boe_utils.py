@@ -7,6 +7,7 @@ from langchain_core.prompts import PromptTemplate
 
 BASE_URL = "https://www.boe.es/datosabiertos/api"
 
+# Departamentos y Ministerios a tener en cuenta para la temática de la Biodiversidad.
 TARGET_DEPTS = {
     "MINISTERIO PARA LA TRANSICIÓN ECOLÓGICA Y EL RETO DEMOGRÁFICO",
     "DIRECCIÓN GENERAL DE BIODIVERSIDAD, BOSQUES Y DESERTIFICACIÓN",
@@ -76,7 +77,7 @@ def _procesar_item(dest: Dict[str, Dict[str, Any]],
     identificador = item.get("identificador")
     raw_pdf = item.get("url_pdf")
     
-    # Algunas respuestas traen url_pdf como dict con "#text"
+    # Algunas respuestas traen url_pdf como dict con "#texto"
     if isinstance(raw_pdf, dict):
         url_pdf = raw_pdf.get("texto") or raw_pdf.get("@url")
     else:
@@ -115,7 +116,6 @@ def filtrar_items(sumario: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
     for diario in diarios:
         for seccion in ensure_list(diario.get("seccion")):
             for dept in ensure_list(seccion.get("departamento")):
-                # Normalizo y comparo el nombre
                 dept_name = ((dept.get("@nombre") or dept.get("nombre", ""))
                              .strip().upper())
                 if dept_name not in TARGET_DEPTS:

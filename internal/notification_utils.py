@@ -68,6 +68,19 @@ def send_boe_notification_email(
 
 
 def read_json_receivers():
+
+    """
+    Lee un fichero JSON y devuelve la lista de destinatarios de correo.
+
+    Args:
+        json_path (str): Ruta al fichero JSON que contiene la clave "receivers"
+                         con la lista de direcciones de email.
+
+    Returns:
+        List[str]: Lista de correos extraídos del campo "receivers".
+                   Si la lista está vacía o no existe, lanza ValueError.
+    """
+    
     json_path = "destinatarios.json"
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)

@@ -5,14 +5,31 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
+from langchain.schema import Document
 from tqdm import tqdm
+from typing import List, Dict, Any
 
 load_dotenv()
 
 logger = logging.getLogger("mottum")
 
 
-def classify_boe(items):
+def classify_boe(
+    items: Dict[str, Any]
+) -> List[Dict[str, bool]]:
+
+    """
+    Clasifica disposiciones del BOE según su relación con biodiversidad.
+
+    Args:
+        items (Dict[str, Any]): Diccionario donde cada clave es el identificador de un BOE y su valor es
+                                un subdiccionario con metadatos, incluyendo 'titulo' y 'epigrafe'.
+
+    Returns:
+        List[Dict[str, bool]]: Lista de diccionarios JSON, cada uno en la forma
+                               {'<identificador>': <True|False>}, indicando si la disposición
+                               está relacionada con biodiversidad.
+    """
 
     template = """
         Eres un clasificador automático de disposiciones del BOE.  
@@ -72,11 +89,21 @@ def classify_boe(items):
     return result
 
 
-def generate_summaries_from_documents(pdf_sources):
+def generate_summaries_from_documents(
+    pdf_sources: List[str]
+) -> Dict[str, str]:
     """
-    Carga documentos PDF desde una lista de URLs, genera un resumen para cada uno
-    y devuelve un diccionario con los resultados.
+    Carga documentos desde una lista de URLs y devuelve un diccionario con los resúmenes.
+
+    Args:
+        urls (List[str]): Lista de URLs de los documentos a cargar.
+
+    Returns:
+        Dict[str, str]: Diccionario donde la clave es la URL y el valor es el resumen
+                        generado o un mensaje de error si la carga o el resumen fallan.
     """
+
+    
     summaries = {}
     total_urls = len(pdf_sources)
     logger.info(
@@ -102,25 +129,22 @@ def generate_summaries_from_documents(pdf_sources):
     return summaries
 
 
-def make_summary(document):
+def make_summary(
+    document: Document
+) -> str:
     """
-    Genera un resumen para un documento dado.
-    # TODO - Documentar
+    Genera un resumen para un único documento Langchain.
+
+    Args:
+        document (Document): Objeto Document de Langchain que contiene 
+                             todo el texto del BOE en su atributo `page_content`.
+
+    Returns:
+        str: Resumen generado según la plantilla definida, o un mensaje de error 
+             si ocurre una excepción durante la generación.
     """
     try:
-        # PROMPT_TEMPLATE = """
-        # Haz un resumen del documento.
-        # El resumen debe incluir los puntos más importantes y relevantes del documento.
-        # El resumen debe ser breve y conciso, pero lo suficientemente informativo como para que el
-        # lector entienda el contenido del documento.
-
-        # La respuesta debe ser en Castellano con la siguiente estructura:
-        # 1. Título del documento.
-        # 2. Resumen muy breve pero contenido con los enunciados de los cambios más relevantes.
-
-        # Documento:
-        # {document}
-        # """
+        
         PROMPT_TEMPLATE = """
         Eres un asistente experto en legislación española. Te proporcionaré el texto completo de un 
         Boletín Oficial del Estado (BOE). Tu tarea es extraer y presentar de forma concisa los puntos 
