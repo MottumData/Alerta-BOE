@@ -184,6 +184,16 @@ def make_summary(
             No interpretar ni especular más allá de lo que dice el texto.
             Si el texto no tiene relación con la biodiversidad, dejarlo claro y no continuar con el análisis.
             Enfocar el análisis en medidas que introduzcan o modifiquen obligaciones legales, protecciones, restricciones o impactos sobre ecosistemas.
+        
+        Ejemplos:
+            A continuación recibirás el contenido completo de una disposición legal publicada en el Boletín Oficial del Estado (BOE).
+            Deberás analizarla según las instrucciones proporcionadas previamente para determinar su relación con la biodiversidad y extraer un resumen estructurado.
+            Los campos requeridos en la respuesta son: Título, URL, Resumen (RESUMEN CON LOS PUNTOS CLAVE SOBRE LOS CAMBIOS RELACIONADOS CON BIODIVERSIDAD).
+            
+            Ejemplo de respuesta tras analizar TODO un BOE:
+            Título: Resolución de 13 de enero de 2025, de la Dirección General de Biodiversidad, Bosques y Desertificación, sobre modificación de ZEPAs marinas en la RAMPE. 
+            URL: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-1299
+            Resumen: Se integra en la Red de Áreas Marinas Protegidas de España (RAMPE) dos nuevas ZEPAs marinas (ES0000554 y ESZZ12004) y se suprimen seis anteriores por absorción territorial. La disposición responde al artículo 6 del Real Decreto 1599/2011, modificando delimitaciones y ajustando la red a criterios UICN de categoría IV. El objetivo es reforzar la protección de corredores migratorios de aves y mejorar la coherencia ecológica de la Red Natura 2000 en aguas españolas, especialmente en Galicia y Cádiz.
 
         Texto completo del BOE:  
         \"\"\"  
@@ -196,7 +206,7 @@ def make_summary(
             input_variables=["document"],
             template=PROMPT_TEMPLATE
         )
-        llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct:latest",
+        llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct",
                         base_url=os.getenv("BASE_URL"),
                         temperature=0.2)
 
