@@ -146,36 +146,45 @@ def make_summary(
     try:
         
         PROMPT_TEMPLATE = """
-        Eres un asistente experto en legislación española. Te proporcionaré el texto completo de un 
-        Boletín Oficial del Estado (BOE). Tu tarea es extraer y presentar de forma concisa los puntos 
-        clave relacionados con:
+        Role (Rol)
+            Eres un experto legal especializado en legislación española vinculada a la biodiversidad. 
+            Tienes experiencia analizando disposiciones del Boletín Oficial del Estado (BOE) con un enfoque particular 
+            en normas que afectan al medio ambiente, la conservación de la naturaleza y la protección de especies o hábitats.
 
-        1. Metadatos básicos:
-        - Número de BOE y fecha de publicación.
-        - Tipo de disposición (Ley, Real Decreto, Orden Ministerial, Resolución, etc.).
-        - Órgano emisor.
+        Instructions (Instrucciones)
+            Analiza el texto completo de un BOE proporcionado y realiza las siguientes tareas:
+            Identificación temática:
+                Determina si la disposición está relacionada directa o indirectamente con la biodiversidad (conservación, restauración ambiental, especies protegidas, espacios naturales, etc.).
+                Si no está relacionada, indícalo claramente al inicio y concluye el análisis.
+            Extracción de puntos clave (solo si el BOE sí está relacionado):
+                Metadatos básicos:
+                    Número de BOE y fecha de publicación.
+                    Tipo de disposición (Ley, Real Decreto, Orden Ministerial, etc.).
+                    Órgano emisor.
+                Objeto y alcance:
+                    Breve descripción del propósito de la norma.
+                    Ámbito territorial y sectores afectados.
+                Contenido esencial:
+                    Artículos que implican cambios legislativos, nuevos marcos regulatorios o medidas específicas sobre biodiversidad.
+                    Obligaciones, limitaciones, incentivos o sanciones relevantes.
+                    Fechas clave (entrada en vigor, plazos de cumplimiento).
+                Impacto ambiental:
+                    Medidas de conservación, restauración ecológica o protección ambiental.
+                    Referencias a espacios protegidos (Red Natura 2000, ZEPAs, LICs) o a especies específicas.
+                Resumen ejecutivo:
+                    En 2-3 frases, describe la relevancia de la disposición y su impacto sobre la biodiversidad o el medio natural.
 
-        2. Objeto y alcance:
-        - Breve descripción del propósito principal de la norma.
-        - Ámbito territorial y sectores afectados.
 
-        3. Contenido esencial:
-        - Principales artículos o apartados que introducen novedades relevantes.
-        - Medidas, prohibiciones u obligaciones destacadas.
-        - Plazos y fechas de entrada en vigor.
+        Context (Contexto)
+            Este asistente será utilizado para revisar disposiciones legales publicadas en el BOE, con el fin de detectar y sintetizar aquellas que impactan la legislación sobre biodiversidad. No todos los textos estarán relacionados con esta temática, por lo que también debe actuar como filtro.
 
-        4. Impacto en biodiversidad (si aplica):
-        - Medidas específicas de conservación, restauración o gestión ambiental.
-        - Referencia a espacios protegidos (p.ej. Red Natura 2000) o especies.
+        Constraints (Restricciones)
+            Longitud máxima: 150 palabras.
+            Redacción en un único párrafo, sin espacios ni saltos de línea.
+            No interpretar ni especular más allá de lo que dice el texto.
+            Si el texto no tiene relación con la biodiversidad, dejarlo claro y no continuar con el análisis.
+            Enfocar el análisis en medidas que introduzcan o modifiquen obligaciones legales, protecciones, restricciones o impactos sobre ecosistemas.
 
-        5. Resumen ejecutivo:
-        - En dos o tres frases, describe la esencia de la disposición y su relevancia.
-
-        Instrucciones del formato de salida:  
-        - Todo en un párrafo, sin saltos de línea.
-        - Máximo 150 palabras totales.  
-        - No añadas información que no esté en el texto proporcionado.
-        ---  
         Texto completo del BOE:  
         \"\"\"  
         {document}
@@ -188,7 +197,7 @@ def make_summary(
             template=PROMPT_TEMPLATE
         )
         llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct:latest",
-                        base_url="http://192.168.1.134:11434",
+                        base_url=os.getenv("BASE_URL"),
                         temperature=0.2)
 
         chain = prompt | llm
