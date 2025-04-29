@@ -1,17 +1,28 @@
 import datetime
 import win32com.client
 
-def register_daily_task(exe_path, task_name="EnviarNewsletter"):
+def register_daily_task(exe_path: str, task_name: str = "EnviarNewsletter") -> None:
 
     """
+    Registra o actualiza una tarea diaria en el Programador de Tareas de Windows
+    para ejecutar un archivo .exe a diario.
 
-    - Añadir un módulo scheduler.py a tu repo que, al ejecutarse, se conecta al Task Scheduler, crea o actualiza el trigger diario y registra la acción de llamar a tu exe 
+    Args:
+        exe_path (str): Ruta absoluta al ejecutable que se desea programar.
+        task_name (str, optional): Nombre que recibirá la tarea en el Programador.
+                                   Por defecto es "EnviarNewsletter".
 
-    - Empaquetar todo en un .exe con PyInstaller usando --onefile y --uac-admin para que solicite elevación sin que el usuario toque nada pyinstaller.org
+    Returns:
+        None
 
-    - Probar localmente, subir dist/tu_app.exe al repositorio (o un release) y enviar por email ese único archivo. El destinatario hace doble clic, acepta la elevación y ya queda registrada la tarea diaria.
-    
-    - Para crear el ejecutable -> pyinstaller --onefile --windowed --uac-admin --name NewsletterApp scheduler.py
+    Instructions:
+        - Añadir un módulo scheduler.py a tu repo que, al ejecutarse, se conecta al Task Scheduler, crea o actualiza el trigger diario y registra la acción de llamar a tu exe 
+
+        - Empaquetar todo en un .exe con PyInstaller usando --onefile y --uac-admin para que solicite elevación sin que el usuario toque nada pyinstaller.org
+
+        - Probar localmente, subir dist/tu_app.exe al repositorio (o un release) y enviar por email ese único archivo. El destinatario hace doble clic, acepta la elevación y ya queda registrada la tarea diaria.
+        
+        - Para crear el ejecutable -> pyinstaller --onefile --windowed --uac-admin --name NewsletterApp scheduler.py
 
     """
     # 1. Conectar al servicio
