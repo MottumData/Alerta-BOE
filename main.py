@@ -7,7 +7,7 @@ from internal.llm_utils import *
 from internal.boe_utils import *
 from internal.notification_utils import send_boe_notification_email, read_json_receivers
 import json
-
+from pprint import pprint
 
 # Logger
 log_format = '[%(name)s %(levelname)s @ %(asctime)s]   %(message)s'
@@ -48,14 +48,21 @@ if __name__ == "__main__":
     tracker.start()
     logger.info("Iniciando el script...")
     start_time = time.time()
+    # Descomentar para ejecutar desde la API
+    # sumario = get_boe_sumario()
+    # sumario_filtrado = filtrar_items(sumario)
+    # pprint(sumario_filtrado)
+    # clasificacion = classify_boe(sumario_filtrado)
+    # pprint(clasificacion)
+    # boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
 
-    # Para la ejecución desde la API:
+    # # Descomentar para ejecutar desde el directorio
+    boe_files = os.listdir("BOE\\PDF")
+    boe_paths = [os.path.join("BOE\\PDF", f) for f in boe_files]
+    
     sumario = get_boe_sumario(fecha="20250423")
     boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
 
-    # Para la ejecución en local desde el directorio:
-    # boe_files = os.listdir("BOE")
-    # boe_paths = [os.path.join("BOE", f) for f in boe_files]
 
     summaries = generate_summaries_from_documents(boe_paths)
 
@@ -64,18 +71,21 @@ if __name__ == "__main__":
     try:
         with open(output_json_file, 'w', encoding='utf-8') as f:
             json.dump(summaries, f, ensure_ascii=False, indent=4)
-        logger.info(f"Summaries saved to {output_json_file}")
+        logger.info("Summaries saved to %s", output_json_file)
     except Exception as e:
-        logger.error(f"Error saving summaries to JSON: {e}")
+        logger.error("Error saving summaries to JSON: %s", e)
 
     # Formatear el diccionario de resúmenes en una cadena para el cuerpo del email
     email_body_parts = ["Resúmenes del BOE del día:\n\n"]
     for url, summary_text in summaries.items():
         if not isinstance(summary_text, str):
-            summary_text = str(summary_text)
+            summary_text = str(summary_text)  # Convierte a cadena si no lo es
 
         cleaned_summary = summary_text.strip()
-        email_body_parts.append(f"URL: {url}\nResumen:\n{cleaned_summary}\n\n---\n")
+
+        email_body_parts.append(
+            f"URL: {url}\nResumen:\n{cleaned_summary}\n\n---\n")
+
 
     email_body_string = "\n".join(email_body_parts)
 
@@ -100,7 +110,6 @@ if __name__ == "__main__":
 # Documentar el código (B)
 # Limpieza de código innecesario (A, B)
 # requirements.txt (B)
-# dockerfile (A)
 # Ejecucion Codecarbon  (B)
 # README (A)
 # Contemplar casos de errores. (No hay BOE ese dia, no hay temática ese dia, se publican mas tarde,...) (A,B)

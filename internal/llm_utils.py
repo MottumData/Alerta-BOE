@@ -1,4 +1,5 @@
 import os
+import time
 import logging
 from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
@@ -32,8 +33,8 @@ def classify_boe(
     """
 
     template = """
-        Eres un clasificador automático de disposiciones del BOE.  
-        Recibirás un diccionario en JSON, donde cada clave es el identificador de un BOE y su valor es 
+        Eres un clasificador automático del Boletín Oficial del Estado.
+        Recibirás un diccionario en JSON, donde cada clave es el identificador de un BOE y su valor es
         un objeto con metadatos, por ejemplo:
 
         {{
@@ -47,13 +48,13 @@ def classify_boe(
         // más entradas
         }}
 
-        Tu tarea es, **solo** basándote en los campos `titulo` y `epigrafe`, decidir para cada BOE si 
-        está relacionado con biodiversidad (o temas muy afines: conservación, especies protegidas, 
-        espacios naturales, Red Natura 2000, ecosistema, fauna, flora, hábitat, conservación, especies 
-        protegidas, restauración ecológica, parques naturales, sostenibilidad ambiental, etc...).  
-        
-        - Si lo está, devuelve `true`. 
-        - Si no, devuelve `false`.  
+        Tu tarea es, **solo** y **únicamente** basándote en los campos `titulo` y `epigrafe` , decidir para cada BOE si
+        está relacionado con biodiversidad (o temas muy afines: conservación, especies protegidas,
+        espacios naturales, Red Natura 2000, ecosistema, fauna, flora, hábitat, conservación, especies
+        protegidas, restauración ecológica, parques naturales, sostenibilidad ambiental, etc...).
+
+        - Si está relacionado, devuelve `true`.
+        - Si no está relacionado, devuelve `false`.
 
         **Formato de salida**: únicamente una lista o array JSON de objetos, cada uno con la forma:
         ```json
@@ -64,10 +65,10 @@ def classify_boe(
         ]
         ```
 
-    Aquí tiene la entrada (json):
-
+    Aquí tiene la entrada (json) sobre la que debe trabajar:
+    ```json
     {text}
-    
+    ```
     """
 
     prompt = PromptTemplate(
@@ -77,9 +78,12 @@ def classify_boe(
 
     parser = JsonOutputParser()
     # 4. Inicializa tu LLM de Ollama
-    llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct:latest",
+    llm = OllamaLLM(#model="robbiemu/salamandra:2b-instruct_bf16",
+                    model="hdnh2006/salamandra-7b-instruct:latest",
+                    # model="gemma3:12b",
                     temperature=0.0,
-                    base_url=os.getenv("BASE_URL"))
+                    base_url=os.getenv("BASE_URL"),
+                    format="json")
 
     # 5. Monta un LLMChain que use el prompt anterior
     chain = prompt | llm | parser
@@ -119,7 +123,8 @@ def generate_summaries_from_documents(
                     "El documento %s tiene %s páginas, excediendo el límite permitido de 15.", url, num_pages)
                 summaries[url] = f"El número de páginas ({num_pages}) excede el límite permitido (15)."
             else:
-                summary = make_summary(documents)
+                full_text = "\n\n".join([doc.page_content for doc in documents])
+                summary = make_summary(full_text)
                 summaries[url] = summary
         except Exception as e:
             logger.error("Error al procesar la URL %s: %s", url, str(e))
@@ -143,6 +148,7 @@ def make_summary(
         str: Resumen generado según la plantilla definida, o un mensaje de error 
              si ocurre una excepción durante la generación.
     """
+    logger.info("Generando resumen para el documento {}...".format(document))
     try:
         
         PROMPT_TEMPLATE = """
@@ -202,13 +208,62 @@ def make_summary(
 
         """
 
+        # PROMPT_TEMPLATE = """
+        #  Role (Rol)
+        #     Eres un experto legal especializado en legislación española vinculada a la biodiversidad.
+        #     Tienes experiencia analizando disposiciones del Boletín Oficial del Estado (BOE) con un enfoque particular
+        #     en normas que afectan al medio ambiente, la conservación de la naturaleza y la protección de especies o hábitats.
+
+        # Instructions (Instrucciones)
+        #     Analiza el texto completo de un BOE proporcionado y realiza las siguientes tareas:
+        #     Identificación temática:
+        #         Determina si la disposición está relacionada directa o indirectamente con la biodiversidad (conservación, restauración ambiental, especies protegidas, espacios naturales, etc.).
+        #         Si no está relacionada, indícalo claramente al inicio y concluye el análisis.
+        #     Extracción de puntos clave (solo si el BOE sí está relacionado):
+        #         Metadatos básicos:
+        #             Número de BOE y fecha de publicación.
+        #             Tipo de disposición (Ley, Real Decreto, Orden Ministerial, etc.).
+        #             Órgano emisor.
+        #         Objeto y alcance:
+        #             Breve descripción del propósito de la norma.
+        #             Ámbito territorial y sectores afectados.
+        #         Contenido esencial:
+        #             Artículos que implican cambios legislativos, nuevos marcos regulatorios o medidas específicas sobre biodiversidad.
+        #             Obligaciones, limitaciones, incentivos o sanciones relevantes.
+        #             Fechas clave (entrada en vigor, plazos de cumplimiento).
+        #         Impacto ambiental:
+        #             Medidas de conservación, restauración ecológica o protección ambiental.
+        #             Referencias a espacios protegidos (Red Natura 2000, ZEPAs, LICs) o a especies específicas.
+        #         Resumen ejecutivo:
+        #             En 2-3 frases, describe la relevancia de la disposición y su impacto sobre la biodiversidad o el medio natural.
+
+        # Context (Contexto)
+        #     Este asistente será utilizado para revisar disposiciones legales publicadas en el BOE, con el fin de detectar y sintetizar aquellas que impactan la legislación sobre biodiversidad. No todos los textos estarán relacionados con esta temática, por lo que también debe actuar como filtro.
+
+        # Constraints (Restricciones)
+        #     Longitud máxima: 150 palabras.
+        #     Redacción en un único párrafo, sin espacios ni saltos de línea.
+        #     No interpretar ni especular más allá de lo que dice el texto.
+        #     Si el texto no tiene relación con la biodiversidad, dejarlo claro y no continuar con el análisis.
+        #     Enfocar el análisis en medidas que introduzcan o modifiquen obligaciones legales, protecciones, restricciones o impactos sobre ecosistemas.
+
+        # Texto completo del BOE:
+        # \"\"\"
+        # {document}
+        # \"\"\"
+
+        # """
+
         prompt = PromptTemplate(
             input_variables=["document"],
             template=PROMPT_TEMPLATE
         )
-        llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct",
+
+        llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct:latest",
                         base_url=os.getenv("BASE_URL"),
-                        temperature=0.2)
+                        temperature=0.0,
+                        max_tokens=150)
+
 
         chain = prompt | llm
 
