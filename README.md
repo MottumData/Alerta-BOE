@@ -51,13 +51,12 @@ La principal dificultad radica en la necesidad de revisar manualmente extensos d
 
 ## Instalación 
 
-*   Instalamos las dependencias del proyecto
+*   Instalamos las dependencias del proyecto:
 ```bash
 pip install -r requirements.txt
 ```
 
-*   Instalamos ollama en caso de no tenerlo instalado
-(https://ollama.com/download/windows)
+*   Instalamos ollama en caso de no tenerlo instalado: (https://ollama.com/download/windows)
 
 ## Uso 
 - Incluir los correos de los destinatarios en el archivo destinatarios.json en formato json.
