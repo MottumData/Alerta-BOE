@@ -17,22 +17,27 @@ La principal dificultad radica en la necesidad de revisar manualmente extensos d
 
 
 ## 2. Nuestra Solución:
-*   **Descripción General:** Explica de forma concisa qué hace tu aplicación/herramienta. ¿Cuál es su propósito principal?
-*   **Enfoque GenAI:** ¿Cómo utiliza la Inteligencia Artificial Generativa para solucionar el problema? Sé específico sobre qué parte del proceso usa GenAI (generación de texto, análisis, clasificación, etc.).
-*   **Propuesta de Valor:** ¿Qué beneficio aporta tu solución? (Ej: Ahorro de tiempo para investigadores, mejor toma de decisiones para gestores, mayor concienciación ciudadana, etc.)
+*   **Descripción General:** Esta solución se conecta con la API del BOE, consulta de forma diaria los boletines de los ministerios y departamentos previamente configurados, y extrae todos sus documentos publicados. Una vez extraídos se  genera un resumen para cada uno de ellos y se envían estos resumenes por email al usuario. 
+*   **Enfoque GenAI:** 
+    *   Clasificación binaria con LLM: Cada disposición extraída se pasa por un modelo instructivo el cual devuelve true si la información de el BOE está relacionada con biodiversidad y false en caso contrario.
+
+    *   Filtrado por ministerio: Sólo procesamos los boletines de los organismos que interesan (Medio Ambiente, Ciencia, Agricultura, …), solo de aquellos que suban BOEs relacionados con la temática de la Biodiversidad.
+
+    *   Resumen automático: Para cada documento marcado como true, el LLM genera un resumen con los puntos claves que se tratan en cada BOE.
 
 ## 3. Características Principales
 
-*   Lista (con bullets) las funcionalidades clave de tu solución.
-    *   Ej: Análisis automático de documentos del BOE relacionados con biodiversidad.
-    *   Ej: Generación de resúmenes concisos y estructurados.
-    *   Ej: Clasificación de disposiciones según su relevancia para la biodiversidad.
-    *   Ej: Sistema de notificación para partes interesadas.
-    *   Ej: Medición de la huella de carbono del proceso (si aplica).
+*   Funcionalidades clave
+    *   API del BOE: Extracción automática de los documentos publicados por los ministerios seleccionados.
+
+    *   Clasificación binaria: LLM que etiqueta cada BOE en función de su relación con la biodiversidad.
+
+    *   Generación de resúmenes: Resumen de 3–4 frases del contenido del BOE
+
+    *   Alerts & Notificaciones: Envío por email de los resúmenes, sólo de los documentos clasificados como TRUE en el contexto de Biodiversidad.
 
 ## 4. Demo / Presentación
-
-*  
+  
 *   Enlace a un vídeo corto mostrando la aplicación en funcionamiento.
 *   Enlace a la presentación de diapositivas (si la hay).
 
@@ -46,9 +51,18 @@ La principal dificultad radica en la necesidad de revisar manualmente extensos d
 *   
 
 ## Instalación 
-- ollama
-- requirements.txt
+
+*   Instalamos las dependencias del proyecto
+```bash
+requirements.txt
+```
+
+*   Instalamos ollama en caso de no tenerlo instalado
+(https://ollama.com/download/windows)
 
 ## Uso 
-- Incluir correo
-- Ejecutar API o de los archivos locales.
+- Incluir los correos de los destinatarios en el archivo destinatarios.json en formato json.
+- run:
+```bash
+python main.py
+```
