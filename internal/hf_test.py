@@ -1,10 +1,21 @@
 from langchain_huggingface.llms import HuggingFacePipeline
 from langchain_core.prompts import PromptTemplate
+import torch
 
 hf = HuggingFacePipeline.from_model_id(
-    model_id="BSC-LT/salamandra-7b-instruct-fp8",
+    model_id="mistralai/Ministral-8B-Instruct-2410",
     task="text-generation",
     pipeline_kwargs={"return_full_text": False},
+    model_kwargs={
+        "torch_dtype": torch.float16, # Usar float16 para reducir memoria
+        "load_in_8bit": True,         # Cargar en 8-bit
+        # Alternativamente, para 4-bit (requiere bitsandbytes más reciente y puede ser más lento):
+        # "load_in_4bit": True,
+        # "bnb_4bit_compute_dtype": torch.float16,
+        # "bnb_4bit_quant_type": "nf4", # O "fp4"
+        # "bnb_4bit_use_double_quant": True,
+    },
+    device_map="auto",
 )
 
 

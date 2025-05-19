@@ -9,16 +9,28 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain.schema import Document
 from tqdm import tqdm
 from typing import List, Dict, Any
+from langchain_huggingface.llms import HuggingFacePipeline
+import torch
 
 load_dotenv()
 
 logger = logging.getLogger("mottum")
 
+# llm = HuggingFacePipeline.from_model_id(
+#     model_id="google/gemma-3-4b-it",
+#     task="text-generation",
+#     pipeline_kwargs={"return_full_text": False, "max_new_tokens": 400},
+#     # model_kwargs={
+#     #     "torch_dtype": torch.float16,  # Usar float16 para reducir memoria
+#     #     "load_in_8bit": True,
+#     # },
+#     device_map="auto",
+# )
+
 
 def classify_boe(
     items: Dict[str, Any]
 ) -> List[Dict[str, bool]]:
-
     """
     Clasifica disposiciones del BOE según su relación con biodiversidad.
 
@@ -36,7 +48,8 @@ def classify_boe(
         Eres un clasificador automático del Boletín Oficial del Estado.
         Recibirás un diccionario en JSON, donde cada clave es el identificador de un BOE y su valor es
         un objeto con metadatos, por ejemplo:
-
+        
+        ```json
         {{
         "BOE-A-2025-8144": {{
             "departamento": "...",
@@ -47,6 +60,7 @@ def classify_boe(
         }},
         // más entradas
         }}
+        ```
 
         Tu tarea es, **solo** y **únicamente** basándote en los campos `titulo` y `epigrafe` , decidir para cada BOE si
         está relacionado con biodiversidad (o temas muy afines: conservación, especies protegidas,
@@ -78,12 +92,22 @@ def classify_boe(
 
     parser = JsonOutputParser()
     # 4. Inicializa tu LLM de Ollama
-    llm = OllamaLLM(#model="robbiemu/salamandra:2b-instruct_bf16",
-                    model="hdnh2006/salamandra-7b-instruct:latest",
-                    # model="gemma3:12b",
-                    temperature=0.0,
-                    base_url=os.getenv("BASE_URL"),
-                    format="json")
+    llm = OllamaLLM(  # model="robbiemu/salamandra:2b-instruct_bf16",
+        model="llama3.1:8b",
+        # model="gemma3:12b",
+        temperature=0.0,
+        base_url=os.getenv("BASE_URL"),
+    )
+    # llm = HuggingFacePipeline.from_model_id(
+    #     model_id="google/gemma-3-4b-it",
+    #     task="text-generation",
+    #     pipeline_kwargs={"return_full_text": False},
+    #     # model_kwargs={
+    #     #     "torch_dtype": torch.float16,  # Usar float16 para reducir memoria
+    #     #     "load_in_8bit": True,
+    #     # },
+    #     device_map="auto",
+    # )
 
     # 5. Monta un LLMChain que use el prompt anterior
     chain = prompt | llm | parser
@@ -107,7 +131,6 @@ def generate_summaries_from_documents(
                         generado o un mensaje de error si la carga o el resumen fallan.
     """
 
-    
     summaries = {}
     total_urls = len(pdf_sources)
     logger.info(
@@ -118,12 +141,13 @@ def generate_summaries_from_documents(
             loader = PyPDFLoader(url)
             documents = loader.load()
             num_pages = len(documents)
-            if num_pages > 15:
+            if num_pages > 25:
                 logger.warning(
-                    "El documento %s tiene %s páginas, excediendo el límite permitido de 15.", url, num_pages)
-                summaries[url] = f"El número de páginas ({num_pages}) excede el límite permitido (15)."
+                    "El documento %s tiene %s páginas, excediendo el límite permitido de 25.", url, num_pages)
+                summaries[url] = f"El número de páginas ({num_pages}) excede el límite permitido (25)."
             else:
-                full_text = "\n\n".join([doc.page_content for doc in documents])
+                full_text = "\n\n".join(
+                    [doc.page_content for doc in documents])
                 summary = make_summary(full_text)
                 summaries[url] = summary
         except Exception as e:
@@ -148,12 +172,12 @@ def make_summary(
         str: Resumen generado según la plantilla definida, o un mensaje de error 
              si ocurre una excepción durante la generación.
     """
-    logger.info("Generando resumen para el documento {}...".format(document))
+    # logger.info("Generando resumen para el documento {}...".format(document))
     try:
-        
+
         PROMPT_TEMPLATE = """
         Role (Rol)
-            Eres un experto legal especializado en legislación española vinculada a la biodiversidad. 
+            Eres un experto legal especializado en legislación española vinculada a la biodiversidad, por tanto DEBES RESPONDER EN ESPAÑOL. 
             Tienes experiencia analizando disposiciones del Boletín Oficial del Estado (BOE) con un enfoque particular 
             en normas que afectan al medio ambiente, la conservación de la naturaleza y la protección de especies o hábitats.
 
@@ -208,62 +232,25 @@ def make_summary(
 
         """
 
-        # PROMPT_TEMPLATE = """
-        #  Role (Rol)
-        #     Eres un experto legal especializado en legislación española vinculada a la biodiversidad.
-        #     Tienes experiencia analizando disposiciones del Boletín Oficial del Estado (BOE) con un enfoque particular
-        #     en normas que afectan al medio ambiente, la conservación de la naturaleza y la protección de especies o hábitats.
-
-        # Instructions (Instrucciones)
-        #     Analiza el texto completo de un BOE proporcionado y realiza las siguientes tareas:
-        #     Identificación temática:
-        #         Determina si la disposición está relacionada directa o indirectamente con la biodiversidad (conservación, restauración ambiental, especies protegidas, espacios naturales, etc.).
-        #         Si no está relacionada, indícalo claramente al inicio y concluye el análisis.
-        #     Extracción de puntos clave (solo si el BOE sí está relacionado):
-        #         Metadatos básicos:
-        #             Número de BOE y fecha de publicación.
-        #             Tipo de disposición (Ley, Real Decreto, Orden Ministerial, etc.).
-        #             Órgano emisor.
-        #         Objeto y alcance:
-        #             Breve descripción del propósito de la norma.
-        #             Ámbito territorial y sectores afectados.
-        #         Contenido esencial:
-        #             Artículos que implican cambios legislativos, nuevos marcos regulatorios o medidas específicas sobre biodiversidad.
-        #             Obligaciones, limitaciones, incentivos o sanciones relevantes.
-        #             Fechas clave (entrada en vigor, plazos de cumplimiento).
-        #         Impacto ambiental:
-        #             Medidas de conservación, restauración ecológica o protección ambiental.
-        #             Referencias a espacios protegidos (Red Natura 2000, ZEPAs, LICs) o a especies específicas.
-        #         Resumen ejecutivo:
-        #             En 2-3 frases, describe la relevancia de la disposición y su impacto sobre la biodiversidad o el medio natural.
-
-        # Context (Contexto)
-        #     Este asistente será utilizado para revisar disposiciones legales publicadas en el BOE, con el fin de detectar y sintetizar aquellas que impactan la legislación sobre biodiversidad. No todos los textos estarán relacionados con esta temática, por lo que también debe actuar como filtro.
-
-        # Constraints (Restricciones)
-        #     Longitud máxima: 150 palabras.
-        #     Redacción en un único párrafo, sin espacios ni saltos de línea.
-        #     No interpretar ni especular más allá de lo que dice el texto.
-        #     Si el texto no tiene relación con la biodiversidad, dejarlo claro y no continuar con el análisis.
-        #     Enfocar el análisis en medidas que introduzcan o modifiquen obligaciones legales, protecciones, restricciones o impactos sobre ecosistemas.
-
-        # Texto completo del BOE:
-        # \"\"\"
-        # {document}
-        # \"\"\"
-
-        # """
-
         prompt = PromptTemplate(
             input_variables=["document"],
             template=PROMPT_TEMPLATE
         )
 
-        llm = OllamaLLM(model="hdnh2006/salamandra-7b-instruct:latest",
+        llm = OllamaLLM(model="gemma3:4b",
                         base_url=os.getenv("BASE_URL"),
                         temperature=0.0,
                         max_tokens=150)
-
+        # llm = HuggingFacePipeline.from_model_id(
+        #     model_id="google/gemma-3-4b-it",
+        #     task="text-generation",
+        #     pipeline_kwargs={"return_full_text": False},
+        #     # model_kwargs={
+        #     #     "torch_dtype": torch.float16,  # Usar float16 para reducir memoria
+        #     #     "load_in_8bit": True,
+        #     # },
+        #     # device_map="auto",
+        # )
 
         chain = prompt | llm
 
