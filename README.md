@@ -54,7 +54,7 @@ La principal dificultad radica en la necesidad de revisar manualmente extensos d
 
 *   Instalamos las dependencias del proyecto
 ```bash
-requirements.txt
+pip install -r requirements.txt
 ```
 
 *   Instalamos ollama en caso de no tenerlo instalado
