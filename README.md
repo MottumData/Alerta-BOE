@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ## Uso 
 - Incluir los correos de los destinatarios en el archivo destinatarios.json en formato json.
-- run:
+- Para correr la solución:
 ```bash
 python main.py
 ```
