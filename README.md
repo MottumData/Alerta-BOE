@@ -43,12 +43,11 @@ La principal dificultad radica en la necesidad de revisar manualmente extensos d
 
 ## 5. Stack Tecnológico
 
-*   **Lenguajes:** Python, etc.
+*   **Lenguajes:** Python.
 *   **Frameworks/Librerías Principales:** Langchain, Ollama.
-*   **Modelos GenAI Utilizados:** Especifica los modelos LLM (ej: `hdnh2006/salamandra-7b-instruct`, `all-mpnet-base-v2` para embeddings).
-*   **Infraestructura:**: Maquina en la que se desarrolla de Azure
-*   **Otros:** CodeCarbon (para medición de emisiones), etc.
-*   
+*   **Modelos GenAI Utilizados:** Modelos LLM: (ej: `hdnh2006/salamandra-7b-instruct`).
+*   **Infraestructura:**: VM alojada en azure.
+*   **Otros:** CodeCarbon (para medición de emisiones).
 
 ## Instalación 
 
