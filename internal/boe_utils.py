@@ -17,6 +17,14 @@ TARGET_DEPTS = {
     "MINISTERIO DE CIENCIA E INNOVACIÓN",
 }
 
+def target_depts_to_string() -> str:
+    """Convierte el conjunto TARGET_DEPTS a una cadena formateada para emails."""
+    if not TARGET_DEPTS:
+        return "No hay departamentos de interés definidos."
+    
+    header = "Departamentos y Ministerios de interés para Biodiversidad:\n"
+    departments_list = "\n".join(f"- {dept}" for dept in sorted(list(TARGET_DEPTS)))
+    return header + departments_list
 
 def ensure_list(x: Any) -> List[Any]:
     """
@@ -132,13 +140,3 @@ def filtrar_items(sumario: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
                     _procesar_item(resultados, dept_name, None, item)
 
     return resultados
-
-
-# if __name__ == "__main__":
-#     # Obtengo el sumario del BOE de hoy
-#     sumario = get_boe_sumario()
-#     # Filtrar solo los ítems de mis departamentos objetivo
-#     items_filtrados = filtrar_items(sumario)
-#     # Imprimo cada identificador con su título y enlace al PDF
-#     for ident, info in items_filtrados.items():
-#         print(f"{ident}: {info['titulo']} → {info['url_pdf']}")
