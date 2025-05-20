@@ -141,10 +141,10 @@ def generate_summaries_from_documents(
             loader = PyPDFLoader(url)
             documents = loader.load()
             num_pages = len(documents)
-            if num_pages > 25:
+            if num_pages > 39:
                 logger.warning(
-                    "El documento %s tiene %s páginas, excediendo el límite permitido de 25.", url, num_pages)
-                summaries[url] = f"El número de páginas ({num_pages}) excede el límite permitido (25)."
+                    "El documento %s tiene %s páginas, excediendo el límite permitido de 30.", url, num_pages)
+                summaries[url] = f"El número de páginas ({num_pages}) excede el límite permitido (30)."
             else:
                 full_text = "\n\n".join(
                     [doc.page_content for doc in documents])
@@ -172,7 +172,6 @@ def make_summary(
         str: Resumen generado según la plantilla definida, o un mensaje de error 
              si ocurre una excepción durante la generación.
     """
-    # logger.info("Generando resumen para el documento {}...".format(document))
     try:
 
         PROMPT_TEMPLATE = """
@@ -237,6 +236,7 @@ def make_summary(
                         base_url=os.getenv("BASE_URL"),
                         temperature=0.0,
                         max_tokens=150)
+        
         # llm = HuggingFacePipeline.from_model_id(
         #     model_id="google/gemma-3-4b-it",
         #     task="text-generation",
