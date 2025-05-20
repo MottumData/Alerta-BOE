@@ -1,6 +1,6 @@
 # Sistema de Alerta de cambios en BOE sobre Biodiversidad
 
-![Logo Mottum](https://mottum.io/wp-content/uploads/2023/07/Logo-Mottum-oscuro-fondo-transp-512w.png)
+![Logo Mottum](public/Logo_Mottum_transp_claro-1920w.png)
 
 
 **Solución presentada para el Hackathon "Soluciones GenAI para la Biodiversidad" de Algoritmos Verdes.**
@@ -45,23 +45,22 @@ La principal dificultad radica en la necesidad de revisar manualmente extensos d
 
 *   **Lenguajes:** Python.
 *   **Frameworks/Librerías Principales:** Langchain, Ollama.
-*   **Modelos GenAI Utilizados:** Especifica los modelos LLM (ej: `hdnh2006/salamandra-7b-instruct`, `all-mpnet-base-v2` para embeddings).
+*   **Modelos GenAI Utilizados:** Modelos LLM: (ej: `hdnh2006/salamandra-7b-instruct`).
 *   **Infraestructura:**: VM alojada en azure.
-*   **Otros:** CodeCarbon (para medición de emisiones) 
+*   **Otros:** CodeCarbon (para medición de emisiones).
 
 ## Instalación 
 
-*   Instalamos las dependencias del proyecto
+*   Instalamos las dependencias del proyecto:
 ```bash
-requirements.txt
+pip install -r requirements.txt
 ```
 
-*   Instalamos ollama en caso de no tenerlo instalado
-(https://ollama.com/download/windows)
+*   Instalamos ollama en caso de no tenerlo instalado: (https://ollama.com/download/windows)
 
 ## Uso 
 - Incluir los correos de los destinatarios en el archivo destinatarios.json en formato json.
-- En la terminal:
+- Para correr la solución:
 ```bash
 python main.py
 ```
