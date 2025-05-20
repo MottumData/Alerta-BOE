@@ -1,6 +1,6 @@
 # Sistema de Alerta de cambios en BOE sobre Biodiversidad
 
-![Logo Mottum](https://mottum.io/wp-content/uploads/2023/07/Logo-Mottum-oscuro-fondo-transp-512w.png)
+![Logo Mottum](https://imgur.com/a/RcOjBQv)
 
 
 **Solución presentada para el Hackathon "Soluciones GenAI para la Biodiversidad" de Algoritmos Verdes.**
