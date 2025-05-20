@@ -20,13 +20,15 @@ La principal dificultad radica en la necesidad de revisar manualmente extensos d
 
 
 ## 2. Nuestra Solución:
-*   **Descripción General:** Esta solución se conecta con la API del BOE, consulta de forma diaria los boletines de los ministerios y departamentos previamente configurados, y extrae todos sus documentos publicados. Una vez extraídos se  genera un resumen para cada uno de ellos y se envían estos resumenes por email al usuario. 
+*   **Descripción General:** Esta solución se conecta con la API del BOE, consulta de forma diaria los boletines de los ministerios y departamentos previamente configurados, y extrae todos sus documentos publicados. Una vez extraídos se  genera un resumen para cada uno de ellos y se envían por email al usuario. 
 *   **Enfoque GenAI:** 
-    *   Clasificación binaria con LLM: Cada disposición extraída se pasa por un modelo instructivo el cual devuelve true si la información de el BOE está relacionada con biodiversidad y false en caso contrario.
+    *   Clasificación binaria con LLM: Cada disposición extraída se pasa por un modelo instructivo el cual incluye dicho BOE si la información está relacionada con biodiversidad y descarta en caso contrario.
 
     *   Filtrado por ministerio: Sólo procesamos los boletines de los organismos que interesan (Medio Ambiente, Ciencia, Agricultura, …), solo de aquellos que suban BOEs relacionados con la temática de la Biodiversidad.
 
-    *   Resumen automático: Para cada documento marcado como true, el LLM genera un resumen con los puntos claves que se tratan en cada BOE.
+    *   Resumen automático: Para cada documento relacionado con la temática, el LLM genera un resumen con los puntos claves que se tratan en cada BOE.
+
+
 
 ## 3. Características Principales
 
@@ -39,6 +41,9 @@ La principal dificultad radica en la necesidad de revisar manualmente extensos d
 
     *   Alerts & Notificaciones: Envío por email de los resúmenes, sólo de los documentos clasificados como TRUE en el contexto de Biodiversidad.
 
+ > Metodología seguida
+
+ > Incuir diagrama
 ## 4. Demo / Presentación
   
 *   Enlace a un vídeo corto mostrando la aplicación en funcionamiento.
@@ -51,9 +56,16 @@ La principal dificultad radica en la necesidad de revisar manualmente extensos d
 *   **Modelos GenAI Utilizados:** Modelos LLM: (ej: `hdnh2006/salamandra-7b-instruct`).
 *   **Infraestructura:**: VM alojada en azure.
 *   **Otros:** CodeCarbon (para medición de emisiones).
+## 5.1 LLM - Utilizados
+> Describir porque usamos salamandra, porque uno cuantizado,... pruebas de diferentes modelos,... Porque NO fine-tuning, RAG, TAG,...
+> Tecnicas de optimizacion para LLM
+
+## 6. Fuentes de Datos
+  > Referencias claras a las fuentes utilizadas.
+  > Creacion de conjunto de datos.
 
 ## Instalación 
-
+> Detallar paso a paso, descarga de modelo de ollama, ...
 *   Instalamos las dependencias del proyecto:
 ```bash
 pip install -r requirements.txt
@@ -62,8 +74,10 @@ pip install -r requirements.txt
 *   Instalamos ollama en caso de no tenerlo instalado: (https://ollama.com/download/windows)
 
 ## Uso 
+> Incluir proceso de cambio de fecha, de tematica, departamentos,...
 - Incluir los correos de los destinatarios en el archivo destinatarios.json en formato json.
 - Para correr la solución:
 ```bash
 python main.py
 ```
+
