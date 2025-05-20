@@ -48,8 +48,10 @@ if __name__ == "__main__":
     tracker.start()
     logger.info("Iniciando el script...")
     start_time = time.time()
+    FECHA = time.strftime('%Y%m%d')
     # Descomentar para ejecutar desde la API
-    sumario = get_boe_sumario()
+    sumario = get_boe_sumario(fecha=FECHA)
+    FECHA = None if not FECHA else time.strftime('%d/%m/%Y')
     sumario_filtrado = filtrar_items(sumario)
 
     # clasificacion = classify_boe(sumario_filtrado)
@@ -75,7 +77,7 @@ if __name__ == "__main__":
         logger.error("Error saving summaries to JSON: %s", e)
 
     # Formatear el diccionario de resúmenes en una cadena para el cuerpo del email
-    email_body_parts = [f"Resúmenes del día para {len(summaries.items())} BOE\n\n",
+    email_body_parts = [f"Resúmenes del día {FECHA} para {len(summaries.items())} BOE\n\n",
                         target_depts_to_string(),
                         "\n\n*********************************\n"]
     for url, summary_text in summaries.items():
