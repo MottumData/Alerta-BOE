@@ -12,15 +12,38 @@ import json
 
 logger = logging.getLogger("mottum")
 
+
+def read_json_receivers():
+    """
+    Lee un fichero JSON y devuelve la lista de destinatarios de correo.
+
+    Args:
+        json_path (str): Ruta al fichero JSON que contiene la clave "receivers"
+                         con la lista de direcciones de email.
+
+    Returns:
+        List[str]: Lista de correos extraídos del campo "receivers".
+                   Si la lista está vacía o no existe, lanza ValueError.
+    """
+
+    json_path = "destinatarios.json"
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        receivers: List[str] = data.get("receivers", [])
+        if not receivers:
+            raise ValueError(f"No se encontraron destinatarios en {json_path}")
+        return receivers
+
+
 def send_boe_notification_email(
-    receivers: List[str],
     attachment_paths: List[str],
     sender_email: str,
     password: str,
     body: str,
-    subject: str = "Notificación diaria: BOEs de biodiversidad",
+    subject: str = "Notificación diaria del Boletín Oficial del Estado (BOE)",
     smtp_server: str = "smtp.gmail.com",
-    smtp_port: int = 587
+    smtp_port: int = 587,
+    receivers: List[str] = read_json_receivers(),
 ) -> None:
     """
     Envía un email con varios adjuntos a una lista de destinatarios.
@@ -66,27 +89,5 @@ def send_boe_notification_email(
         server.sendmail(sender_email, receivers, msg.as_string())
         logger.info(f"Correo enviado a: {', '.join(receivers)}")
 
-
-def read_json_receivers():
-
-    """
-    Lee un fichero JSON y devuelve la lista de destinatarios de correo.
-
-    Args:
-        json_path (str): Ruta al fichero JSON que contiene la clave "receivers"
-                         con la lista de direcciones de email.
-
-    Returns:
-        List[str]: Lista de correos extraídos del campo "receivers".
-                   Si la lista está vacía o no existe, lanza ValueError.
-    """
-    
-    json_path = "destinatarios.json"
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        receivers: List[str] = data.get("receivers", [])
-        if not receivers:
-            raise ValueError(f"No se encontraron destinatarios en {json_path}")
-        return receivers
 
 # TODO-Adjuntar BOE de los del resumen

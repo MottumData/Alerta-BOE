@@ -49,24 +49,23 @@ if __name__ == "__main__":
     logger.info("Iniciando el script...")
     start_time = time.time()
     # Descomentar para ejecutar desde la API
-    # sumario = get_boe_sumario()
-    # sumario_filtrado = filtrar_items(sumario)
-    # pprint(sumario_filtrado)
+    sumario = get_boe_sumario()
+    sumario_filtrado = filtrar_items(sumario)
+
     # clasificacion = classify_boe(sumario_filtrado)
     # pprint(clasificacion)
-    # boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
-
-    # # Descomentar para ejecutar desde el directorio
-    boe_files = os.listdir("BOE\\PDF")
-    boe_paths = [os.path.join("BOE\\PDF", f) for f in boe_files]
-    
-    sumario = get_boe_sumario(fecha="20250423")
     boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
 
+    # # Descomentar para ejecutar desde el directorio
+    # boe_files = os.listdir("BOE\\PDF")
+    # boe_paths = [os.path.join("BOE\\PDF", f) for f in boe_files]
+
+    # sumario = get_boe_sumario(fecha="20250423")
+    # boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
 
     summaries = generate_summaries_from_documents(boe_paths)
 
-    # Guardamos los resumenes en summaries.json
+    # # # Guardamos los resumenes en summaries.json
     output_json_file = "summaries.json"
     try:
         with open(output_json_file, 'w', encoding='utf-8') as f:
@@ -76,7 +75,9 @@ if __name__ == "__main__":
         logger.error("Error saving summaries to JSON: %s", e)
 
     # Formatear el diccionario de resúmenes en una cadena para el cuerpo del email
-    email_body_parts = ["Resúmenes del BOE del día:\n\n"]
+    email_body_parts = [f"Resúmenes del día para {len(summaries.items())} BOE\n\n",
+                        target_depts_to_string(),
+                        "\n\n*********************************\n"]
     for url, summary_text in summaries.items():
         if not isinstance(summary_text, str):
             summary_text = str(summary_text)  # Convierte a cadena si no lo es
@@ -84,13 +85,14 @@ if __name__ == "__main__":
         cleaned_summary = summary_text.strip()
 
         email_body_parts.append(
-            f"URL: {url}\nResumen:\n{cleaned_summary}\n\n---\n")
-
+            f"BOE: {url}\n{cleaned_summary}\n\n*********************************\n"
+        )
 
     email_body_string = "\n".join(email_body_parts)
 
     # Enviamos el email con los resumenes diarios del BOE
     receivers = read_json_receivers()
+
     send_boe_notification_email(
         receivers=receivers,
         body=email_body_string,
@@ -105,13 +107,3 @@ if __name__ == "__main__":
 
     logger.info("Emissions: %s kg CO₂eq", emissions)
     logger.info("Tiempo de ejecución: %.2f segundos", elapsed_time)
-
-# TODO:
-# Documentar el código (B)
-# Limpieza de código innecesario (A, B)
-# requirements.txt (B)
-# Ejecucion Codecarbon  (B)
-# README (A)
-# Contemplar casos de errores. (No hay BOE ese dia, no hay temática ese dia, se publican mas tarde,...) (A,B)
-# prompting para enfocar mejor la notificación. (A)
-# prompting para estandarizar el resumen del BOE. (B)
