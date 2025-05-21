@@ -4,6 +4,7 @@ from datetime import date
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import PromptTemplate
+import json
 
 BASE_URL = "https://www.boe.es/datosabiertos/api"
 
@@ -16,6 +17,14 @@ TARGET_DEPTS = {
     "DIRECCIÓN GENERAL DE DESARROLLO RURAL, INNOVACIÓN Y POLÍTICA FORESTAL",
     "MINISTERIO DE CIENCIA E INNOVACIÓN",
 }
+
+json_path = "target_depts.json"
+with open(json_path, "r", encoding="utf-8") as f:
+    data = json.load(f)
+    target_depts: List[str] = data.get("target_depts", [])
+    if not target_depts:
+        raise ValueError(f"No se encontraron destinatarios en {json_path}")
+    TARGET_DEPTS = set(target_depts)
 
 
 def ensure_list(x: Any) -> List[Any]:
