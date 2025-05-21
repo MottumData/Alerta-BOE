@@ -44,23 +44,98 @@ def classify_boe(
                                está relacionada con biodiversidad.
     """
 
-    template = """
+    # template = """
+    # Eres un clasificador automático del Boletín Oficial del Estado.
+    # Recibirás un diccionario JSON con multiples BOE, donde cada clave es el identificador de un BOE y su valor es
+    # un objeto con metadatos de dicho BOE, por ejemplo:
+
+    # Tu tarea es, **solo** y **únicamente** basándote en los campos `titulo` y `epigrafe` , decidir para cada BOE si
+    # está relacionado con biodiversidad (o temas muy afines: conservación, especies protegidas,
+    # espacios naturales, Red Natura 2000, ecosistema, fauna, flora, hábitat, conservación, especies
+    # protegidas, restauración ecológica, parques naturales, sostenibilidad ambiental, etc...).
+
+    # - Si está relacionado, devuelve `true`.
+    # - Si no está relacionado, devuelve `false`.
+
+    #     **Formato de salida**: únicamente una lista o array JSON de objetos, cada uno con la forma:
+    #     ```json
+    #     [
+    #     {{"BOE-A-2025-8144": true}},
+    #     {{"BOE-A-2025-8145": false}},
+    #     ...
+    #     ]
+    #     ```
+
+    #     Aquí tiene la entrada (json) sobre la que debe trabajar:
+    #     ```json
+    #     {text}
+    #     ```
+    # """
+    # template = """
+
+    #     Eres un asistente jurídico-ambiental experto.
+    #     Tu tarea es analizar una lista con diccionario Python llamado boe_items cuyas claves son identificadores BOE
+    #     y cuyos valores contienen los campos "titulo" y "epigrafe". Es decir, tienes que clasificar todos los diccionarios.
+
+    #     **Reglas de decisión**
+    #     1. Considera solo "titulo" y "epigrafe".
+    #     2. Haz un resumen si detectas relación con biodiversidad y términos afines
+    #     (conservación, especies protegidas, hábitats, restauración ecológica,
+    #     parques naturales, sostenibilidad, Red Natura 2000, etc.).
+    #     3. No lo hagas en los demás casos.
+
+    #     **Formato de salida obligatorio**
+    #     Devuelve **únicamente** una lista JSON, donde cada elemento es un objeto con un único par
+    #     clave-valor:
+
+    #     [
+    #     {{"<identificador>": "<resumen>"}},
+    #     {{"<identificador>": "no"}}
+    #     ]
+
+    #     La respuesta visible debe ser en formato JSON obligatoriamente. **No** añadas explicaciones,
+    #     comentarios ni espacios fuera del JSON.
+
+    #     Los boletines boe_items a clasificar son los siguientes:
+    #     {boe_items}
+    # """
+    # prompt = PromptTemplate(
+    #     input_variables=["text"],
+    #     template=template
+    # )
+
+    # parser = JsonOutputParser()
+
+    # -------------------------------------------------
+    boe_classification_list_schema = {
+        "title": "ListaDeClasificacionBOE",
+        "description": "Una lista de objetos. Cada objeto representa la clasificación de un BOE. La clave del objeto es el identificador del BOE (ej. 'BOE-A-2025-1234') y el valor es un booleano (true si está relacionado con biodiversidad, false si no).",
+        "type": "array",
+        "items": {
+            "type": "object",
+            "description": "Clasificación de un único BOE.",
+            "patternProperties": {
+                "^BOE-[A-Z]-[0-9]{4}-[0-9]+$": {
+                    "type": "boolean",
+                    "description": "Clasificación del BOE: true para relacionado con biodiversidad, false para no relacionado."
+                }
+            },
+            "additionalProperties": False,
+            "minProperties": 1,
+            "maxProperties": 1,
+            "propertyNames": {
+                "pattern": "^BOE-[A-Z]-[0-9]{4}-[0-9]+$",
+                "description": "El identificador del BOE debe seguir el formato BOE-X-YYYY-NNNN."
+            }
+        }
+    }
+    parser = JsonOutputParser()
+
+    prompt = PromptTemplate(
+        template=""""
         Eres un clasificador automático del Boletín Oficial del Estado.
-        Recibirás un diccionario en JSON, donde cada clave es el identificador de un BOE y su valor es
-        un objeto con metadatos, por ejemplo:
-        
-        ```json
-        {{
-        "BOE-A-2025-8144": {{
-            "departamento": "...",
-            "epigrafe": "...",
-            "identificador": "BOE-A-2025-8144",
-            "titulo": "...",
-            "url_pdf": {{ ... }}
-        }},
-        // más entradas
-        }}
-        ```
+        Recibirás un diccionario JSON con multiples BOE, donde cada clave es el identificador de un BOE y su valor es
+        un objeto con metadatos de dicho BOE, por ejemplo:
 
         Tu tarea es, **solo** y **únicamente** basándote en los campos `titulo` y `epigrafe` , decidir para cada BOE si
         está relacionado con biodiversidad (o temas muy afines: conservación, especies protegidas,
@@ -69,34 +144,22 @@ def classify_boe(
 
         - Si está relacionado, devuelve `true`.
         - Si no está relacionado, devuelve `false`.
-
-        **Formato de salida**: únicamente una lista o array JSON de objetos, cada uno con la forma:
-        ```json
-        [
-        {{"BOE-A-2025-8144": true}},
-        {{"BOE-A-2025-8145": false}},
-        ...
-        ]
-        ```
-
-        Aquí tiene la entrada (json) sobre la que debe trabajar:
-        ```json
+        Por favor, extrae los elementos de la noticia siguiendo el siguiente esquema: {schema}.\n\n{format_instructions}\n
+        Los boletines boe_items a clasificar son los siguientes:
         {text}
-        ```
-    """
-
-    prompt = PromptTemplate(
-        input_variables=["text"],
-        template=template
+        """,
+        input_variables=['text', 'schema'],
+        partial_variables={
+            "format_instructions": parser.get_format_instructions()
+        },
     )
 
-    parser = JsonOutputParser()
     # 4. Inicializa tu LLM de Ollama
     llm = OllamaLLM(  # model="robbiemu/salamandra:2b-instruct_bf16",
         model="llama3.1:8b-instruct-q4_K_M",
         # model="gemma3:12b",
         temperature=0.0,
-        base_url=os.getenv("BASE_URL"),
+        base_url=os.getenv("BASE_URL")
     )
     # llm = HuggingFacePipeline.from_model_id(
     #     model_id="google/gemma-3-4b-it",
@@ -112,7 +175,7 @@ def classify_boe(
     # 5. Monta un LLMChain que use el prompt anterior
     chain = prompt | llm | parser
 
-    result = chain.invoke({"text": items})
+    result = chain.invoke({"text": items, "schema": boe_classification_list_schema})
 
     return result
 
@@ -236,7 +299,7 @@ def make_summary(
                         base_url=os.getenv("BASE_URL"),
                         temperature=0.0,
                         max_tokens=150)
-        
+
         # llm = HuggingFacePipeline.from_model_id(
         #     model_id="google/gemma-3-4b-it",
         #     task="text-generation",
