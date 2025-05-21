@@ -115,7 +115,7 @@ Para las tareas de clasificación de relevancia y generación de resúmenes de l
    >**WIP ARTURO**
     * <u>Prompt Engineering:</u> Se invirtió esfuerzo en el diseño, refinamiento y optimización de *prompts* claros y efectivos para guiar al modelo Llama 3.1 en las tareas de clasificación y resumen, con el objetivo de maximizar la calidad de las respuestas y minimizar ambigüedades e inconsistencias. Estos prompts están disponibles en `internal\llm_utils.py`. Por ejemplo, el prompt para resumir es:
     *   <u>Ejecución Local con:**
-        *   Ollama<u> El uso de Ollama facilitó la gestión y ejecución del modelo LLM en la VM.
+        *   Ollama</u> El uso de Ollama facilitó la gestión y ejecución del modelo LLM en la VM.
         *   Transformers
     *   *  *   <u>Recursos y Viabilidad:</u> Se utiliza una versión cuantizada a 4 bits del modelo Llama 3.1 8B. La cuantización es crucial para reducir significativamente el tamaño del modelo, los requisitos de memoria y cómputo durante la inferencia manteniendo un rendimiento similar al modelo sin cuantizar.**
 
