@@ -46,7 +46,19 @@ Esta solución se conecta con la API del BOE, consulta de forma diaria los bolet
 
     *   Resumen automático: Para cada documento relacionado con la temática, el LLM genera un resumen con los puntos claves que se tratan en cada BOE.
 
+### 2.2 Escalabilidad
+<p align="center">
+  <img src="public/mottumAI.png" alt="Foto Solución">
+</p>
 
+No todas las necesidades de IA son iguales para todos nuestros clientes. Por eso, presentamos una Suite de IA Flexible y Modular, la cual permite diseñar y construir las soluciones que tu organización requiere. Ya sea que necesites agentes especializados, sistemas de búsqueda semántica con RAG, o asistentes enfoncados a tu caso de uso, nuestra plataforma te ofrece la libertad y el control para crear tu estrategia de IA.
+
+*   **MOTTUM.AI:** 
+    *   Optimización de Procesos y Productividad: Permite la automatización tareas repetitivas, la agilización flujos de trabajo y libera a tus equipos para que se concentren en iniciativas estratégicas mediante la creación de agentes inteligentes y asistentes virtuales adaptados las necesidades de la organización.
+    *   Acceso Inteligente a la Información: Los datos son necesarios. Implementa soluciones de RAG para que tus empleados y clientes obtengan respuestas precisas y contextualizadas.
+    *   Innovación Acelerada: Reduce la complejidad y los tiempos de desarrollo. Nuestra suite proporciona los bloques de construcción y la flexibilidad para prototipar, construir y desplegar soluciones de IA de una manera rápida y eficiente.
+    *   Escalabilidad y Adaptabilidad: Comienza con soluciones específicas y escala a medida que tus necesidades evolucionan.
+    *   Reducción de Costos Operativos: Al automatizar procesos, mejorar la eficiencia de los empleados y optimizar la utilización de recursos, nuestras soluciones de IA pueden contribuir significativamente a la reducción de costos operativos.
 
 ## 3. Características Principales 🛠️
 
