@@ -16,6 +16,7 @@
   - [Ineficiencia Actual ⏳](#ineficiencia-actual-)
 - [2. Nuestra Solución :rocket:](#2-nuestra-solución-rocket)
   - [2.1 Descripción General](#21-descripción-general)
+  - [2.2 Escalabilidad](#22-escalabilidad)
 - [3. Características Principales 🛠️](#3-características-principales-️)
 - [4. Demo / Presentación](#4-demo--presentación)
 - [5. Stack Tecnológico 🧑‍💻](#5-stack-tecnológico-)
@@ -23,6 +24,9 @@
 - [7. Fuentes de Datos 🗂️](#7-fuentes-de-datos-️)
 - [8. Instalación ⚙️](#8-instalación-️)
 - [9. Uso ▶️](#9-uso-️)
+- [10. Licencia 📄](#10-licencia-)
+- [11. Cómo contribuir 🤝](#11-cómo-contribuir-)
+- [12. Autores](#12-autores)
 
 </details>
 
@@ -124,12 +128,73 @@ Para las tareas de clasificación de relevancia y generación de resúmenes de l
     *   <u>*Table Augmented Generation (TAG):*</u> No se identificó la necesidad de que el LLM utilizara TAG debido a que la obtención de datos se hacía a través de la API o por Requests.
 
 *   **Técnicas de Optimización para LLM:** 
-   >**WIP ARTURO**
+   
     * <u>Prompt Engineering:</u> Se invirtió esfuerzo en el diseño, refinamiento y optimización de *prompts* claros y efectivos para guiar al modelo Llama 3.1 en las tareas de clasificación y resumen, con el objetivo de maximizar la calidad de las respuestas y minimizar ambigüedades e inconsistencias. Estos prompts están disponibles en `internal\llm_utils.py`. Por ejemplo, el prompt para resumir es:
-    *   <u>Ejecución Local con:**
-        *   Ollama</u> El uso de Ollama facilitó la gestión y ejecución del modelo LLM en la VM.
-        *   Transformers
-    *   *  *   <u>Recursos y Viabilidad:</u> Se utiliza una versión cuantizada a 4 bits del modelo Llama 3.1 8B. La cuantización es crucial para reducir significativamente el tamaño del modelo, los requisitos de memoria y cómputo durante la inferencia manteniendo un rendimiento similar al modelo sin cuantizar.**
+  
+        ```json
+        Role (Rol)
+        Eres un experto legal especializado en legislación española vinculada a la biodiversidad, por tanto DEBES RESPONDER EN ESPAÑOL. 
+
+        Tienes experiencia analizando disposiciones del Boletín Oficial del Estado (BOE) con un enfoque particular en normas que afectan al medio ambiente, la conservación de la naturaleza y la protección de especies o hábitats.
+
+        Instructions (Instrucciones)
+            Analiza el texto completo de un BOE proporcionado y realiza las siguientes tareas:
+            Identificación temática:
+                Determina si la disposición está relacionada directa o indirectamente con la biodiversidad (conservación, restauración ambiental, especies protegidas, espacios naturales, etc.).
+                    
+                Si no está relacionada, indícalo claramente al inicio y concluye el análisis.
+                Extracción de puntos clave (solo si el BOE sí está relacionado):
+                    Metadatos básicos:
+                        Número de BOE y fecha de publicación.
+                        Tipo de disposición (Ley, Real Decreto, Orden Ministerial, etc.).
+                        Órgano emisor.
+                    Objeto y alcance:
+                        Breve descripción del propósito de la norma.
+                        Ámbito territorial y sectores afectados.
+                    Contenido esencial:
+                        Artículos que implican cambios legislativos, nuevos marcos regulatorios o medidas específicas sobre biodiversidad.
+                        Obligaciones, limitaciones, incentivos o sanciones relevantes.
+                        Fechas clave (entrada en vigor, plazos de cumplimiento).
+                    Impacto ambiental:
+                        Medidas de conservación, restauración ecológica o protección ambiental.
+                        Referencias a espacios protegidos (Red Natura 2000, ZEPAs, LICs) o a especies específicas.
+                    Resumen ejecutivo:
+                        En 2-3 frases, describe la relevancia de la disposición y su impacto sobre la biodiversidad o el medio natural.
+
+
+            Context (Contexto)
+                Este asistente será utilizado para revisar disposiciones legales publicadas en el BOE, con el fin de detectar y sintetizar aquellas que impactan la legislación sobre biodiversidad. No todos los textos estarán relacionados con esta temática, por lo que también debe actuar como filtro.
+
+            Constraints (Restricciones)
+                Longitud máxima: 150 palabras.
+                Redacción en un único párrafo, sin espacios ni saltos de línea.
+                No interpretar ni especular más allá de lo que dice el texto.
+                Si el texto no tiene relación con la biodiversidad, dejarlo claro y no continuar con el análisis.
+                Enfocar el análisis en medidas que introduzcan o modifiquen obligaciones legales, protecciones, restricciones o impactos sobre ecosistemas.
+            
+            Ejemplos:
+                A continuación recibirás el contenido completo de una disposición legal publicada en el Boletín Oficial del Estado (BOE).
+                Deberás analizarla según las instrucciones proporcionadas previamente para determinar su relación con la biodiversidad y extraer un resumen estructurado.
+                Los campos requeridos en la respuesta son: Título, URL, Resumen (RESUMEN CON LOS PUNTOS CLAVE SOBRE LOS CAMBIOS RELACIONADOS CON BIODIVERSIDAD).
+                
+                Ejemplo de respuesta tras analizar TODO un BOE:
+                Título: Resolución de 13 de enero de 2025, de la Dirección General de Biodiversidad, Bosques y Desertificación, sobre modificación de ZEPAs marinas en la RAMPE. 
+                URL: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-1299
+                Resumen: Se integra en la Red de Áreas Marinas Protegidas de España (RAMPE) dos nuevas ZEPAs marinas (ES0000554 y ESZZ12004) y se suprimen seis anteriores por absorción territorial. La disposición responde al artículo 6 del Real Decreto 1599/2011, modificando delimitaciones y ajustando la red a criterios UICN de categoría IV. El objetivo es reforzar la protección de corredores migratorios de aves y mejorar la coherencia ecológica de la Red Natura 2000 en aguas españolas, especialmente en Galicia y Cádiz.
+
+            Texto completo del BOE:  
+            \"\"\"  
+            {document}
+            \"\"\"
+
+            """
+        ```
+ 
+    *  <u>Ejecución Local</u>:
+          * `Ollama`: nos sirvió como backend principal para la inferencia de modelos LLM, permitiendo desplegar y gestionar modelos de lenguaje de manera local con una configuración mínima. Gracias a su sencillez, fue posible contar rápidamente con un servicio de inferencia funcional, facilitando el desarrollo y las pruebas. Sin embargo, fue necesario ajustar su configuración para evitar que el servicio quedara ejecutándose en segundo plano y consumiendo recursos del sistema de forma innecesaria cuando no se utilizaba.
+
+        * `Transformers`: También se implementó una versión completamente funcional basada en la librería Transformers de Hugging Face. Aunque su integración requirió un mayor esfuerzo inicial en cuanto a instalación y gestión de dependencias, este trabajo se vio recompensado por la eficiencia y flexibilidad obtenidas en la ejecución local de los modelos. En el código actual, la opción de Transformers está comentada, pero puede activarse fácilmente si se prefiere este enfoque.
+       * Recursos y Viabilidad: Se utiliza una versión cuantizada a 4 bits del modelo Llama 3.1 8B. La cuantización es crucial para reducir significativamente el tamaño del modelo, los requisitos de memoria y cómputo durante la inferencia manteniendo un rendimiento levemente inferior al modelo sin cuantizar.
 
 ## 7. Fuentes de Datos 🗂️
 *   **Fuente Principal de Datos en Tiempo Real:**
@@ -191,6 +256,12 @@ Para poder ejecutar el proceso es necesario seguir los siguientes pasos:
     }
     ```
 
+    > ℹ️ Las limitaciones actuales pueden afectar la
+        entrega de correos electrónicos a direcciones corporativas.
+        Está previsto que esto se solucione en una futura
+        actualización.
+
+    
 2.  **Configurar los departamentos de interés:**
     Cree un archivo llamado `target_depts.json` en la raíz del proyecto (o en la carpeta `internal` si así lo configuró en `boe_utils.py`). Este archivo debe contener una lista de los nombres de los departamentos del BOE que desea monitorear.
     Ejemplo de contenido para `target_depts.json`:
@@ -241,6 +312,6 @@ Puedes encontrar el texto completo de la licencia en el archivo [LICENSE](LICENS
     5.  Envía un Pull Request a la rama `main` del repositorio original, explicando tus cambios.
 
 ## 12. Autores
-- [Arturo Ortiz](https://github.com/SrArtur)
+- [Arturo Ortiz](https://github.com/SrArtur).
 - [Beltrán Valle](https://github.com/bvallegc).
 - [Jose Luis Delgado](https://www.linkedin.com/in/jldelda/).
