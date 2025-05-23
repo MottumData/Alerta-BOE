@@ -276,22 +276,11 @@ Para poder ejecutar el proceso es necesario seguir los siguientes pasos:
     ```
 
 3.  **Seleccionar la fecha (Opcional):**
-    Por defecto, el script procesará el BOE del día actual. Para procesar una fecha específica, puede modificar el script `main.py` o, preferiblemente, ejecutarlo con el argumento `--fecha`:
-    ```bash
-    python main.py --fecha YYYYMMDD
-    ```
-    Por ejemplo, para el 23 de mayo de 2025:
-    ```bash
-    python main.py --fecha 20250523
-    ```
-    Si no se proporciona el argumento `--fecha`, se usará la fecha actual.
-
-4.  **Para correr la solución:**
-
+    Por defecto, el script procesará el BOE del día actual. Para procesar una fecha específica, puede modificar el script `main.py`:
     ```bash
     python main.py
     ```
-
+    
 ## 10. Licencia 📄
 
 Este proyecto se distribuye bajo los términos de la **GNU General Public License v3.0**.
