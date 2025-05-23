@@ -49,20 +49,21 @@ if __name__ == "__main__":
     logger.info("Iniciando el script...")
     start_time = time.time()
     # 1. Descomentar para ejecutar desde la API
-    # sumario = get_boe_sumario()
-    # sumario_filtrado = filtrar_items(sumario)
-    # pprint(sumario_filtrado)
+    sumario = get_boe_sumario()
+    sumario_filtrado = filtrar_items(sumario)
+    pprint(sumario_filtrado)
     # 2. Desccomentar para ejecutar la clasificación
-    # clasificacion = classify_boe(sumario_filtrado)
-    # pprint(clasificacion)
-    # boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
+    clasificacion = classify_boe(sumario_filtrado)
+    pprint(clasificacion)
+    boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
 
     # 3. Descomentar para ejecutar desde el directorio
-    boe_files = os.listdir("BOE\\PDF")
-    boe_paths = [os.path.join("BOE\\PDF", f) for f in boe_files]
+    # Comentar las siguientes línea para ejecutar desde la API
+    # boe_files = os.listdir("BOE\\PDF")
+    # boe_paths = [os.path.join("BOE\\PDF", f) for f in boe_files]
     
-    sumario = get_boe_sumario(fecha="20250423")
-    boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
+    # sumario = get_boe_sumario(fecha="20250423")
+    # boe_paths = [value['url_pdf'] for value in filtrar_items(sumario).values()]
 
 
     summaries = generate_summaries_from_documents(boe_paths)
