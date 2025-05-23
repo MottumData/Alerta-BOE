@@ -27,6 +27,7 @@
 - [10. Licencia 📄](#10-licencia-)
 - [11. Cómo contribuir 🤝](#11-cómo-contribuir-)
 - [12. Autores](#12-autores)
+- [13. Sobre Mottum](#13-sobre-mottum)
 
 </details>
 
@@ -38,6 +39,8 @@ Mantenerse al día con la legislación sobre biodiversidad publicada en boletine
 ### Ineficiencia Actual ⏳
 La principal dificultad radica en la necesidad de revisar manualmente extensos documentos oficiales para identificar, interpretar y resumir las secciones relevantes para la biodiversidad. Este proceso consume mucho tiempo y recursos, ralentizando la capacidad de respuesta y la toma de decisiones informadas por parte de administraciones, empresas y centros de investigación.
 
+### Consumo Energético ⚡
+EL consumo energético se encuentra en el archivo emissions.csv.
 
 ## 2. Nuestra Solución :rocket:
 ### 2.1 Descripción General 
@@ -57,12 +60,13 @@ Esta solución se conecta con la API del BOE, consulta de forma diaria los bolet
 
 No todas las necesidades de IA son iguales para todos nuestros clientes. Por eso, presentamos una Suite de IA Flexible y Modular, la cual permite diseñar y construir las soluciones que tu organización requiere. Ya sea que necesites agentes especializados, sistemas de búsqueda semántica con RAG, o asistentes enfoncados a tu caso de uso, nuestra plataforma te ofrece la libertad y el control para crear tu estrategia de IA.
 
-*   **MOTTUM.AI:** 
+*   **Mottum.AI:** 
     *   Optimización de Procesos y Productividad: Permite la automatización tareas repetitivas, la agilización flujos de trabajo y libera a tus equipos para que se concentren en iniciativas estratégicas mediante la creación de agentes inteligentes y asistentes virtuales adaptados las necesidades de la organización.
     *   Acceso Inteligente a la Información: Los datos son necesarios. Implementa soluciones de RAG para que tus empleados y clientes obtengan respuestas precisas y contextualizadas.
     *   Innovación Acelerada: Reduce la complejidad y los tiempos de desarrollo. Nuestra suite proporciona los bloques de construcción y la flexibilidad para prototipar, construir y desplegar soluciones de IA de una manera rápida y eficiente.
-    *   Escalabilidad y Adaptabilidad: Comienza con soluciones específicas y escala a medida que tus necesidades evolucionan.
+    *   Flexibilidad y escalabilidad: Comienza con soluciones específicas y escala a medida que tus necesidades evolucionan.
     *   Reducción de Costos Operativos: Al automatizar procesos, mejorar la eficiencia de los empleados y optimizar la utilización de recursos, nuestras soluciones de IA pueden contribuir significativamente a la reducción de costos operativos.
+    *   Gobernanza: Nuestra suite facilita la implementación de soluciones personalizables, facilita el seguimiento de rendimiento de los modelos, y permite a perfiles menos técnicos ser capaces de implementar sus propias soluciones de IA, ofreciendo transparecia y autonomía para cualquier perfil.
 
 ## 3. Características Principales 🛠️
 
@@ -315,3 +319,7 @@ Puedes encontrar el texto completo de la licencia en el archivo [LICENSE](LICENS
 - [Arturo Ortiz](https://github.com/SrArtur).
 - [Beltrán Valle](https://github.com/bvallegc).
 - [Jose Luis Delgado](https://www.linkedin.com/in/jldelda/).
+- [Hylenne González](https://www.linkedin.com/in/hylennegonzalez/)
+
+## 13. Sobre Mottum
+**Mottum** ([https://mottum.io](https://mottum.io)) es una consultora especializada en Inteligencia Artificial y Data Intelligence. Impulsamos la transformación de las organizaciones para que se conviertan en entidades data-driven, ofreciendo formación en IA, nuestra suite **Mottum.AI** para soluciones de IA personalizadas (como este sistema de alerta), y consultoría experta en analítica avanzada e IA Generativa.
