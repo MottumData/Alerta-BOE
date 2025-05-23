@@ -137,35 +137,21 @@ Siga estos pasos para configurar el entorno y ejecutar el proyecto:
 
 1.  **Clonar el Repositorio (si aún no lo ha hecho):**
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    cd <NOMBRE_DEL_DIRECTORIO_DEL_PROYECTO>
+    git clone <https://github.com/MottumData/PNAV-HACK2.git>
+    cd <PNAV-HACK2>
     ```
 
-2.  **Crear un Entorno Virtual (Recomendado):**
-    ```bash
-    python -m venv venv
-    ```
-    Para activar el entorno virtual:
-    *   En Windows:
-        ```bash
-        .\venv\Scripts\activate
-        ```
-    *   En macOS/Linux:
-        ```bash
-        source venv/bin/activate
-        ```
-
-3.  **Instalar las Dependencias del Proyecto:**
+2.  **Instalar las Dependencias del Proyecto:**
     Asegúrese de tener el entorno virtual activado.
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Instalar Ollama:**
+3.  **Instalar Ollama:**
     *   Si aún no tiene Ollama instalado, descárguelo e instálelo desde el sitio web oficial: [https://ollama.com/download](https://ollama.com/download). Siga las instrucciones para su sistema operativo (Windows, macOS o Linux).
     *   Después de la instalación, asegúrese de que el servicio de Ollama se esté ejecutando. Generalmente se inicia automáticamente.
 
-5.  **Descargar el Modelo LLM con Ollama:**
+4.  **Descargar el Modelo LLM con Ollama:**
     Abra una terminal o línea de comandos y ejecute el siguiente comando para descargar el modelo `llama3.1:8b-instruct` (o la versión cuantizada específica que esté utilizando, por ejemplo, `q4_K_M`):
     ```bash
     ollama pull llama3.1:8b-instruct
@@ -176,20 +162,73 @@ Siga estos pasos para configurar el entorno y ejecutar el proyecto:
     ```
     Espere a que la descarga se complete. El tamaño del modelo puede ser considerable.
 
-6.  **Configurar Destinatarios (Ver sección de Uso):**
-    Asegúrese de crear y configurar el archivo `destinatarios.json` como se indica en la sección "Uso".
+5.  **Configurar Destinatarios y los departamentos a los que consultar (Ver sección de Uso):**
+    Asegúrese de crear y configurar el archivo `destinatarios.json` y `target_depts.json` como se indica en la sección "Uso".
 
-*   Instalamos las dependencias del proyecto:
-    ```bash
-    pip install -r requirements.txt
-    ```
 ## 9. Uso ▶️
 Para poder ejecutar el proceso es necesario seguir los siguientes pasos:
-- Incluir los correos de los destinatarios deseados en el archivo destinatarios.json en formato json.
-- Incluir los departamentos deseados en el archivo de target_depts.json
-- Para cambiar la fecha el usuario debe dirigirse al archivo main.py. Este encontrará una variable con el nombre de sumario la cual tiene el valor de una función: get_boe_sumario(). En caso de dejarla vacía se ejecutará el proceso con la fecha del día actual, para seleccionar una fecha concreta el usuario debe incluir como argumento de la función lo siguiente: fecha="YYYYMMDD".
-- Para correr la solución:
+1.  **Configurar los destinatarios:**
+    Cree un archivo llamado `destinatarios.json` en la raíz del proyecto. Este archivo debe contener una lista de las direcciones de correo electrónico a las que se enviarán las notificaciones.
+    Ejemplo de contenido para `destinatarios.json`:
+    ```json
+    {
+        "receivers": [
+          "correo1@ejemplo.com",
+          "correo2@ejemplo.com"
+        ]
+    }
+    ```
+
+2.  **Configurar los departamentos de interés:**
+    Cree un archivo llamado `target_depts.json` en la raíz del proyecto (o en la carpeta `internal` si así lo configuró en `boe_utils.py`). Este archivo debe contener una lista de los nombres de los departamentos del BOE que desea monitorear.
+    Ejemplo de contenido para `target_depts.json`:
+    ```json
+    {
+        "target_depts": [
+            "MINISTERIO ABC",
+            "DIRECCIÓN GENERAL DE BIODIVERSIDAD Y ...",
+            "DIRECCIÓN GENERAL DE CALIDAD Y ...",
+        ]
+    } 
+    ```
+
+3.  **Seleccionar la fecha (Opcional):**
+    Por defecto, el script procesará el BOE del día actual. Para procesar una fecha específica, puede modificar el script `main.py` o, preferiblemente, ejecutarlo con el argumento `--fecha`:
+    ```bash
+    python main.py --fecha YYYYMMDD
+    ```
+    Por ejemplo, para el 23 de mayo de 2025:
+    ```bash
+    python main.py --fecha 20250523
+    ```
+    Si no se proporciona el argumento `--fecha`, se usará la fecha actual.
+
+4.  **Para correr la solución:**
 
     ```bash
     python main.py
     ```
+
+## 10. Licencia 📄
+
+Este proyecto se distribuye bajo los términos de la **GNU General Public License v3.0**.
+
+Puedes encontrar el texto completo de la licencia en el archivo [LICENSE](LICENSE) en la raíz de este repositorio.
+
+## 11. Cómo contribuir 🤝
+
+¡Tu ayuda es bienvenida! Si deseas contribuir:
+
+*   **Reportar Errores:** Abre un **issue** detallando el problema, cómo reproducirlo y tu entorno.
+*   **Sugerir Mejoras:** Crea un **issue** explicando tu idea.
+*   **Enviar Cambios (Pull Requests):**
+    1.  Haz un Fork del repositorio.
+    2.  Crea una nueva rama para tus cambios.
+    3.  Realiza tus modificaciones.
+    4.  Asegúrate de que el código funciona y sigue el estilo general del proyecto.
+    5.  Envía un Pull Request a la rama `main` del repositorio original, explicando tus cambios.
+
+## 12. Autores
+- [Arturo Ortiz](https://github.com/SrArtur)
+- [Beltrán Valle](https://github.com/bvallegc).
+- [Jose Luis Delgado](https://www.linkedin.com/in/jldelda/).
