@@ -94,9 +94,8 @@ def classify_boe(
 
     parser = JsonOutputParser()
     # 4. Inicializa tu LLM de Ollama
-    llm = OllamaLLM(  # model="robbiemu/salamandra:2b-instruct_bf16",
-        model="llama3.1:8b",
-        # model="gemma3:12b",
+    llm = OllamaLLM(
+        model="llama3.1:8b-instruct-q4_K_M",
         temperature=0.0,
         base_url=os.getenv("BASE_URL"),
     )
@@ -239,7 +238,7 @@ def make_summary(
             template=PROMPT_TEMPLATE
         )
 
-        llm = OllamaLLM(model="gemma3:4b",
+        llm = OllamaLLM(model="llama3.1:8b-instruct-q4_K_M",
                         base_url=os.getenv("BASE_URL"),
                         temperature=0.0,
                         max_tokens=150)
