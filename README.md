@@ -195,10 +195,10 @@ Para las tareas de clasificación de relevancia y generación de resúmenes de l
     *   Referencia API: [https://boe.es/datosabiertos/api/api.php](https://boe.es/datosabiertos/api/api.php)
 
 *   **Creación de Conjunto de Datos para Desarrollo y Pruebas:**
-    *   Para el desarrollo inicial, la validación de los *prompts* y las pruebas del sistema, se recopiló un conjunto de datos manualmente.
-    *   Este conjunto se generó a partir de la descarga de documentos del BOE de diferentes días y secciones, seleccionando ejemplos relevantes e irrelevantes para la temática de biodiversidad.
-    *   Ejemplo de consulta diaria de BOEs: [https://boe.es/boe/dias/2025/05/20/](https://boe.es/boe/dias/YYYY/MM/DD/) (reemplazar YYYY/MM/DD por fechas específicas).
-    *   Este conjunto de datos ayudó a refinar los criterios de clasificación y la efectividad de los resúmenes generados por el LLM antes de la implementación del flujo automatizado con la API.
+    *   **Creación de Conjunto de Datos para Desarrollo y Pruebas:**
+        *   Para el desarrollo inicial y la validación de *prompts*, se compiló manualmente un conjunto de datos. Este consistió en documentos del BOE de diversas fechas, secciones y formatos, incluyendo ejemplos tanto relevantes como irrelevantes para la biodiversidad.
+        *   Se utilizó como referencia la estructura de consulta diaria del BOE, por ejemplo: `https://boe.es/boe/dias/YYYY/MM/DD/` (donde `YYYY/MM/DD` se reemplaza por la fecha deseada).
+        *   Este conjunto de datos fue fundamental para refinar los criterios de clasificación y la calidad de los resúmenes generados por el LLM antes de automatizar el proceso mediante la API.
 
 
 ## 7. Instalación ⚙️
