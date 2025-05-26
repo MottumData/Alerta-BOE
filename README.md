@@ -9,38 +9,33 @@
 [![Hackathon Badge](https://img.shields.io/badge/Hackathon-Algoritmos%20Verdes%20GenAI%20Biodiversidad-brightgreen)](https://algoritmosverdes.gob.es/es/hackathon/soluciones-genai-para-la-biodiversidad)
 
 <details>
-<summary>Tabla de Contenidos</summary>
+<summary>Índice</summary>
 
 - [1. El Reto: Problema de Biodiversidad](#1-el-reto-problema-de-biodiversidad)
-  - [Relevancia 💡](#relevancia-)
-  - [Ineficiencia Actual ⏳](#ineficiencia-actual-)
+  - [1.1 Relevancia 💡](#11-relevancia-)
+  - [1.2 Ineficiencia Actual ⏳](#12-ineficiencia-actual-)
 - [2. Nuestra Solución :rocket:](#2-nuestra-solución-rocket)
   - [2.1 Descripción General](#21-descripción-general)
-  - [2.2 Escalabilidad](#22-escalabilidad)
+  - [2.2 Escalabilidad a Producto](#22-escalabilidad-a-producto)
 - [3. Características Principales 🛠️](#3-características-principales-️)
-- [4. Demo / Presentación](#4-demo--presentación)
-- [5. Stack Tecnológico 🧑‍💻](#5-stack-tecnológico-)
-- [6. LLM - Utilizados](#6-llm---utilizados)
-- [7. Fuentes de Datos 🗂️](#7-fuentes-de-datos-️)
-- [8. Instalación ⚙️](#8-instalación-️)
-- [9. Uso ▶️](#9-uso-️)
-- [10. Licencia 📄](#10-licencia-)
-- [11. Cómo contribuir 🤝](#11-cómo-contribuir-)
-- [12. Autores](#12-autores)
-- [13. Sobre Mottum](#13-sobre-mottum)
+- [4. Stack Tecnológico 🧑‍💻](#4-stack-tecnológico-)
+- [5. LLM - Utilizados](#5-llm---utilizados)
+- [6. Fuentes de Datos 🗂️](#6-fuentes-de-datos-️)
+- [7. Instalación ⚙️](#7-instalación-️)
+- [8. Uso ▶️](#8-uso-️)
+- [9. Licencia 📄](#9-licencia-)
+- [10. Autores](#10-autores)
+- [11. Sobre Mottum](#11-sobre-mottum)
 
 </details>
 
 ## 1. El Reto: Problema de Biodiversidad 
 
-### Relevancia 💡
+### 1.1 Relevancia 💡
 Mantenerse al día con la legislación sobre biodiversidad publicada en boletines oficiales (como el BOE) es crucial para la conservación, la investigación y la gestión ambiental en España. Sin embargo, el volumen y la frecuencia de las publicaciones hacen que el seguimiento manual sea una tarea ingente y propensa a retrasos.
 
-### Ineficiencia Actual ⏳
+### 1.2 Ineficiencia Actual ⏳
 La principal dificultad radica en la necesidad de revisar manualmente extensos documentos oficiales para identificar, interpretar y resumir las secciones relevantes para la biodiversidad. Este proceso consume mucho tiempo y recursos, ralentizando la capacidad de respuesta y la toma de decisiones informadas por parte de administraciones, empresas y centros de investigación.
-
-### Consumo Energético ⚡
-EL consumo energético se encuentra en el archivo emissions.csv.
 
 ## 2. Nuestra Solución :rocket:
 ### 2.1 Descripción General 
@@ -53,12 +48,12 @@ Esta solución se conecta con la API del BOE, consulta de forma diaria los bolet
 
     *   Resumen automático: Para cada documento relacionado con la temática, el LLM genera un resumen con los puntos claves que se tratan en cada BOE.
 
-### 2.2 Escalabilidad
+### 2.2 Escalabilidad a Producto
 <p align="center">
   <img src="public/mottumAI.png" alt="Foto Solución">
 </p>
 
-No todas las necesidades de IA son iguales para todos nuestros clientes. Por eso, presentamos una Suite de IA Flexible y Modular, la cual permite diseñar y construir las soluciones que tu organización requiere. Ya sea que necesites agentes especializados, sistemas de búsqueda semántica con RAG, o asistentes enfoncados a tu caso de uso, nuestra plataforma te ofrece la libertad y el control para crear tu estrategia de IA.
+No todas las necesidades de IA son iguales para todos nuestros clientes. Por eso, presentamos una Suite de IA Flexible y Modular, la cual permite diseñar y construir las soluciones que tu organización requiere. Ya sea que necesites agentes especializados, sistemas de búsqueda semántica con RAG, o asistentes enfocados a tu caso de uso, nuestra plataforma te ofrece la libertad y el control para crear tu estrategia de IA.
 
 *   **Mottum.AI:** 
     *   Optimización de Procesos y Productividad: Permite la automatización tareas repetitivas, la agilización flujos de trabajo y libera a tus equipos para que se concentren en iniciativas estratégicas mediante la creación de agentes inteligentes y asistentes virtuales adaptados las necesidades de la organización.
@@ -70,27 +65,21 @@ No todas las necesidades de IA son iguales para todos nuestros clientes. Por eso
 
 ## 3. Características Principales 🛠️
 
-*   Funcionalidades clave
+*   A continuación, se describen las funcionalidades clave incorporadas, y el diagrama que sigue ilustra visualmente los procesos.
     *   **API del BOE**: Extracción automática de los sumarios publicados por los Ministerios seleccionados.
 
     *   **Clasificación binaria**: LLM que etiqueta cada BOE en función de su relación con la biodiversidad.
 
-    *   **Extracción de los puntos claves y resumen**: Resumen de 3–4 frases del contenido del BOE con los puntos claves
+    *   **Extracción de los puntos claves y resumen**: Resumen del contenido del BOE con los puntos claves
 
     *  **Notificación**: Envío de notificación por email con los resúmenes de los diferentes sumarios relacionados con Biodiversidad.
 
- > Metodología seguida
 
  <p align="center">
-  <img src="public/Diagrama_de_flujo1.jpg" alt="Logo Mottum">
+  <img src="public/diagrama.png" alt="Diagrama">
 </p>
 
-## 4. Demo / Presentación
-  
-*   Enlace a un vídeo corto mostrando la aplicación en funcionamiento.
-*   Enlace a la presentación de diapositivas (si la hay).
-
-## 5. Stack Tecnológico 🧑‍💻
+## 4. Stack Tecnológico 🧑‍💻
 
 *   **Lenguajes:** Python.
 *   **Frameworks/Librerías Principales:** Langchain, Ollama ,Transformers y CodeCarbon.
@@ -106,7 +95,7 @@ No todas las necesidades de IA son iguales para todos nuestros clientes. Por eso
     *   `llama3.1:8b-instruct-q4_K_M`
 *   **Infraestructura:**: Máquina Virtual desplegada en Azure. En concreto `Standard D8as v5 (8 vcpus, 32 GiB memory)` sin GPU.
 
-## 6. LLM - Utilizados
+## 5. LLM - Utilizados
 Para las tareas de clasificación de relevancia y generación de resúmenes de los documentos del BOE, se optó finalmente por un modelo de la familia Llama 3.1, específicamente una versión cuantizada de 8B.
 *   **Descarte de la familia Salamandra**: Durante una parte importante del desarrollo se utilizó el modelo Salamandra-7B. No obstante, se detectaron varias limitaciones relevantes que supusieron un cuello de botella durante el desarrollo y por tanto, una búsqueda de LLM alternativo. Las limitaciones fueron las siguientes:
     
@@ -135,7 +124,7 @@ Para las tareas de clasificación de relevancia y generación de resúmenes de l
    
     * <u>Prompt Engineering:</u> Se invirtió esfuerzo en el diseño, refinamiento y optimización de *prompts* claros y efectivos para guiar al modelo Llama 3.1 en las tareas de clasificación y resumen, con el objetivo de maximizar la calidad de las respuestas y minimizar ambigüedades e inconsistencias. Estos prompts están disponibles en `internal\llm_utils.py`. Por ejemplo, el prompt para resumir es:
   
-        ```json
+        ```
         Role (Rol)
         Eres un experto legal especializado en legislación española vinculada a la biodiversidad, por tanto DEBES RESPONDER EN ESPAÑOL. 
 
@@ -200,26 +189,26 @@ Para las tareas de clasificación de relevancia y generación de resúmenes de l
         * `Transformers`: También se implementó una versión completamente funcional basada en la librería Transformers de Hugging Face. Aunque su integración requirió un mayor esfuerzo inicial en cuanto a instalación y gestión de dependencias, este trabajo se vio recompensado por la eficiencia y flexibilidad obtenidas en la ejecución local de los modelos. En el código actual, la opción de Transformers está comentada, pero puede activarse fácilmente si se prefiere este enfoque.
        * Recursos y Viabilidad: Se utiliza una versión cuantizada a 4 bits del modelo Llama 3.1 8B. La cuantización es crucial para reducir significativamente el tamaño del modelo, los requisitos de memoria y cómputo durante la inferencia manteniendo un rendimiento levemente inferior al modelo sin cuantizar.
 
-## 7. Fuentes de Datos 🗂️
+## 6. Fuentes de Datos 🗂️
 *   **Fuente Principal de Datos en Tiempo Real:**
     *   La solución utiliza la **API de Datos Abiertos del Boletín Oficial del Estado (BOE)** para acceder y descargar diariamente los sumarios y documentos publicados.
     *   Referencia API: [https://boe.es/datosabiertos/api/api.php](https://boe.es/datosabiertos/api/api.php)
 
 *   **Creación de Conjunto de Datos para Desarrollo y Pruebas:**
-    *   Para el desarrollo inicial, la validación de los *prompts* y las pruebas del sistema, se recopiló un conjunto de datos manualmente.
-    *   Este conjunto se generó a partir de la descarga de documentos del BOE de diferentes días y secciones, seleccionando ejemplos relevantes e irrelevantes para la temática de biodiversidad.
-    *   Ejemplo de consulta diaria de BOEs: [https://boe.es/boe/dias/2025/05/20/](https://boe.es/boe/dias/YYYY/MM/DD/) (reemplazar YYYY/MM/DD por fechas específicas).
-    *   Este conjunto de datos ayudó a refinar los criterios de clasificación y la efectividad de los resúmenes generados por el LLM antes de la implementación del flujo automatizado con la API.
+    *   **Creación de Conjunto de Datos para Desarrollo y Pruebas:**
+        *   Para el desarrollo inicial y la validación de *prompts*, se compiló manualmente un conjunto de datos. Este consistió en documentos del BOE de diversas fechas, secciones y formatos, incluyendo ejemplos tanto relevantes como irrelevantes para la biodiversidad.
+        *   Se utilizó como referencia la estructura de consulta diaria del BOE, por ejemplo: `https://boe.es/boe/dias/YYYY/MM/DD/` (donde `YYYY/MM/DD` se reemplaza por la fecha deseada).
+        *   Este conjunto de datos fue fundamental para refinar los criterios de clasificación y la calidad de los resúmenes generados por el LLM antes de automatizar el proceso mediante la API.
 
 
-## 8. Instalación ⚙️
+## 7. Instalación ⚙️
 
 Siga estos pasos para configurar el entorno y ejecutar el proyecto:
 
 1.  **Clonar el Repositorio (si aún no lo ha hecho):**
     ```bash
-    git clone <https://github.com/MottumData/PNAV-HACK2.git>
-    cd <PNAV-HACK2>
+    git clone https://github.com/MottumData/Alerta-BOE.git
+    cd Alerta-BOE
     ```
 
 2.  **Instalar las Dependencias del Proyecto:**
@@ -246,7 +235,7 @@ Siga estos pasos para configurar el entorno y ejecutar el proyecto:
 5.  **Configurar Destinatarios y los departamentos a los que consultar (Ver sección de Uso):**
     Asegúrese de crear y configurar el archivo `destinatarios.json` y `target_depts.json` como se indica en la sección "Uso".
 
-## 9. Uso ▶️
+## 8. Uso ▶️
 Para poder ejecutar el proceso es necesario seguir los siguientes pasos:
 1.  **Configurar los destinatarios:**
     Cree un archivo llamado `destinatarios.json` en la raíz del proyecto. Este archivo debe contener una lista de las direcciones de correo electrónico a las que se enviarán las notificaciones.
@@ -285,30 +274,17 @@ Para poder ejecutar el proceso es necesario seguir los siguientes pasos:
     python main.py
     ```
     
-## 10. Licencia 📄
+## 9. Licencia 📄
 
 Este proyecto se distribuye bajo los términos de la **GNU General Public License v3.0**.
 
 Puedes encontrar el texto completo de la licencia en el archivo [LICENSE](LICENSE) en la raíz de este repositorio.
 
-## 11. Cómo contribuir 🤝
-
-¡Tu ayuda es bienvenida! Si deseas contribuir:
-
-*   **Reportar Errores:** Abre un **issue** detallando el problema, cómo reproducirlo y tu entorno.
-*   **Sugerir Mejoras:** Crea un **issue** explicando tu idea.
-*   **Enviar Cambios (Pull Requests):**
-    1.  Haz un Fork del repositorio.
-    2.  Crea una nueva rama para tus cambios.
-    3.  Realiza tus modificaciones.
-    4.  Asegúrate de que el código funciona y sigue el estilo general del proyecto.
-    5.  Envía un Pull Request a la rama `main` del repositorio original, explicando tus cambios.
-
-## 12. Autores
+## 10. Autores
 - [Arturo Ortiz](https://github.com/SrArtur).
 - [Beltrán Valle](https://github.com/bvallegc).
 - [Jose Luis Delgado](https://www.linkedin.com/in/jldelda/).
-- [Hylenne González](https://www.linkedin.com/in/hylennegonzalez/)
+- [Hylenne González](https://www.linkedin.com/in/hylennegonzalez/).
 
-## 13. Sobre Mottum
-**Mottum** ([https://mottum.io](https://mottum.io)) es una consultora especializada en Inteligencia Artificial y Data Intelligence. Impulsamos la transformación de las organizaciones para que se conviertan en entidades data-driven, ofreciendo formación en IA, nuestra suite **Mottum.AI** para soluciones de IA personalizadas (como este sistema de alerta), y consultoría experta en analítica avanzada e IA Generativa.
+## 11. Sobre Mottum
+[**Mottum**](https://mottum.io) es una consultora especializada en Inteligencia Artificial y Data Intelligence. Impulsamos la transformación de las organizaciones para que se conviertan en entidades data-driven, ofreciendo formación en IA, nuestra suite **Mottum.AI** para soluciones de IA personalizadas (como este sistema de alerta), y consultoría experta en analítica avanzada e IA Generativa.
