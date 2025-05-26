@@ -12,6 +12,7 @@ import json
 
 logger = logging.getLogger("mottum")
 
+
 def send_boe_notification_email(
     receivers: List[str],
     attachment_paths: List[str],
@@ -68,7 +69,6 @@ def send_boe_notification_email(
 
 
 def read_json_receivers():
-
     """
     Lee un fichero JSON y devuelve la lista de destinatarios de correo.
 
@@ -80,7 +80,7 @@ def read_json_receivers():
         List[str]: Lista de correos extraídos del campo "receivers".
                    Si la lista está vacía o no existe, lanza ValueError.
     """
-    
+
     json_path = "destinatarios.json"
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -89,4 +89,48 @@ def read_json_receivers():
             raise ValueError(f"No se encontraron destinatarios en {json_path}")
         return receivers
 
-# TODO-Adjuntar BOE de los del resumen
+
+def save_summaries_to_file(summaries: dict) -> None:
+    """
+    Guarda los resúmenes en un archivo JSON.
+
+    Args:
+        summaries (dict): Diccionario con los resúmenes a guardar.
+
+    Returns:
+        None
+    """
+
+    output_json_file = "summaries.json"
+    try:
+        with open(output_json_file, 'w', encoding='utf-8') as f:
+            json.dump(summaries, f, ensure_ascii=False, indent=4)
+            logger.info("Summaries saved to %s", output_json_file)
+    except Exception as e:
+        logger.error("Error saving summaries to JSON: %s", e)
+
+
+def create_email_template(date: str, summaries: dict, depts: str) -> str:
+    """	
+    Crea el cuerpo del email con los resúmenes del BOE.	
+    Args:	
+        date (str): Fecha del BOE en formato 'DD/MM/YYYY'.	
+        summaries (dict): Diccionario con los resúmenes de los BOE.	
+        depts (str): Texto con los departamentos destinatarios.
+    Returns:
+        str: Cuerpo del email formateado.
+    """
+
+    email_body_parts = [f"Resúmenes del día {date} para {len(summaries.items())} BOE\n\n",
+                        depts,
+                        "\n\n*********************************\n"]
+    for url, summary_text in summaries.items():
+        if not isinstance(summary_text, str):
+            summary_text = str(summary_text)  # Convierte a cadena si no lo es
+
+        cleaned_summary = summary_text.strip()
+
+        email_body_parts.append(
+            f"BOE: {url}\n{cleaned_summary}\n\n*********************************\n")
+    email_body_string = "\n".join(str(part) for part in email_body_parts)
+    return email_body_string
