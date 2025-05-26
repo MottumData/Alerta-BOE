@@ -45,8 +45,13 @@ def classify_boe(
     """
 
     template = """
-        Eres un clasificador automático del Boletín Oficial del Estado.
-        Recibirás un diccionario en JSON, donde cada clave es el identificador de un BOE y su valor es
+        Eres un clasificador automático del Boletín Oficial del Estado. Clasifica cada BOE en función de su relación con la
+        biodiversidad.Utiliza **solo** y **únicamente** en los campos `titulo` y `epigrafe`. Razona por ti mismo y ejecuta:
+        
+        - Si está relacionado, devuelve `true`.
+        - Si no está relacionado, devuelve `false`.
+    
+        Recibirás un diccionario donde cada clave es el identificador de un BOE y su valor es
         un objeto con metadatos, por ejemplo:
         
         ```json
@@ -62,15 +67,12 @@ def classify_boe(
         }}
         ```
 
-        Tu tarea es, **solo** y **únicamente** basándote en los campos `titulo` y `epigrafe` , decidir para cada BOE si
-        está relacionado con biodiversidad (o temas muy afines: conservación, especies protegidas,
-        espacios naturales, Red Natura 2000, ecosistema, fauna, flora, hábitat, conservación, especies
-        protegidas, restauración ecológica, parques naturales, sostenibilidad ambiental, etc...).
+        Ejemplos de temas muy afines: conservación, especies protegidas, espacios naturales, Red Natura 2000, 
+        ecosistema, fauna, flora, hábitat, conservación, especies protegidas, restauración ecológica, 
+        parques naturales, sostenibilidad ambiental, etc...). 
 
-        - Si está relacionado, devuelve `true`.
-        - Si no está relacionado, devuelve `false`.
-
-        **Formato de salida**: únicamente una lista o array JSON de objetos, cada uno con la forma:
+        Restricción:
+        El Formato de salida debe ser una lista con la siguiente forma:
         ```json
         [
         {{"BOE-A-2025-8144": true}},
@@ -79,10 +81,10 @@ def classify_boe(
         ]
         ```
 
-    Aquí tiene la entrada (json) sobre la que debe trabajar:
-    ```json
-    {text}
-    ```
+        Aquí tiene la entrada (json) sobre la que debe trabajar:
+        ```json
+        {text}
+        ```
     """
 
     prompt = PromptTemplate(
