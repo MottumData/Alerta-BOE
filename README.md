@@ -9,7 +9,7 @@
 [![Hackathon Badge](https://img.shields.io/badge/Hackathon-Algoritmos%20Verdes%20GenAI%20Biodiversidad-brightgreen)](https://algoritmosverdes.gob.es/es/hackathon/soluciones-genai-para-la-biodiversidad)
 
 <details>
-<summary>Tabla de Contenidos</summary>
+<summary>Índice</summary>
 
 - [1. El Reto: Problema de Biodiversidad](#1-el-reto-problema-de-biodiversidad)
   - [1.1 Relevancia 💡](#11-relevancia-)
@@ -24,8 +24,8 @@
 - [7. Instalación ⚙️](#7-instalación-️)
 - [8. Uso ▶️](#8-uso-️)
 - [9. Licencia 📄](#9-licencia-)
-- [12. Autores](#12-autores)
-- [13. Sobre Mottum](#13-sobre-mottum)
+- [10. Autores](#10-autores)
+- [11. Sobre Mottum](#11-sobre-mottum)
 
 </details>
 
@@ -280,11 +280,11 @@ Este proyecto se distribuye bajo los términos de la **GNU General Public Licens
 
 Puedes encontrar el texto completo de la licencia en el archivo [LICENSE](LICENSE) en la raíz de este repositorio.
 
-## 12. Autores
+## 10. Autores
 - [Arturo Ortiz](https://github.com/SrArtur).
 - [Beltrán Valle](https://github.com/bvallegc).
 - [Jose Luis Delgado](https://www.linkedin.com/in/jldelda/).
 - [Hylenne González](https://www.linkedin.com/in/hylennegonzalez/).
 
-## 13. Sobre Mottum
+## 11. Sobre Mottum
 [**Mottum**](https://mottum.io) es una consultora especializada en Inteligencia Artificial y Data Intelligence. Impulsamos la transformación de las organizaciones para que se conviertan en entidades data-driven, ofreciendo formación en IA, nuestra suite **Mottum.AI** para soluciones de IA personalizadas (como este sistema de alerta), y consultoría experta en analítica avanzada e IA Generativa.
