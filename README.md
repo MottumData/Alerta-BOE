@@ -207,8 +207,8 @@ Siga estos pasos para configurar el entorno y ejecutar el proyecto:
 
 1.  **Clonar el Repositorio (si aún no lo ha hecho):**
     ```bash
-    git clone <https://github.com/MottumData/PNAV-HACK2.git>
-    cd <PNAV-HACK2>
+    git clone https://github.com/MottumData/Alerta-BOE.git
+    cd Alerta-BOE
     ```
 
 2.  **Instalar las Dependencias del Proyecto:**
