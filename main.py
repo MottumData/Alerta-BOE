@@ -72,8 +72,6 @@ if __name__ == "__main__":
 
     save_summaries_to_file(summaries)
 
-    print(FECHA)
-    pprint(summaries)
     mail_template = create_email_template(date=FECHA,
                                           summaries=summaries,
                                           depts=target_depts_to_string())
