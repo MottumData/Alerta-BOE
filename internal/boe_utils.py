@@ -141,13 +141,3 @@ def filtrar_items(sumario: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
                     _procesar_item(resultados, dept_name, None, item)
 
     return resultados
-
-
-# if __name__ == "__main__":
-#     # Obtengo el sumario del BOE de hoy
-#     sumario = get_boe_sumario()
-#     # Filtrar solo los ítems de mis departamentos objetivo
-#     items_filtrados = filtrar_items(sumario)
-#     # Imprimo cada identificador con su título y enlace al PDF
-#     for ident, info in items_filtrados.items():
-#         print(f"{ident}: {info['titulo']} → {info['url_pdf']}")
