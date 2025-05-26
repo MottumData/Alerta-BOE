@@ -18,13 +18,23 @@ TARGET_DEPTS = {
     "MINISTERIO DE CIENCIA E INNOVACIÓN",
 }
 
-json_path = "target_depts.json"
-with open(json_path, "r", encoding="utf-8") as f:
-    data = json.load(f)
-    target_depts: List[str] = data.get("target_depts", [])
-    if not target_depts:
-        raise ValueError(f"No se encontraron destinatarios en {json_path}")
-    TARGET_DEPTS = set(target_depts)
+
+def target_depts_to_string() -> None:
+    """
+    Carga los destinatarios de un fichero JSON y los añade a TARGET_DEPTS.
+
+    El fichero debe contener una clave "target_depts" con una lista de nombres de departamentos.
+    Si no se encuentra la clave o la lista está vacía, lanza ValueError.
+    """
+
+    json_path = "target_depts.json"
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        target_depts: List[str] = data.get("target_depts", [])
+        if not target_depts:
+            raise ValueError(f"No se encontraron destinatarios en {json_path}")
+        TARGET_DEPTS = set(target_depts)
+    return TARGET_DEPTS 
 
 
 def ensure_list(x: Any) -> List[Any]:
@@ -85,7 +95,7 @@ def _procesar_item(dest: Dict[str, Dict[str, Any]],
     """
     identificador = item.get("identificador")
     raw_pdf = item.get("url_pdf")
-    
+
     # Algunas respuestas traen url_pdf como dict con "#texto"
     if isinstance(raw_pdf, dict):
         url_pdf = raw_pdf.get("texto") or raw_pdf.get("@url")
@@ -135,7 +145,7 @@ def filtrar_items(sumario: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
                     epig_name = epig.get("@nombre") or epig.get("nombre")
                     for item in ensure_list(epig.get("item")):
                         _procesar_item(resultados, dept_name, epig_name, item)
-                
+
                 # 2) Procesa los ítems que estén “a pie” del departamento
                 for item in ensure_list(dept.get("item")):
                     _procesar_item(resultados, dept_name, None, item)
