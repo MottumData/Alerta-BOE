@@ -88,5 +88,3 @@ def read_json_receivers():
         if not receivers:
             raise ValueError(f"No se encontraron destinatarios en {json_path}")
         return receivers
-
-# TODO-Adjuntar BOE de los del resumen
