@@ -1,7 +1,7 @@
 <h1 align="center">Sistema de Alerta de cambios en BOE sobre Biodiversidad</h1>
 
 <p align="center">
-  <img src="public/Logo_Mottum_transp_claro-1920w.png" alt="Logo Mottum" width="300px">
+  <img src="public/logoMottum.png" alt="Logo Mottum" width="400px">
 </p>
 
 
